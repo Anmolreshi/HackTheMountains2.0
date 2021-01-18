@@ -3,6 +3,8 @@ import { Typography, Backdrop, LinearProgress } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
 import variants from "./../variants";
+import Logo from "../Header/assets/htm.svg";
+import bg from "./bg.jpg";
 const useStyles = makeStyles({
   backdrop: {
     color: "white",
@@ -15,7 +17,7 @@ const PreLoader = () => {
   const [open, setOpen] = useState(true);
   const [progress, setProgress] = React.useState(0);
   const [buffer, setBuffer] = React.useState(10);
-
+  const [opacity, setOpacity] = React.useState(0.1);
   const progressRef = React.useRef(() => {});
   React.useEffect(() => {
     progressRef.current = () => {
@@ -26,6 +28,7 @@ const PreLoader = () => {
         const diff2 = Math.random() * 30;
         setProgress(progress + diff);
         setBuffer(progress + diff + diff2);
+        setOpacity(progress * 0.01);
       }
     };
   });
@@ -33,7 +36,7 @@ const PreLoader = () => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       progressRef.current();
-    }, 500);
+    }, 800);
 
     return () => {
       clearInterval(timer);
@@ -47,16 +50,23 @@ const PreLoader = () => {
         variants={variants}
         transition={{ duration: 2 }}
       >
-        <Typography variant="h2">Hack The Mountains</Typography>
-        <Typography gutterBottom={true} variant="h2">
-          2.0
-        </Typography>
-
-        <LinearProgress
-          variant="buffer"
-          value={progress}
-          valueBuffer={buffer}
-        />
+        <div style={{ backgroundImage: bg }}>
+          <center>
+            <img
+              width="320px"
+              src={Logo}
+              alt="logo"
+              style={{ opacity: opacity }}
+            />
+            <br />
+            <LinearProgress color="secondary" />
+            <br />
+            <Typography variant="h3">
+              Hack The Mountains 2.0 <br />
+              Coming Soon
+            </Typography>
+          </center>
+        </div>
       </motion.div>
     </Backdrop>
   );

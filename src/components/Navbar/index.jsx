@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import {
   AppBar,
@@ -11,11 +11,12 @@ import {
 } from "@material-ui/core/";
 import { makeStyles } from "@material-ui/styles";
 
+import { HashLink } from "react-router-hash-link";
 import data from "./data";
 import Backdrop from "./mobileMenu";
 const useStyles = makeStyles({
   root: {
-    zIndex: 0,
+    zIndex: 1,
     backgroundColor: "#202136"
   }
 });
@@ -52,13 +53,26 @@ export default function ElevateAppBar(props) {
         <Toolbar>
           <Hidden mdUp>
             <Backdrop />
+            <span style={{ textAlign: "right" }}>HTM 2.0</span>
           </Hidden>
           <Hidden smDown>
             <Container>
               <Box display="flex" flexDirection="row" justifyContent="center">
                 {data.map((item, index) => (
                   <Box p={1}>
-                    <Typography variant="subtitle1">{item.name}</Typography>
+                    <HashLink
+                      style={{
+                        textDecoration: "none",
+                        color: "white",
+                        whiteSpace: "nowrap"
+                      }}
+                      smooth
+                      to={`/${item.path}`}
+                    >
+                      <Typography gutterBottom={true} variant="subtitle1">
+                        {item.name}{" "}
+                      </Typography>
+                    </HashLink>
                   </Box>
                 ))}
               </Box>

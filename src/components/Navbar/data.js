@@ -4,19 +4,24 @@ const data = [
     path: "#tracks"
   },
   {
-    name: "Schedule"
+    name: "Schedule",
+    path: "#tracks"
   },
   {
-    name: "FAQ"
+    name: "FAQ",
+    path: "#tracks"
   },
   {
-    name: "Sponsors"
+    name: "Sponsors",
+    path: "#sponsors"
   },
   {
-    name: "Team "
+    name: "Team ",
+    path: "#team"
   },
   {
-    name: "MOhit "
+    name: "Workshops and Sessions",
+    path: "#workshops"
   }
 ];
 export default data;
