@@ -4,26 +4,27 @@ import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
 import variants from "../variants";
 import data from "./data";
-import MLH from "../Sponsors/assets/mlh.svg";
-import HTM from "./assets/HTM.png";
+// import MLH from "../Sponsors/assets/mlh.svg";
+import HTM from "./assets/htm.svg";
 const useStyles = makeStyles({
   container: {
     backgroundColor: "#202136",
     color: "white",
-    padding: "25px"
+    paddingBottom: "22px",
+    paddingTop: "30px"
   },
   desc: {
     lineHeight: "32px",
     paddingBottom: "22px"
   },
   left: {
-    textAlign: "left",
-    padding: "25px"
+    textAlign: "left"
   },
   button: {
     color: "white",
     background: "black",
     border: "1px solid white",
+    zIndex: 0,
     "&hover": {
       background: "white",
       color: "black"
@@ -51,9 +52,10 @@ const Header = () => {
               gutterBottom={true}
               variant="h1"
             >
-              {data.heading.line1}
-              <br />
-              {data.heading.line2} {data.version}
+              {data.heading.line1} {data.version}
+            </Typography>
+            <Typography gutterBottom={true} variant="h5">
+              "{data.heading.line2}"
             </Typography>
             <Typography gutterBottom={true} variant="h5">
               <b>{data.timeheading}</b>
@@ -65,9 +67,10 @@ const Header = () => {
               {data.subheading}
             </Typography>
             <Typography className={classes.desc} variant="body1">
-              <b>League Partner</b>
-              <br />
-              <img alt="htm" src={MLH} />
+              {/* <b>League Partner</b>
+              <br /> */}
+              {/* <img alt="htm" src={MLH} /> */}
+              {/* League Partner Image */}
             </Typography>
 
             <Button variant="outlined" className={classes.button}>
@@ -81,7 +84,7 @@ const Header = () => {
             display="flex"
             justifyContent="center"
           >
-            <img alt="htm" className={classes.logo} src={HTM} width="70%" />
+            <img src={HTM} alt="htm" className={classes.logo} width="70%" />
           </Box>
         </Grid>
       </Grid>
