@@ -7,9 +7,13 @@ import Tracks from "./components/Tracks";
 import Team from "./components/Team";
 import History from "./components/History";
 import PreviousSponsors from "./components/Sponsors/PreviousSponsors";
-import Sponsors from "./components/Sponsors/Sponsors";
+import AboutUs from "./components/About"
+// import Sponsors from "./components/Sponsors/Sponsors";
 import Footer from "./components/Footer";
+import Schedule from "./components/Schedule"
+import Registration from "./components/Registration"
 import Workshops from "./components/Workshops/homepage";
+import Contact from "./components/ContactUs"
 import WorkshopRoute from "./components/Workshops/page";
 import TeamRoute from "./components/Team/components/teampage";
 import "./styles.css";
@@ -27,12 +31,15 @@ export default function App() {
             <Navbar />
             <Box>
               <Header />
+              <AboutUs/>
               <Tracks />
               <History />
-              <Sponsors />
+        
               <PreviousSponsors />
               {/* <Workshops /> */}
               <Team />
+         
+              <Contact/>
               <Footer />
             </Box>
           </>
@@ -43,7 +50,6 @@ export default function App() {
         exact={true}
         children={
           <>
-            <PreLoader />
             <Navbar />
             <Box>
               <WorkshopRoute />
@@ -52,18 +58,34 @@ export default function App() {
         }
       />
       <Route
-        path="/team"
+        path="/schedule"
         exact={true}
         children={
           <>
-            <PreLoader />
+           
             <Navbar />
             <Box>
-              <TeamRoute />
+              <Schedule/>
+              <Footer />
             </Box>
           </>
         }
       />
+      <Route
+        path="/register"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <Registration/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
+
     </Switch>
   );
 }
