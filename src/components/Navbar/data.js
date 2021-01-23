@@ -1,15 +1,15 @@
 const data = [
   {
+    name: "About",
+    path: "#about"
+  },
+  {
     name: "Tracks",
     path: "#tracks"
   },
   {
     name: "Schedule",
-    path: "#tracks"
-  },
-  {
-    name: "FAQ",
-    path: "#tracks"
+    path: "schedule"
   },
   {
     name: "Sponsors",
@@ -20,8 +20,16 @@ const data = [
     path: "#team"
   },
   {
-    name: "Workshops and Sessions",
+    name: "Workshops",
     path: "#workshops"
+  },
+  {
+    name: "Prizes",
+    path: "#prizes"
+  },
+  {
+    name: "FAQ",
+    path: "#tracks"
   }
 ];
 export default data;

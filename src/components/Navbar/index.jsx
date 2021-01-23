@@ -10,14 +10,26 @@ import {
   Container
 } from "@material-ui/core/";
 import { makeStyles } from "@material-ui/styles";
-
+import HTM from './htm.svg'
+import MLHBadge from "./mlh_Badge.svg"
 import { HashLink } from "react-router-hash-link";
 import data from "./data";
+import {Link} from "react-router-dom"
 import Backdrop from "./mobileMenu";
 const useStyles = makeStyles({
   root: {
-    zIndex: 1,
-    backgroundColor: "#202136"
+    zIndex: 6,
+    backgroundColor: "#EEEEEE",
+   
+  },
+  onhover:{
+    fontWeight:'800',
+    fontFamily:'consolas',
+    transition: 'transform .2s',
+    '&:hover':{
+     color:"#202136",
+     transform: 'scale(1.2)'
+    }
   }
 });
 
@@ -53,29 +65,40 @@ export default function ElevateAppBar(props) {
         <Toolbar>
           <Hidden mdUp>
             <Backdrop />
-            <span style={{ textAlign: "right" }}>HTM 2.0</span>
+            
+            <a href="/">
+            <span ><img src={HTM} height="50px" width="70px" style={{cursor:'pointer'}}/></span>
+           
+            </a>
+       
           </Hidden>
           <Hidden smDown>
             <Container>
-              <Box display="flex" flexDirection="row" justifyContent="center">
+            <span id="HTMNav"><img src={HTM} height="50" width="80"/></span>
+              <Box display="flex" flexDirection="row" justifyContent="space-around">
+              
                 {data.map((item, index) => (
-                  <Box p={1}>
+                  <Box  p={1}>
                     <HashLink
                       style={{
                         textDecoration: "none",
-                        color: "white",
-                        whiteSpace: "nowrap"
-                      }}
+                        color:"#434040",
+                        whiteSpace: "nowrap",
+                            }}
+                     
                       smooth
                       to={`/${item.path}`}
                     >
-                      <Typography gutterBottom={true} variant="subtitle1">
-                        {item.name}{" "}
+                      <Typography  className={classes.onhover} gutterBottom={true} variant="subtitle1">
+                       <b>{item.name}</b> {" "}
                       </Typography>
                     </HashLink>
                   </Box>
                 ))}
               </Box>
+              {/* <span id="MLHBadge">
+                <img src={MLHBadge} height="150" width="180"/>
+              </span> */}
             </Container>
           </Hidden>
         </Toolbar>
