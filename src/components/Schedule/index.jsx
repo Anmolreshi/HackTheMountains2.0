@@ -1,43 +1,24 @@
 import React from "react";
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot
-} from "@material-ui/lab";
-
+import {Container, Grid, Typography} from "@material-ui/core"
+import Timeline from "./components/timeline"
 export default function AlternateTimeline() {
-  return (
-    <Timeline align="alternate">
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Eat</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Code</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>Sleep</TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-        </TimelineSeparator>
-        <TimelineContent>Repeat</TimelineContent>
-      </TimelineItem>
-    </Timeline>
+  return (<>
+    <br/><br/><br/><br/>
+    <Container>
+    <Grid container spacing={5} > <Grid item xs={12} sm={12} md={4} lg={4}>
+      <Timeline/>
+      </Grid>
+      <Grid item xs={12} sm={12} md={4} lg={4}>
+      <Typography gutterBottom={true}>Being on time, is a good thing. We at Hack the Mountains, try to be best on schedule. Here is one to help you out in this hackathon</Typography>
+      <Typography variant="h5">Coming Soon<br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/>
+      </Typography>
+      </Grid>
+   
+      </Grid></Container>
+    </>
   );
 }
+
+
+

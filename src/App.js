@@ -2,7 +2,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/";
 import Header from "./components/Header/";
+import FAQ from "./components/FAQ"
 import PreLoader from "./components/preLoader";
+import  Judges from './components/Judges'
 import Tracks from "./components/Tracks";
 import Team from "./components/Team";
 import History from "./components/History";
@@ -27,15 +29,16 @@ export default function App() {
         exact={true}
         children={
           <>
-            <PreLoader />
+       <PreLoader />     
             <Navbar />
             <Box>
               <Header />
               <AboutUs/>
               <Tracks />
               <History />
-        
               <PreviousSponsors />
+              <Judges/>
+            
               {/* <Workshops /> */}
               <Team />
          
@@ -85,7 +88,19 @@ export default function App() {
           </>
         }
       />
-
+      <Route
+        path="/faq"
+        exact={true}
+        children={
+          <>
+            <Navbar />
+            <Box>
+              <FAQ/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />  
     </Switch>
   );
 }

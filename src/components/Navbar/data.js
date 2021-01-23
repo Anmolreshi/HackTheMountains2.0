@@ -12,6 +12,10 @@ const data = [
     path: "schedule"
   },
   {
+    name: "Judges",
+    path: "#judges"
+  },
+  {
     name: "Sponsors",
     path: "#sponsors"
   },
@@ -29,7 +33,7 @@ const data = [
   },
   {
     name: "FAQ",
-    path: "#tracks"
+    path: "faq"
   }
 ];
 export default data;

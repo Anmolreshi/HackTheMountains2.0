@@ -5,7 +5,7 @@ const AIRTABLE_URI = `https://api.airtable.com/v0/appTpeQ5wAiKaISuG/Table%201?ma
 
 const useTeams = () => {
   const [repos, setRepos] = useState([]);
-  const token = "keyULJyQPltPgbpaW";
+  const token = process.env.REACT_APP_AIRTABLE_API_KEY;
 
   const getTeam = async () => {
     let res = await Axios({

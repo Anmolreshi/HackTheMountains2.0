@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   backdrop: {
     color: "white",
     background: "black",
-    zIndex: 2
+    zIndex: 10
   }
 });
 const PreLoader = () => {
@@ -20,9 +20,15 @@ const PreLoader = () => {
   const [opacity, setOpacity] = React.useState(0.1);
   const progressRef = React.useRef(() => {});
   React.useEffect(() => {
+    // Obstructs Scrolling while showing welcome screen.
+    document.body.style.overflow = "hidden"  
+
     progressRef.current = () => {
       if (progress >= 100) {
         setOpen(false);
+    // allows scrolling after display is removed.
+        document.body.style.overflow = ""
+    
       } else {
         const diff = Math.random() * 50;
         const diff2 = Math.random() * 30;
@@ -34,17 +40,21 @@ const PreLoader = () => {
   });
 
   React.useEffect(() => {
+
     const timer = setInterval(() => {
       progressRef.current();
     }, 800);
 
     return () => {
+  
       clearInterval(timer);
     };
   }, []);
 
   return (
+
     <Backdrop className={classes.backdrop} open={open}>
+
       <motion.div
         animate="fadein"
         variants={variants}
@@ -59,12 +69,7 @@ const PreLoader = () => {
               style={{ opacity: opacity }}
             />
             <br />
-            <LinearProgress color="secondary" />
-            <br />
-            <Typography variant="h3">
-              Hack The Mountains 2.0 <br />
-              Coming Soon
-            </Typography>
+            
           </center>
         </div>
       </motion.div>

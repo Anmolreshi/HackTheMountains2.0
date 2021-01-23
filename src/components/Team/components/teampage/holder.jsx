@@ -1,58 +1,104 @@
-import { Box, Typography, Grid } from "@material-ui/core";
+import { Box, Typography, Grid, Container } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
-const Holder = () => {
-  return (
-    <Box
-      style={{
-        minWidth: "170px",
-        border: "2px solid black",
-        padding: "5px",
+const Holder = (props) => {
+   
+  const opcodes =[{
+                    "role":"Organizer",
+                    "index":1,
+                    "card_color":"#7F1E8E",
+                    "font_color":"#FFFFFF"
+                  },
+                  {
+                    "role":"Web Engineering",
+                    "index":2,
+                    "card_color":"#00AADF",
+                    "font_color":"#FFFFFF"
+                  },
+                  {
+                    "role":"Content Specialist",
+                    "index":3,
+                    "card_color":"#EFA744",
+                    "font_color":"#202136"
+                  },
+                  {
+                    "role":"Graphics Specialist",
+                    "index":4,
+                    "card_color":"#13B6A2",
+                    "font_color":"#FFFFFF"
+                  },
+                  {
+                    "role":"Outreach Evangelist",
+                    "index":5,
+                    "card_color":"#DC8F8F",
+                    "font_color":"#000000"
+                  },
+                  {
+                    "role":"Technical Team",
+                    "index":6,
+                    "card_color":"#DC8F8F",
+                    "font_color":"#000000"
+                  }             
+    ]
 
-        maxWidth: "262px",
-        background: "orange"
-      }}
-    >
-      <Grid container spacing={3} style={{ minHeight: "350px" }}>
+const useStyles = makeStyles({
+  hoverClass: {
+    transition: "transform 1s",
+    '&:hover':{
+      cursor:'pointer',
+      boxShadow:`0px 0px 0px 0px,0px 0px 0px 0px,0px 0px 0px 0px`,
+      transition: "transform 0.7s",
+      transform: "scale(1.1,1.1)",
+      border:'3px solid white'
+    }
+  }
+});
+
+  const getRole=(index)=>{
+    const config = opcodes[index-1]
+    return config.role;
+  }
+  const classes = useStyles();
+ const index = props.index;
+  return (
+    
+    <Grid container>
+ 
+      <Grid container  >
         <Grid
+        id="teamM"
           item
           xs={12}
           sm={12}
           md={12}
           lg={12}
-          style={{ minHeight: "150px", background: "#F7DDBF" }}
+          style={{wordWrap:"break-word", textAlign:'center'}}
         >
-          <center>
+        <br/>
+        <a rel="noopener noreferrer" 
+              target="_blank" style={{textDecoration:'none', color:"white"}} 
+              href = {props.linkedin}>
             <img
-              src="https://media-exp1.licdn.com/dms/image/C5603AQGS86WfEbvPPw/profile-displayphoto-shrink_400_400/0/1602104885807?e=1616025600&v=beta&t=E5lZx7iv0H-S0GAcIfSFmpIAho3Vb5cLCH8hIVEHDmM"
+              src={props.image}
               width="150px"
-              style={{ borderRadius: "100%" }}
+              style={{ borderRadius:'100%' }}
             />
-          </center>
-        </Grid>
+        </a>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h5">Name</Typography>
-          <Typography variant="p">Lorem Ipsum</Typography>
-          <br />
+          <br/>
+          <Typography variant="h5" style={{fontSize:"18px",fontFamily:'consolas', wordWrap:"break-word", textAlign:'center'}}>
+            <b>{props.name}</b>
+            </Typography>
+          <Typography variant="p" style={{fontSize:"14px",fontFamily:'consolas', wordWrap:"break-word"}}>
+            <b>
+            {getRole(index)} {props.designation}</b>
+          </Typography>
         </Grid>
-        <Grid item xs={4} sm={4} md={6} lg={4}>
-          <Grid container spacing={4}>
-            <Grid item xs={2}>
-              {" "}
-              <FaLinkedinIn />
-            </Grid>
-            <Grid item xs={2}>
-              {" "}
-              <FaGithub />
-            </Grid>
-            <Grid item xs={2}>
-              {" "}
-              <FaExternalLinkAlt />
-            </Grid>
-          </Grid>
         </Grid>
       </Grid>
-    </Box>
+   
+    </Grid>
   );
 };
 export default Holder;

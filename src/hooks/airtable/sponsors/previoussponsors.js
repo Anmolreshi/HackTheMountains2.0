@@ -1,11 +1,11 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
 
-const AIRTABLE_URI = `https://api.airtable.com/v0/appKuw9dstOl3ZOvr/table1?maxRecords=300&view=Grid%20view`;
+const AIRTABLE_URI = `https://api.airtable.com/v0/${process.env.REACT_APP_SPONSORS_KEY}/table1?maxRecords=300&view=Grid%20view`;
 
 const usePrevSponsors = () => {
   const [repos, setRepos] = useState([]);
-  const token = "keyULJyQPltPgbpaW";
+  const token = process.env.REACT_APP_AIRTABLE_API_KEY;
 
   const getSponsors = async () => {
     let res = await Axios({

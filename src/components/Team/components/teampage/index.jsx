@@ -1,13 +1,15 @@
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
 import Holder from "./holder.jsx";
 import { useTeams } from "../../../../hooks/api/team/getTeam";
 import { useOpcodes } from "../../../../hooks/api/team/getOpcode";
+
 const useStyles = makeStyles({
   root: {
-    height: "100vh",
-    background: "#202136"
+    // height: "100vh",
+
+   
   }
 });
 const Team = () => {
@@ -15,33 +17,48 @@ const Team = () => {
   const opcodes = useOpcodes();
   const classes = useStyles();
 
-  const getOpcode = (index) => {
-    const config = {
-      cColor: opcodes[index - 1].card_color,
-      fColor: opcodes[index - 1].font_color
-    };
-    return config;
-  };
+  // const getOpcode = (index,opcodes) => {
+  //   const config = {
+  //     cColor: opcodes[index - 1].card_color,
+  //     fColor: opcodes[index - 1].font_color
+  //   };
+  //   return config;
+  // };
 
-  console.log(teamdata);
-  console.log(getOpcode(1));
   return (
     <div className={classes.root}>
+
+    <br/>
       <Container>
-        <br />
-        <br />
-        <br />
-        {/* {data.team_data.map((member) => {
-          return (
-            <Grid container spacing={4}>
-              <Grid item xs={12} sm={6} md={4} lg={4}>
-                <Holder />
+     
+        <Grid container spacing={8}>
+          {teamdata.map((member) => {
+ 
+            return (
+
+
+
+
+              <Grid item xs={12} sm md lg style={{marginBottom:'12px'}}>
+                <Holder
+                  name={member.name}
+                  linkedin={member.linkedin}
+                  image={member.image}
+                  index={member.role_index}
+                  github = {member.github}
+                  external = {member.external}
+                  designation ={member.designation}
+               
+                />
               </Grid>
-            </Grid>
-          );
-        })} */}
-        Hello Data
-      </Container>
+
+
+
+
+            );
+          })}            </Grid></Container>
+
+
     </div>
   );
 };

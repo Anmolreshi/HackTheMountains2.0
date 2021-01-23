@@ -70,7 +70,7 @@
   ::-webkit-scrollbar {
     height: 12px;
     width: 12px;
-    background: #CA484F;
+    background: #202136;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -95,4 +95,21 @@
     top: 0px;
     left:90%
   }
+  #teamM, #judge{
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+      filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all 0.4s ease-in-out;  
+    }
+
+   #teamM:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+    
+    }
+    #judge:hover {
+    filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.01);
+    }
 </style>

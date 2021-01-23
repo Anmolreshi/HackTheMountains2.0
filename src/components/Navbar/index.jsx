@@ -75,7 +75,7 @@ export default function ElevateAppBar(props) {
           <Hidden smDown>
             <Container>
             <span id="HTMNav"><img src={HTM} height="50" width="80"/></span>
-              <Box display="flex" flexDirection="row" justifyContent="space-around">
+              <Box display="flex" flexDirection="row" justifyContent="flex-end">
               
                 {data.map((item, index) => (
                   <Box  p={1}>

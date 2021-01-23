@@ -12,7 +12,17 @@ const useStyles = makeStyles({
     padding: "20px",
     borderRadius: "5px"
   },
-
+  newsponsor:{
+    background: "#CA484F",
+    padding:'25px',
+    textShadow: `0 0 20px #fff, 
+    0 0 30px #CA484F,
+    0 0 40px #CA484F,
+    0 0 50px #CA484F,
+    0 0 60px #CA484F,
+    0 0 70px #CA484F,
+    0 0 80px #CA484F`
+  },
   btn: {
     background: "black",
     color: "white",
@@ -30,30 +40,9 @@ const PreviousSponsors = (props) => {
   const handleVisibility = (data) => {};
 
   return (
-    <>
-      <Container className={classes.root}>
-        <Typography gutterBottom={true} variant="h3">
-          <center>
-            <b>Sponsors</b>
-          </center>
-          <br />
-        </Typography>
-        <Box>
-          {" "}
-          <Typography gutterBottom={true} variant="h5">
-            <center>
-              <b>Coming Soon</b>
-              <br />
-              <br />
-              <Button variant="outlined" className={classes.button}>
-                Download Brochure
-              </Button>
-            </center>
-            <br />
-          </Typography>
-        </Box>
-      </Container>
-      <Container className={classes.root}>
+    <div id="sponsors">
+    <div>
+    <Container className={classes.root}>
         <Typography gutterBottom={true} variant="h3">
           <center>
             <b>Previous Sponsors</b>
@@ -63,8 +52,32 @@ const PreviousSponsors = (props) => {
         <Box>
           <Slides data={data} />
         </Box>
+    </Container>
+    </div>
+    <div className={classes.newsponsor}>
+    
+    <Container >
+        <Typography gutterBottom={true} variant="h3">
+          <center>
+            <b>Sponsors</b>
+          </center>
+          <br />
+        </Typography>
+        <Box>
+          {" "}
+          <Typography gutterBottom={true} variant="h2">
+            <center>
+              <b>Coming Soon</b><br/>
+            </center>
+            <br />
+          </Typography>
+        </Box>
       </Container>
-    </>
+
+    </div>
+      
+      
+    </div>
   );
 };
 
