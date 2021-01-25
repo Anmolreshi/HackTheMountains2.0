@@ -52,12 +52,9 @@ const About = () => {
             <Grid item xs={12} sm={12} md={6} lg={6} className={classes.left}>
               <Box >
                 <Typography variant="h4" gutterBottom={true}><b>What's this all about?</b></Typography>
-                <Typography variant="h5"> An online hackathon focussing on bringing wide range of people closer 
-                and create super cool things that the world needs. <br/><br/>
-                We at <b>Sudan's Tech</b> love to encourage people 
-                to build something great and useful, and we decided to take our hackathon to 2nd season, and bring you back, 
-                Hack The Mountains 2.0.
-        
+                <Typography variant="h5"> We are organizing an International Level Hackathon “HACK THE MOUNTAINS 2.O”  a 36 hour virtual Hackathon  by the First ever Tech community from Jammu And Kashmir “SUDAN’S TECH ” -  by the students and for the students.
+<br/><br/>
+SUDAN'S TECH is a Non profit Organization registered under government of india under section - 8 company rules which provides technical education to students. Our main focus is to provide technical education and make students industry ready.
                 </Typography>
               </Box>
             </Grid>
@@ -66,10 +63,8 @@ const About = () => {
                 <Box>
                   <Typography variant="h4" gutterBottom={true}><b>How do I signup?</b> </Typography>
                   <Typography variant="h5">
-                    Pre-Registrations are open now, you can pre register yourself 
-                    here.<br/> 
-                    We will be reaching you out soon at your inbox, with more updates 
-                    for Hack The Mountains.
+                   You can pre-register for the hackathon. Soon we will be opening 
+                   registration, where you can register yoursel. We will roll out instructions to register in the form of video tutorial as well as instructions even on our social handles.
         
                 </Typography>
                 </Box>

@@ -5,18 +5,26 @@ import { motion } from "framer-motion";
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Holder from "./components/holder"
+import BG from "./../../assets/backgrounds/greydots.svg"
 import { useJudges } from "../../hooks/airtable/judges";
 const useStyles = makeStyles({
   container: {
-    background: 'white',
+   
+    // backgroundImage:`url(${BG})`,
     paddingTop: '50px',
     paddingBottom: '50px',
-    border:'5px solid white',
-    color:'#202136'
+    color:'black',
+   
   },
-
- 
-
+  highlighter:{
+    textShadow: `0 0 20px #fff, 
+    0 0 30px #CA484F,
+    0 0 40px #CA484F,
+    0 0 50px #CA484F,
+    0 0 60px #CA484F,
+    0 0 70px #CA484F,
+    0 0 80px #CA484F`
+  }
 });
 
 const Judges = () => {
@@ -28,7 +36,10 @@ const Judges = () => {
       <Grid container>
 
         <Container>
-        <Typography variant="h4" gutterBottom={true}><b>Our Judges</b></Typography>
+        <Typography style={{textAlign:'center'}}
+        className={classes.highlighter}
+         variant="h4" gutterBottom={true}>
+          <b>Our Judges</b></Typography>
                 
           <Grid container spacing={4} >
            {/* {
@@ -42,9 +53,11 @@ const Judges = () => {
               </Grid>))
            }
            */}
-             <Typography variant="h4" gutterBottom={true}><b>
+           <Grid item xs={12} sm={12} md={12} lg={12}><br/><br/><br/><br/><br/>
+           <Typography style={{textAlign:'center'}} variant="h3" gutterBottom={true}><b>
                Coming Soon</b></Typography>
-       
+<br/><br/><br/><br/><br/>
+           </Grid>
 </Grid>
    
         </Container>

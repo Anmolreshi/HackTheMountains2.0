@@ -1,33 +1,33 @@
 import React from "react";
 import { Typography, Grid, Box, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import TeamCards from './components/teampage/index'
-import ReactPlayer from "react-player";
-import data from "./data";
+import TeamCards from './components/cards/index'
+import BG from "../../assets/backgrounds/greydots.svg"
+
 const useStyles = makeStyles({
   root: {
     padding: "35px",
-    backgroundColor: "black",
-    color: "#E9AE91"
+    backgroundColor: "#202136",
+    backgroundImage:`url(${BG})`,
+    color: "white"
   },
   container: {
     padding: "30px",
-    border: "1px solid #E9AE91",
     borderRadius: "5px"
   },
   head: {
     color: "#E9AE91"
   },
-  btn: {
-    background: "black",
-    color: "#E9AE91",
-    border: "1px solid #E9AE91",
-    borderRadius: "2px",
-    "&:hover": {
-      background: "#202136",
-      opacity: "0.7"
-    }
-  }
+highlighter:{
+  textAlign:'center', 
+  textShadow: `0 0 20px #fff, 
+  0 0 30px #CA484F,
+  0 0 40px #CA484F,
+  0 0 50px #CA484F,
+  0 0 60px #CA484F,
+  0 0 70px #CA484F,
+  0 0 80px #CA484F`
+}
 });
 const Tracks = (props) => {
   const classes = useStyles();
@@ -36,8 +36,8 @@ const Tracks = (props) => {
       <Box className={classes.container}>
         <Grid container>
           <Grid item xs={12} sm={12} lg={12} md={12}>
-            <Typography variant="h4" style={{textAlign:'center'}}>
-              Brought to you by our super cool team
+            <Typography variant="h4" className={classes.highlighter}>
+              <b>Brought to you by</b>
             </Typography>
           <TeamCards/>
           </Grid>

@@ -10,6 +10,10 @@ import Team from "./components/Team";
 import History from "./components/History";
 import PreviousSponsors from "./components/Sponsors/PreviousSponsors";
 import AboutUs from "./components/About"
+import Ribbon from "./components/ribbon"
+import Volunteer from "./components/Contribute/VolunteerRegistration"
+import Mentor from "./components/Contribute/MentorRegistration";
+import Speaker from "./components/Contribute/SpeakerRegistration"
 // import Sponsors from "./components/Sponsors/Sponsors";
 import Footer from "./components/Footer";
 import Schedule from "./components/Schedule"
@@ -17,7 +21,7 @@ import Registration from "./components/Registration"
 import Workshops from "./components/Workshops/homepage";
 import Contact from "./components/ContactUs"
 import WorkshopRoute from "./components/Workshops/page";
-import TeamRoute from "./components/Team/components/teampage";
+import TeamRoute from "./components/Team/components/cards";
 import "./styles.css";
 import { Box } from "@material-ui/core";
 
@@ -29,7 +33,7 @@ export default function App() {
         exact={true}
         children={
           <>
-       <PreLoader />     
+       {/* <PreLoader />      */}
             <Navbar />
             <Box>
               <Header />
@@ -41,13 +45,15 @@ export default function App() {
             
               {/* <Workshops /> */}
               <Team />
-         
+           
               <Contact/>
+              <Ribbon/>
               <Footer />
             </Box>
           </>
         }
       />
+      
       <Route
         path="/workshops"
         exact={true}
@@ -96,11 +102,54 @@ export default function App() {
             <Navbar />
             <Box>
               <FAQ/>
+              <Ribbon/>
               <Footer />
             </Box>
           </>
         }
       />  
+      <Route
+        path="/volunteer/register"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <Volunteer/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
+       <Route
+        path="/mentors/register"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <Mentor/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
+      <Route
+        path="/speakers/register"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <Speaker/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
     </Switch>
   );
 }

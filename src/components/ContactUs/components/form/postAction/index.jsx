@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 import Axios from "axios";
 import { makeStyles } from "@material-ui/styles";
-import { motion } from "framer-motion";
+
 const Form = () => {
     const [loading, setLoading] = useState(false);
     
@@ -33,7 +33,7 @@ const Form = () => {
         },
         left: {
             
-          
+        
            padding:'5px',
             
 
@@ -81,7 +81,7 @@ const Form = () => {
     };
    
     const classes = useStyles();
-    return (<Container>
+    return (
        
             <Grid container>
 
@@ -121,9 +121,11 @@ const Form = () => {
                     )}
 
                     {!loading && !success && (
-                        <form noValidate autoComplete="off">
+                        <form noValidate autoComplete="off"
+                        style={{'&:hover':{ transform: 'scaleX(1.4)'}}}>
                             <TextField
                             fullWidth
+                            style={{background:'white','&:hover':{ transform: 'scaleX(1.4)'}}}
                                 autoFocus={false}
                                 value={name}
                                 name="name"
@@ -140,6 +142,7 @@ const Form = () => {
                             <br />
                             <TextField
                             fullWidth
+                            style={{background:'white'}}
                                 value={email}
                                 name="email"
                                 id="outlined-basic"
@@ -179,7 +182,7 @@ const Form = () => {
                                 }}
                             >
                                 Ask your Query
-                            </Button>
+                            </Button><br/><br/>
                         </form>
                     )}
 
@@ -189,7 +192,7 @@ const Form = () => {
 
 
             </Grid>
-    </Container>
+  
     );
 };
 export default Form;

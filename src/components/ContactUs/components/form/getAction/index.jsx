@@ -59,13 +59,13 @@ const TicketStatus = () => {
         }
     };
     return (
-        <Container>
+    
         <Grid container spacing={0}>
             <Grid  item xs={12} md={12} lg={12} sm={12}>
-            <br />
-            <br />
+            
                 <TextField
                 className={classes.whiteBG}
+                id="textfield2"
                     required={true}
                     value={ticket}
                     name="ticket"
@@ -77,7 +77,10 @@ const TicketStatus = () => {
                         setTicket(e.target.value);
                     }}
                 /><br/><br/>
+                </Grid>
+                 <Grid  item xs={12} md={12} lg={12} sm={12}>
                 <Button
+                    
                     disableElevation
                     variant="contained"
                     color="primary"
@@ -90,8 +93,9 @@ const TicketStatus = () => {
                     }}
                 >
                     Check Status
-                </Button><br/><br/>
-                {
+                </Button></Grid>
+            <Grid item xs={12} md={12} lg={12} sm={12}>
+            <br/><br/>                {
              !ticket && !Tmessage && !Tstatus && !Tloading && (<Typography variant="h6">
                     <b>Here's the Chronology!</b><br />
                     {"->"} Ask your query,<br />
@@ -125,12 +129,9 @@ const TicketStatus = () => {
                 <Typography variant="h6" color="secondary" gutterBottom={true}>
                     {Tmessage}
                 </Typography>
-            )}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            </Grid>
-            
-
-           
-        </Grid></Container>
+            )}
+            </Grid>          
+        </Grid>
     )
 }
 
