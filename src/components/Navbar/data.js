@@ -1,39 +1,43 @@
 const data = [
   {
     name: "About",
-    path: "#about"
+    path: "season2/#about"
   },
   {
     name: "Tracks",
-    path: "#tracks"
-  },
-  {
-    name: "Schedule",
-    path: "schedule"
-  },
-  {
-    name: "Judges",
-    path: "#judges"
+    path: "season2/#tracks"
   },
   {
     name: "Sponsors",
-    path: "#sponsors"
-  },
-  {
-    name: "Team ",
-    path: "#team"
-  },
-  {
-    name: "Workshops",
-    path: "#workshops"
+    path: "season2/#sponsors"
   },
   {
     name: "Prizes",
-    path: "#prizes"
+    path: "season2/#prizes"
   },
+  {
+    name: "Judges",
+    path: "season2/#judges"
+  },
+  {
+    name: "Team ",
+    path: "season2/#team"
+  },
+  {
+    name: "Schedule",
+    path: "season2/schedule"
+  },
+  // {
+  //   name: "Workshops",
+  //   path: "season2/#workshops"
+  // },
   {
     name: "FAQ",
     path: "faq"
-  }
+  },
+  {
+    name: "Contact",
+    path: "season2/#contactus"
+  },
 ];
 export default data;

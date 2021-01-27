@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography, Hidden } from "@material-ui/core"
 import Form from "./components/postForm"
-import { TrendingUpOutlined } from "@material-ui/icons";
+
 export default function AlternateTimeline() {
   return (<Container>
     <br /><br /><br /><br />

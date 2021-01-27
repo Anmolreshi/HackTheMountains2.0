@@ -2,13 +2,13 @@ import React from "react";
 import { Grid, Typography, Container, Button, Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import variants from "../variants";
 import data from "./data";
 import BG from "./assets/bg.svg"
 // import MLH from "../Sponsors/assets/mlh.svg";
-import HTM from "./assets/htm.svg";
+// import HTM from "./assets/htm.svg";
 const useStyles = makeStyles({
   container: {
     background: "#202136",
@@ -41,13 +41,12 @@ const useStyles = makeStyles({
   },
   button: {
     color: "white",
-    background: "black",
+
     border: "1px solid white",
     zIndex: 0,
     textDecoration: 'none',
-    "&hover": {
-      background: "white",
-      color: "white",
+    "&:hover": {
+
       textDecoration: 'none',
     }
   },
@@ -70,7 +69,7 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const classes = useStyles();
   return (
     <motion.div
@@ -79,7 +78,7 @@ const Header = () => {
       transition={{ duration: 4 }}
     >
       <Hidden smDown>
-        <Grid className={classes.container} container>
+        <Grid className={classes.container} container id="top">
           <Container>
             <Grid container>
 
@@ -89,49 +88,66 @@ const Header = () => {
               <Grid containeritem xs={12} sm={12} md={7} lg={7}>
                 {/* Title */}
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                <Typography
-                  className={classes.heading}
-                  variant="h1"
-                >
-                  <b>{data.heading.line1} {data.version}</b>
-                </Typography>
+                  <Typography
+                    className={classes.heading}
+                    variant="h1"
+                  >
+                    <b>{data.heading.line1} {data.version}</b>
+                  </Typography>
                 </Grid>
                 {/* Moto */}
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                <Typography gutterBottom={true} variant="h5" >
-                  "{data.heading.line2}"
+                  <Typography gutterBottom={true} variant="h5" >
+                    "{data.heading.line2}"
               </Typography>
-              </Grid>
+                </Grid>
                 {/* Date */}
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                <Typography gutterBottom={true} variant="h5">
-                  <br /><b>{data.timeheading}</b>
-                </Typography>
+                  <Typography gutterBottom={true} variant="h5">
+                    <br /><b>{data.timeheading}</b>
+                  </Typography>
                 </Grid>
                 {/* Description */}
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                <Typography className={classes.desc} variant="h6">
-                  <b> {data.description}</b><br /><br />
-                </Typography>
+                  <Typography className={classes.desc} variant="h6">
+                    <b> {data.description}</b><br /><br />
+                  </Typography>
                 </Grid>
-                <Grid container item >
+                <Grid spacing={3} container item md={6} lg={6} >
                   {/* Participate Button */}
-                    <Grid item xs={12} sm={12} md={3} lg={3}>
-                      <Link to="/register">
-                        <Button variant="outlined" className={classes.button}>
-                          Pre Register
+                  <Grid item xs={12} sm={12} md={6} lg={6}>
+                    <Link to="/register">
+                      <Button fullWidth variant="outlined" style={{ background: "#641BFF" }} className={classes.button}>
+                        Pre Register
                         </Button>
-                      </Link>
-                    </Grid>{} 
+                    </Link>
+                  </Grid>{ }
                   {/* Brochure Button */}
-                    <Grid item xs={12} sm={12} md={3} lg={3} >
-                      <Link to="/register">
-                        <Button variant="outlined" className={classes.button}>
-                          Brochure
-                        </Button>
-                      </Link>
-                    </Grid><br /><br /><br /><br /><br /><br /><br />
+                  <Grid item xs={12} sm={12} md={6} lg={6} >
+                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1d5yR7ts7lR0P3Q4pL9W3JLJitmXTsvlO/view?usp=sharing">
+                      <Button fullWidth variant="outlined" className={classes.button}>
+                        Brochure
+                      </Button>
+                    </a>
                   </Grid>
+                  {/* Sponsor Button */}
+                  <Grid item xs={12} sm={12} md={12} lg={12} >
+                    <Link to="/sponsors/register">
+                      <Button fullWidth variant="outlined" className={classes.button}>
+                        Be A Sponsor
+                      </Button>
+                    </Link>
+                  </Grid>
+                  {/* Check Status Button */}
+                  <Grid item xs={12} sm={12} md={12} lg={12} >
+                    <Link to="/status">
+                      <Button fullWidth variant="outlined" style={{ color: 'white', border: "1px solid white" }}>
+                        Check Ticket Status
+                      </Button>
+                    </Link>
+                  </Grid>
+                  <br /><br /><br /><br /><br /><br /><br />
+                </Grid>
               </Grid>
 
 
@@ -142,34 +158,68 @@ const Header = () => {
       </Hidden>
       {/* Mobile View */}
       <Hidden mdUp>
-        <Grid className={classes.mobilecontainer} container>
+        <Grid className={classes.mobilecontainer} container id="top">
           <Container>
-            <Grid container>
+            <Grid container sm xs>
 
               <br /><br />
               {/* Title */}
-              <Typography
-
-                variant="h2"
-              >
-                <b>{data.heading.line1} {data.version}</b>
-              </Typography>
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <Typography
+                  className={classes.heading}
+                  variant="h1"
+                >
+                  <b>{data.heading.line1} {data.version}</b>
+                </Typography>
+              </Grid>
               {/* Moto */}
-              <Typography gutterBottom={true} variant="h5" >
-                "{data.heading.line2}"
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <Typography gutterBottom={true} variant="h5" >
+                  "{data.heading.line2}"
               </Typography>
+              </Grid>
               {/* Date */}
-              <Typography gutterBottom={true} variant="h5">
-                <b>{data.timeheading}</b>
-              </Typography>
-              {/* Participate Button */}
-              <Link to="/register">
-                <Button variant="outlined" className={classes.button}>
-                  Participate
-                </Button>
-              </Link>
-
-
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <Typography gutterBottom={true} variant="h5">
+                  <br /><b>{data.timeheading}</b><br/><br/>
+                </Typography>
+              </Grid>
+               
+              <Grid spacing={3} container item md={6} lg={6} >
+                  {/* Participate Button */}
+                  <Grid item xs={6} sm={6} md={6} lg={6}>
+                    <Link to="/register">
+                      <Button fullWidth variant="outlined" style={{ background: "#641BFF" }} className={classes.button}>
+                        Pre Register
+                        </Button>
+                    </Link>
+                  </Grid>{ }
+                  {/* Brochure Button */}
+                  <Grid item xs={6} sm={6} md={6} lg={6} >
+                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1d5yR7ts7lR0P3Q4pL9W3JLJitmXTsvlO/view?usp=sharing">
+                      <Button fullWidth variant="outlined" className={classes.button}>
+                        Brochure
+                      </Button>
+                    </a>
+                  </Grid>
+                  {/* Sponsor Button */}
+                  <Grid item xs={12} sm={12} md={12} lg={12} >
+                    <Link to="/sponsors/register">
+                      <Button fullWidth variant="outlined" className={classes.button}>
+                        Be A Sponsor
+                      </Button>
+                    </Link>
+                  </Grid>
+                  {/* Check Status Button */}
+                  <Grid item xs={12} sm={12} md={12} lg={12} >
+                    <Link to="/status">
+                      <Button fullWidth variant="outlined" style={{ color: 'white', border: "1px solid white" }}>
+                        Check Ticket Status
+                      </Button>
+                    </Link>
+                  </Grid>
+                  <br /><br /><br /><br /><br />
+                </Grid>
             </Grid>
           </Container>
         </Grid></Hidden>

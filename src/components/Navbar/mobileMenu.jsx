@@ -30,17 +30,7 @@ export default function SimpleBackdrop() {
       </Button>
       <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
         <Grid container>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
-            <Box p={1} style={{ textAlign: "center" }}>
-              <Typography
-                style={{ cursor: "pointer" }}
-                gutterBottom={true}
-                variant="subtitle1"
-              >
-                <b>X</b>
-              </Typography>
-            </Box>
-          </Grid>
+         
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Box>
               {data.map((item, index) => (

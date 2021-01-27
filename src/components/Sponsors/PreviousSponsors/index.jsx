@@ -1,7 +1,6 @@
 import React from "react";
-import { Typography, Box, Grid, Button, Container } from "@material-ui/core";
+import { Typography, Box, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import BG from "../../../assets/backgrounds/dots.svg"
 import { usePrevSponsors } from "../../../hooks/airtable/sponsors/previoussponsors";
 import Slides from "./Carousel";
 const useStyles = makeStyles({
@@ -17,7 +16,8 @@ const useStyles = makeStyles({
     background: "#202136",
     color:'white',
     padding:'25px',
-    backgroundImage:`url(${BG})`
+    backgroundImage: 'radial-gradient(grey 0.6px, transparent 0)',
+    backgroundSize:`15px 15px`,
   },
   btn: {
     background: "black",
@@ -28,21 +28,21 @@ const useStyles = makeStyles({
       opacity: "0.7"
     }
   },
-  highlighter:{
-    textShadow: `0 0 20px #fff, 
-    0 0 30px #CA484F,
-    0 0 40px #CA484F,
-    0 0 50px #CA484F,
-    0 0 60px #CA484F,
-    0 0 70px #CA484F,
-    0 0 80px #CA484F`
-  }
+  // highlighter:{
+  //   textShadow: `0 0 20px #fff, 
+  //   0 0 30px #CA484F,
+  //   0 0 40px #CA484F,
+  //   0 0 50px #CA484F,
+  //   0 0 60px #CA484F,
+  //   0 0 70px #CA484F,
+  //   0 0 80px #CA484F`
+  // }
 });
 const PreviousSponsors = (props) => {
   const data = usePrevSponsors();
-  const [visible, setVisible] = React.useState(false);
+  // const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
-  const handleVisibility = (data) => {};
+  // const handleVisibility = (data) => {};
 
   return (
     <div id="sponsors">
@@ -66,7 +66,7 @@ const PreviousSponsors = (props) => {
         gutterBottom={true} 
         variant="h4">
           <center>
-            <b>Sponsors, who made it possible</b>
+            <b>Our Sponsors</b>
           </center>
           <br />
         </Typography>

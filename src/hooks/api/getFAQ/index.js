@@ -12,7 +12,7 @@ const useFAQs = () => {
     });
 
     let { data } = res;
-    console.log(data);
+    
 
     setRepos(data.FAQ);
   };

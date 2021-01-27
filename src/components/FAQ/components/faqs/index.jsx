@@ -1,11 +1,11 @@
 import React from "react";
-import { Grid, Typography, Container, Button, Hidden } from "@material-ui/core";
+import { Grid, Typography, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
-import { useHistory } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom';
+// import { Link } from 'react-router-dom'
 import variants from "./../../../variants";
-import data from "./../../../Header/data";
+// import data from "./../../../Header/data";
 import BG from "./../../../Header/assets/bg.svg"
 import { useFAQs } from "../../../../hooks/api/getFAQ";
 // import MLH from "../Sponsors/assets/mlh.svg";
@@ -64,7 +64,7 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
-    const history = useHistory();
+    // const history = useHistory();
     const classes = useStyles();
     const faq_data= useFAQs();
     return (
@@ -76,14 +76,13 @@ const Header = () => {
       
                 <Grid container className={classes.container}>
                     <Container>
-                        <Grid container spacing={5}>
-                        <br/><br/><br/>
-                         
+                        <Grid container spacing={5} style={{ borderRadius:"2px"}}>                        
                             {faq_data.map((faq)=>{
                                 return(
-                                    <Grid container item xs={12} sm={12} lg={6} md={6}>
-                                            <Grid item xs={12} sm={12} lg={12} md={12}>
-                                                {faq.question}
+                                    <Grid                                   
+                                      container item xs={12} sm={12} lg={6} md={6}>
+                                            <Grid  item xs={12} sm={12} lg={12} md={12}>
+                                               <Typography  style={{borderBottom:'1px solid white'}} variant="h5"> <b>{faq.question.toUpperCase()}</b></Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={12} lg={12} md={12}>
                                                 {faq.answer}

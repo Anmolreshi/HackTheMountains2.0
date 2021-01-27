@@ -1,109 +1,117 @@
 import React from "react";
-import { Typography, Grid, Box, Hidden, Paper, Container } from "@material-ui/core";
+import { Typography, Grid, Button, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import BG from "./bg.svg"
-import MLH from "../../assets/placeholders/mlh-logo-color.png"
+import MLH from "../../assets/placeholders/mlh-logo-color.svg"
 const useStyles = makeStyles({
   root: {
     paddingTop: "88px",
     backgroundColor: '#202136',
-    backgroundImage: `url(${BG})`,
+    backgroundImage: 'radial-gradient(white 0.6px, transparent 0)',
+    backgroundSize: `15px 15px`,
     color: "white",
     paddingBottom: "88px",
     paddingLeft: "14px",
     paddingRight: "14px"
   },
-  statusBox: {
-    height: "100%",
-    border: '5px solid #202136',
-    background: '#CA484F'
+  items: {
+    '&:hover':{
+      opacity:'0.8',
+      cursor:'pointer',
+      border:'1px solid aqua',  
+      color:'aqua'
+    },
+    
   },
-  container: {
-    paddingTop: "22px",
-    paddingBottom: "22px",
-    paddingLeft: "12px",
-    paddingRight: "12px",
-    borderRadius: "5px",
-    margin: "5px",
-    textAlign: "center",
-    background: "rgba(0,0,0,0.6)"
-  }
+  button: {
+    color: "white",
+    background: "black",
+    border: "1px solid white",
+    zIndex: 0,
+    textDecoration: 'none',
+    "&hover": {
+      background: "white",
+      color: "white",
+      textDecoration: 'none',
+    }
+  },
 });
 const Tracks = () => {
   const classes = useStyles();
   return (
 
-    <Grid container className={classes.root}>
+    <div className={classes.root}>
       <Container>
-        <Grid container spacing={6}>
-        <Grid container item xs={12} sm={12} md={5} lg={5} spacing={6}>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
+        <Grid container>
+          <Grid item xs={12} sm={12} md={7} lg={7}>
             <Typography gutterBottom={true} variant="h2">
               Hack The Mountains 1.0<br />
             </Typography>
             <Typography variant="h6">
-            <b> League Partner for 1.0</b> <br />
-              <img src = {MLH} width="150px" height="70px"/ >
+              <b> League Partner for 1.0</b> <br />
+              <img alt="MLH LOGO" src={MLH} width="150px" height="70px" />
             </Typography>
+            <Typography  gutterBottom={true} variant="h6">
+              <br/> It was the first ever international hackathon, in the state of 
+            </Typography>
+            <Typography  gutterBottom={true} variant="h6">
+              Jammu and Kashmir, India <br/>
+            </Typography><br/>
+            <a target="_blank" rel="noopener noreferrer" href="http://season1.hackthemountain.tech/">
+                <Button variant="outlined" className={classes.button}>
+                  Know More
+                </Button>
+            </a><br/><br/>
           </Grid>
-           <Grid item xs={12} sm={12} md={12} lg={12} spacing={6}>
-            <Typography variant="h4">
-              Let's see few glimpses of our season 1 hackathon.
-            </Typography>
+          <Grid container spacing={3} item xs={12} sm={12} md={5} lg={5}>
+            <Grid item xs={12} sm={12} md={6} lg={6} >
+              <StatusBox name="Lines_Of_Code" count="50K+" bg="black"/>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} >
+              <StatusBox name="Worth Prizes" count="$30K+" bg="black" />
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} >
+              <StatusBox name="Workshops" count="40+" bg="black"/>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} >
+              <StatusBox name="Sponsors" count="50+" bg="black" />
+            </Grid>
           </Grid>
         </Grid>
-
-        <Grid container item xs={12} sm={12} md={6} lg={6} spacing={6}>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
-            <Typography variant="h4"style={{color:'aqua'}}>
-           50K+ Lines of Code<br/>
-             <br/>1300+ Registrations<br/>
-             <br/>160+  Impactful Projects<br/>
-             <br/>40+ Expert Sessions<br/>
-             <br/>10+ Prime Judges<br/>
-             <br/>50+ Sponsors<br/>
-        
-            </Typography>
-          </Grid>
-          
-        </Grid></Grid>
       </Container>
-    </Grid>
+    </div>
 
   );
 };
 export default Tracks;
 
-// Mastur
+
 const StatusBox = (props) => {
 
   const count = props.count;
-  const type = props.type;
   const name = props.name;
+  const bg = props.bg;
   const classes = useStyles();
 
-
   return (
-    <div >
-      <Grid container >
+    <div className={classes.items} style={{ cursor:'pointer', border:'1px solid white',borderRadius:'10px',background: bg, width:'100%', paddingTop:'20px' }}>
+      <Grid container  >
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <span style={{ fontSize: '50px', fontWeight: '200', textAlign: 'center' }}> {count}<span>
-            {
-              !type && "+"
-            }
-          </span>
-            <span>
-              {
-                type && "K+"
-              }
-            </span>
-          </span>
+          <Typography variant="h2" style={{ textAlign: 'center' }}>
+           {count}
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>
-          <Typography variant="h6">{name}</Typography>
+          <Typography variant="h6" style={{ textAlign: 'center' }} >{name}<br/><br/></Typography>
 
         </Grid>
       </Grid>
     </div>
   )
 }
+
+
+
+
+
+
+

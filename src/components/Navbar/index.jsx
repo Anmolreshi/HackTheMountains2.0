@@ -11,10 +11,9 @@ import {
 } from "@material-ui/core/";
 import { makeStyles } from "@material-ui/styles";
 import HTM from './htm.svg'
-import MLHBadge from "./mlh_Badge.svg"
+// import MLHBadge from "./mlh_Badge.svg"
 import { HashLink } from "react-router-hash-link";
 import data from "./data";
-import {Link} from "react-router-dom"
 import Backdrop from "./mobileMenu";
 const useStyles = makeStyles({
   root: {
@@ -34,7 +33,7 @@ const useStyles = makeStyles({
 });
 
 function ElevationScroll(props) {
-  const { children, window } = props;
+  const { children } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
@@ -67,14 +66,19 @@ export default function ElevateAppBar(props) {
             <Backdrop />
             
             <a href="/">
-            <span ><img src={HTM} height="50px" width="70px" style={{cursor:'pointer'}}/></span>
+            <span ><img alt="HTMLOGO" src={HTM} height="50px" width="70px" style={{cursor:'pointer'}}/></span>
            
             </a>
        
           </Hidden>
           <Hidden smDown>
             <Container>
-            <span id="HTMNav"><img src={HTM} height="50" width="80"/></span>
+            <span id="HTMNav">
+              <HashLink smooth
+                    to={`/season2#top`} >
+              <img alt="HTMLOGO" src={HTM} height="50" width="80"/>
+              </HashLink>
+              </span>
               <Box display="flex" flexDirection="row" justifyContent="flex-end">
               
                 {data.map((item, index) => (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Container, Button, Box } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
 import variants from "../../variants";

@@ -5,10 +5,11 @@ import { makeStyles } from "@material-ui/styles";
 // import { useHistory } from 'react-router-dom';
 
 
+
 // import { useJudges } from "../../hooks/airtable/judges";
 const useStyles = makeStyles({
   container: {
-    backgroundImage: 'radial-gradient(#202136 0.6px, transparent 0)',
+    backgroundImage: 'radial-gradient(#641BFF 1px, transparent 0)',
     backgroundSize: `15px 15px`,
     // backgroundImage:`url(${BG})`,
     paddingTop: '50px',
@@ -16,29 +17,30 @@ const useStyles = makeStyles({
     color: 'black',
 
   },
-  // highlighter: {
-  //   textShadow: `0 0 20px #1BC5FF, 
-  //   0 0 30px #1BC5FF,
-  //   0 0 40px #1BC5FF,
-  //   0 0 50px #1BC5FF,
-  //   0 0 60px #1BC5FF,
-  //   0 0 70px #1BC5FF,
-  //   0 0 80px #1BC5FF`
-  // }
+  highlighter: {
+    // textShadow: `0 0 20px aqua, 
+    // 0 0 30px aqua,
+    // 0 0 40px aqua,
+    // 0 0 50px aqua,
+    // 0 0 60px aqua,
+    // 0 0 70px aqua,
+    // 0 0 80px aqua`
+  }
 });
 
 const Judges = () => {
+  // const history = useHistory();
   const classes = useStyles();
   // const judge_data = useJudges();
   return (
-    <div id="judges" className={classes.container}>
+    <div id="prizes" className={classes.container}>
       <Grid container>
 
         <Container>
           <Typography style={{ textAlign: 'center' }}
             className={classes.highlighter}
             variant="h4" gutterBottom={true}>
-            <br/><b>Judges</b></Typography>
+           <br/> <b>Prizes</b></Typography>
 
           <Grid container spacing={4} >
             {/* {

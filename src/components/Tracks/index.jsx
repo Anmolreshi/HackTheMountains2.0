@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography, Grid, Box } from "@material-ui/core";
 import Holder from "./holders/";
-import BG from "./../../assets/backgrounds/blackdots.svg"
 import { makeStyles } from "@material-ui/styles";
 import { useTracks } from "../../hooks/airtable/tracks";
 const useStyles = makeStyles({
   background:{
-    backgroundImage:`url(${BG})`,
+    backgroundImage: 'radial-gradient(#202136 0.6px, transparent 0)',
+    backgroundSize:`15px 15px`,
   },
   root: {
     padding: "25px",
@@ -41,12 +41,12 @@ const Tracks = () => {
   let data2 = useTracks();
   const classes = useStyles();
   return (
-    <div className={classes.background}>
+    <div className={classes.background} id="tracks">
     <Box className={classes.root}>
       <Box className={classes.margin}>
         <center>
-          <Typography id="tracks" gutterBottom={true} variant="h3">
-            <b>Tracks</b>
+          <Typography  gutterBottom={true} variant="h3">
+          <br/>  <b>Tracks</b><br/><br/>
           </Typography>
          
         </center>

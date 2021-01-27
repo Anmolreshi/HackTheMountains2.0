@@ -1,26 +1,24 @@
 import React from "react";
-import { Grid, Typography, Container, Button, Hidden } from "@material-ui/core";
+import { Grid, Typography, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
-import { useHistory } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom';
+// import { Link } from 'react-router-dom'
 import FAQs from "./components/faqs"
 import variants from "../variants";
-import data from "./../Header/data";
-import BG from "./../Header/assets/bg.svg"
+// import data from "./../Header/data";
+// import BG from "./../Header/assets/bg.svg"
 // import MLH from "../Sponsors/assets/mlh.svg";
 
 const useStyles = makeStyles({
     container: {
         background: "#202136",
-        backgroundImage: `url(${BG})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: "300px 150px",
+        // backgroundImage: `url(${BG})`,
+   
         color: "white",
-        paddingBottom: "10%",
+
         paddingTop: "30px",
-        height: "100%"
+     
     },
     faqcontainer: {
         background: "#202136",
@@ -47,7 +45,7 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
-    const history = useHistory();
+    // const history = useHistory();
     const classes = useStyles();
     return (
         <motion.div
@@ -69,15 +67,14 @@ const Header = () => {
                             {/* FAQ Heading */}
                             <Grid item xs={12} sm={12} md={12} lg={12}>
                                 <Typography gutterBottom={true} variant="h3">
-                                    <br /><b>FAQ</b>
+                                    <br /><b>Frequently Asked Questions from Hackers.</b>
                                 </Typography>
                             </Grid>
                             {/* Description */}
                             <Grid item xs={12} sm={12} md={12} lg={12}>
                                 <Typography className={classes.desc} variant="h6">
-                                    <b>Find answers to some of the most asked questions to us!! </b><br /><br />
-                                    <br /><br /><br /><br /><br /><br />
-                                </Typography>
+                                    <b>Here are the answers to many of the common questions that hackers ask us about the hackathon.</b><br />
+                                <br/><br/></Typography>
                             </Grid>
                             
 
@@ -89,10 +86,10 @@ const Header = () => {
                 </Container>
             </Grid>
             {/* FAQs */}
-            <Grid  className={classes.faqcontainer}><br /><br /><br /><br />
+            <Grid  className={classes.faqcontainer}>
                 <Container>
                     <Grid container item xs={12} sm={12} md={12} lg={12}>
-                        <FAQs />
+                        <FAQs /><br/>
                     </Grid>
                 </Container>
             </Grid>

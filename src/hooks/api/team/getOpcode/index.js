@@ -12,7 +12,7 @@ const useOpcodes = () => {
     });
 
     let { data } = res;
-    console.log(data);
+    
     
     setRepos(data.op_code);
   };

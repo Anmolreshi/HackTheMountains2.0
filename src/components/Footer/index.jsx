@@ -11,7 +11,8 @@ const useStyles = makeStyles({
   container: {
     padding: "20px",
     backgroundColor: "#202136",
-    borderRadius: "5px"
+    borderRadius: "5px",
+    elevation:'none',
   },
   head: {
     color: "yellow"
@@ -38,7 +39,7 @@ const Tracks = (props) => {
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Grid container spacing={4}>
                   <Grid display="block" item xs={12} sm={12} md={6} lg={6}>
-                    <Card className={classes.container}>
+                    <Card className={classes.container} elevation={false}>
                       <center>
                         <img src={HTM} width="50%" alt="Footer" />
                       </center>
@@ -47,7 +48,7 @@ const Tracks = (props) => {
                   <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Typography gutterBottom={true} variant="h6">
                       Hack The Mountains
-                      <br /> Virtual, 10-11 October 2020 <br />
+                      <br /> Virtual, 15-16 May 2021 <br />
                       <a
                         style={{ textDecoration: "none", color: "#E9AE91" }}
                         href="https://www.instagram.com/hack_the_mountains/?hl=en"

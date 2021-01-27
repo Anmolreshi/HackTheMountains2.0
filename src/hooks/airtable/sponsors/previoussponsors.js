@@ -15,7 +15,7 @@ const usePrevSponsors = () => {
     });
 
     let { data } = res;
-    console.log(data);
+    
 
     let P = Promise.all(
       data.records.map(async (el) => {
@@ -28,9 +28,7 @@ const usePrevSponsors = () => {
         return d;
       })
     );
-
     let temp_repo = await P;
-    console.log(temp_repo);
     setRepos(temp_repo);
   };
 

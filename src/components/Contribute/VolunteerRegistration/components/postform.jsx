@@ -3,8 +3,7 @@ import {
     TextField,
     Button,
     Typography,
-    CircularProgress,
-    Checkbox
+    CircularProgress
 } from "@material-ui/core";
 import {PostAction} from "./../../postActions/postaction"
 

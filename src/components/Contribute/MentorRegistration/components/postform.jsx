@@ -3,8 +3,7 @@ import {
     TextField,
     Button,
     Typography,
-    CircularProgress,
-    Checkbox
+    CircularProgress
 } from "@material-ui/core";
 import {PostAction} from "../../postActions/postaction"
 
@@ -27,7 +26,6 @@ const Form = () => {
         resume:resume,
     }
     const sendResponse = async (data) => {
-     console.log(data);
         setLoading(true);
 
         const response = await PostAction(2, data)

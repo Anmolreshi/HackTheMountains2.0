@@ -1,14 +1,14 @@
 import React from "react";
-import { Typography, Grid, Box, Button } from "@material-ui/core";
+import { Typography, Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import TeamCards from './components/cards/index'
-import BG from "../../assets/backgrounds/greydots.svg"
 
 const useStyles = makeStyles({
   root: {
     padding: "35px",
     backgroundColor: "#202136",
-    backgroundImage:`url(${BG})`,
+    backgroundImage: 'radial-gradient(#676666 0.6px, transparent 0)',
+    backgroundSize:`15px 15px`,
     color: "white"
   },
   container: {
@@ -20,13 +20,13 @@ const useStyles = makeStyles({
   },
 highlighter:{
   textAlign:'center', 
-  textShadow: `0 0 20px #fff, 
-  0 0 30px #CA484F,
-  0 0 40px #CA484F,
-  0 0 50px #CA484F,
-  0 0 60px #CA484F,
-  0 0 70px #CA484F,
-  0 0 80px #CA484F`
+  // textShadow: `0 0 20px #fff, 
+  // 0 0 30px #CA484F,
+  // 0 0 40px #CA484F,
+  // 0 0 50px #CA484F,
+  // 0 0 60px #CA484F,
+  // 0 0 70px #CA484F,
+  // 0 0 80px #CA484F`
 }
 });
 const Tracks = (props) => {
@@ -37,7 +37,7 @@ const Tracks = (props) => {
         <Grid container>
           <Grid item xs={12} sm={12} lg={12} md={12}>
             <Typography variant="h4" className={classes.highlighter}>
-              <b>Brought to you by</b>
+              <b>Brought to by</b>
             </Typography>
           <TeamCards/>
           </Grid>

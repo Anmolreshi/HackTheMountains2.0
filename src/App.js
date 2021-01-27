@@ -7,9 +7,12 @@ import PreLoader from "./components/preLoader";
 import  Judges from './components/Judges'
 import Tracks from "./components/Tracks";
 import Team from "./components/Team";
-import History from "./components/History";
+import Prizes from "./components/Prizes"
+import History from "./components/History/index";
+import SponsorRequest from "./components/SponsorRequest"
 import PreviousSponsors from "./components/Sponsors/PreviousSponsors";
 import AboutUs from "./components/About"
+import Status from "./components/Status"
 import Ribbon from "./components/ribbon"
 import Volunteer from "./components/Contribute/VolunteerRegistration"
 import Mentor from "./components/Contribute/MentorRegistration";
@@ -18,10 +21,10 @@ import Speaker from "./components/Contribute/SpeakerRegistration"
 import Footer from "./components/Footer";
 import Schedule from "./components/Schedule"
 import Registration from "./components/Registration"
-import Workshops from "./components/Workshops/homepage";
+// import Workshops from "./components/Workshops/homepage";
 import Contact from "./components/ContactUs"
 import WorkshopRoute from "./components/Workshops/page";
-import TeamRoute from "./components/Team/components/cards";
+// import TeamRoute from "./components/Team/components/cards";
 import "./styles.css";
 import { Box } from "@material-ui/core";
 
@@ -33,7 +36,7 @@ export default function App() {
         exact={true}
         children={
           <>
-       {/* <PreLoader />      */}
+            <PreLoader />
             <Navbar />
             <Box>
               <Header />
@@ -41,6 +44,32 @@ export default function App() {
               <Tracks />
               <History />
               <PreviousSponsors />
+              <Prizes/>
+              <Judges/>
+
+              {/* <Workshops /> */}
+              <Team />
+           
+              <Contact/>
+              <Ribbon/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
+      <Route
+        path="/season2"
+        exact={true}
+        children={
+          <>
+            <Navbar />
+            <Box>
+              <Header />
+              <AboutUs/>
+              <Tracks />
+              <History />
+              <PreviousSponsors />
+              <Prizes/>
               <Judges/>
             
               {/* <Workshops /> */}
@@ -53,9 +82,8 @@ export default function App() {
           </>
         }
       />
-      
       <Route
-        path="/workshops"
+        path="/season2/workshops"
         exact={true}
         children={
           <>
@@ -67,7 +95,7 @@ export default function App() {
         }
       />
       <Route
-        path="/schedule"
+        path="/season2/schedule"
         exact={true}
         children={
           <>
@@ -145,6 +173,34 @@ export default function App() {
             <Navbar />
             <Box>
               <Speaker/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
+       <Route
+        path="/sponsors/register"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <SponsorRequest/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
+      <Route
+        path="/status"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <Status/>
               <Footer />
             </Box>
           </>

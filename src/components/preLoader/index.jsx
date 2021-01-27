@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Backdrop, LinearProgress } from "@material-ui/core";
+import {Backdrop } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
 import variants from "./../variants";
@@ -16,7 +16,6 @@ const PreLoader = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
   const [progress, setProgress] = React.useState(0);
-  const [buffer, setBuffer] = React.useState(10);
   const [opacity, setOpacity] = React.useState(0.1);
   const progressRef = React.useRef(() => {});
   React.useEffect(() => {
@@ -31,9 +30,7 @@ const PreLoader = () => {
     
       } else {
         const diff = Math.random() * 50;
-        const diff2 = Math.random() * 30;
         setProgress(progress + diff);
-        setBuffer(progress + diff + diff2);
         setOpacity(progress * 0.01);
       }
     };

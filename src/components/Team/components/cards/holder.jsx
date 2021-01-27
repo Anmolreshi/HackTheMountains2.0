@@ -1,5 +1,5 @@
-import { Box, Typography, Grid, Container } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Typography, Grid } from "@material-ui/core";
+
 import React from "react";
 const Holder = (props) => {
    
@@ -41,24 +41,12 @@ const Holder = (props) => {
                   }             
     ]
 
-const useStyles = makeStyles({
-  hoverClass: {
-    transition: "transform 1s",
-    '&:hover':{
-      cursor:'pointer',
-      boxShadow:`0px 0px 0px 0px,0px 0px 0px 0px,0px 0px 0px 0px`,
-      transition: "transform 0.7s",
-      transform: "scale(1.1,1.1)",
-      border:'3px solid white'
-    }
-  }
-});
 
   const getRole=(index)=>{
     const config = opcodes[index-1]
     return config.role;
   }
-  const classes = useStyles();
+
  const index = props.index;
   return (
     
@@ -79,6 +67,7 @@ const useStyles = makeStyles({
               target="_blank" style={{textDecoration:'none', color:"white"}} 
               href = {props.linkedin}>
             <img
+            alt="MEMBERS"
               src={props.image}
               width="150px"
               style={{ borderRadius:'100%' }}

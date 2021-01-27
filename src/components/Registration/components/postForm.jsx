@@ -3,8 +3,7 @@ import {
   TextField,
   Button,
   Typography,
-  CircularProgress,
-  Checkbox
+  CircularProgress
 } from "@material-ui/core";
 import Axios from "axios";
 
@@ -213,8 +212,3 @@ const Form = () => {
   );
 };
 export default Form;
-
-function validateEmail(email) {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}

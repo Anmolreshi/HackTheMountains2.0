@@ -1,4 +1,4 @@
-import { duration } from "@material-ui/core";
+
 
 const data = {
   heading: {
@@ -8,6 +8,11 @@ const data = {
   version: "2.0",
   timeheading: `15 May 2021 - 16 May 2021`,
   duration: "36",
-  description: `We are Coming up with a 36 hour Virtual Hackathon "Hack The Mountain  2.0" .It will Provide each one of you an platform where all developers , coders , innovators will come together and create new solutions to real life problems as well as Students can Increase their Network by interacting with Students and professionals around the globe.`
+  description: `We are coming up with a 36 hour virtual hackathon 
+  "Hack The Mountains  2.0".
+   Its a platform where people from diverse backgrounds
+   come together and create new solutions to real life problems as well as 
+   helps to grow one's network by interacting with other fellow students and professionals
+   around the globe. Its a people hackathon, open for all.`
 };
 export default data;

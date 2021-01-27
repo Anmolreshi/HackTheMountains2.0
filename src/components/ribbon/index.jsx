@@ -1,13 +1,13 @@
 import React from "react";
-import { Typography, Grid, Box, Hidden, Paper, Container } from "@material-ui/core";
+import { Typography, Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import BG from "../../assets/backgrounds/dots.svg"
 import { Link } from "react-router-dom";
 const useStyles = makeStyles({
     root: {
         paddingTop: "88px",
-        backgroundColor: '#202136',
-        backgroundImage: `url(${BG})`,
+        background:'#202136',
+        backgroundImage: 'radial-gradient(white 0.6px, transparent 0)',
+        backgroundSize:`15px 15px`,
         color: "white",
         paddingBottom: "88px",
         paddingLeft: "14px",
@@ -54,7 +54,6 @@ const Tracks = () => {
                         <Grid item xs={12} sm={12} md lg>
                             <Item name="Speaker" link="/speakers/register"/>
                         </Grid>
-                    
                 </Grid>
             </Container>
         </Grid>
@@ -68,8 +67,6 @@ const Item = (props) => {
 
     const link = props.link;
     const name = props.name;
-    const classes = useStyles();
-
 
     return (<Link to={link}>
         <div id="ribbon-items" style={{ textDecoration: 'none', color: 'black', background: "#E9AE91", padding: "15px", textAlign: 'center' }}>

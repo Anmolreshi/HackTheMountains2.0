@@ -15,7 +15,7 @@ const useJudges = () => {
     });
 
     let { data } = res;
-    console.log(typeof data);
+    
 
     let P = Promise.all(
       data.records.map(async (el) => {

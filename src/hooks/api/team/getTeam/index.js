@@ -12,7 +12,7 @@ const useTeams = () => {
     });
 
     let { data } = res;
-    console.log(data);
+
 
     setRepos(data.team_data);
   };

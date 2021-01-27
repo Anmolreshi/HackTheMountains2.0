@@ -1,9 +1,8 @@
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
 import Holder from "./holder.jsx";
 import { useTeams } from "../../../../hooks/api/team/getTeam";
-import { useOpcodes } from "../../../../hooks/api/team/getOpcode";
 
 const useStyles = makeStyles({
   root: {
@@ -14,7 +13,6 @@ const useStyles = makeStyles({
 });
 const Team = () => {
   const teamdata = useTeams();
-  const opcodes = useOpcodes();
   const classes = useStyles();
 
   // const getOpcode = (index,opcodes) => {
