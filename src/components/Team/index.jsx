@@ -37,7 +37,7 @@ const Tracks = (props) => {
         <Grid container>
           <Grid item xs={12} sm={12} lg={12} md={12}>
             <Typography variant="h4" className={classes.highlighter}>
-              <b>Brought to by</b>
+              <b>Brought to you by</b>
             </Typography>
           <TeamCards/>
           </Grid>

@@ -1,17 +1,16 @@
 import React from "react";
-import { Typography, Grid, Container } from "@material-ui/core";
+import { Typography, Grid, Container, Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 const useStyles = makeStyles({
     root: {
         paddingTop: "88px",
-        background:'#202136',
+        background: '#202136',
         backgroundImage: 'radial-gradient(white 0.6px, transparent 0)',
-        backgroundSize:`15px 15px`,
+        backgroundSize: `15px 15px`,
         color: "white",
         paddingBottom: "88px",
-        paddingLeft: "14px",
-        paddingRight: "14px",
+
 
     },
     statusBox: {
@@ -23,7 +22,6 @@ const useStyles = makeStyles({
         paddingTop: "22px",
         paddingBottom: "22px",
         paddingLeft: "12px",
-        paddingRight: "12px",
         borderRadius: "5px",
         margin: "5px",
         textAlign: "center",
@@ -36,24 +34,43 @@ const Tracks = () => {
 
         <Grid container className={classes.root}>
             <Container>
-                <Grid item xs={12} sm={12} md={12} lg={12} spacing={3}>
-                    <Typography variant="h4" style={{ textAlign: 'center' }}>
-                        Contribute!<br /><br />
-                    </Typography>
-                </Grid>
-                <Grid container item xs={12} sm={12} md={12} lg={12} spacing={6}>
-                   
-                        <Grid item xs={12} sm={12} md lg>
-                            <Item name="Volunteer"  link="/volunteer/register"/>
+                <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} spacing={3}>
+                        <Typography variant="h4" style={{ textAlign: 'center' }}>
+                            Contribute!<br /><br />
+                        </Typography>
+                    </Grid>
+                    <Hidden smDown>
+                        <Grid container style={{ textAlign: "center" }} item xs={12} sm={12} md={12} lg={12} spacing={4}>
+
+                            <Grid item xs={12} sm={12} md={4} lg={4}>
+                                <Item name="Volunteer" link="/volunteer/register" />
+                            </Grid>
+
+                            <Grid item xs={12} sm={12} md={4} lg={4}>
+                                <Item name="Mentor" link="/mentors/register" />
+                            </Grid>
+
+                            <Grid item xs={12} sm={12} md={4} lg={4}>
+                                <Item name="Speaker" link="/speakers/register" />
+                            </Grid>
                         </Grid>
-                   
-                        <Grid item xs={12} sm={12} md lg>
+                    </Hidden>
+                    <Hidden mdUp>
+                        <Grid style={{marginBottom:"20px"}} item xs={12} sm={12} md={4} lg={4}>
+                            <Item name="Volunteer" link="/volunteer/register" />
+                        </Grid>
+                        <Grid style={{marginBottom:"20px"}} item xs={12} sm={12} md={4} lg={4}>
                             <Item name="Mentor" link="/mentors/register" />
                         </Grid>
+                 
 
-                        <Grid item xs={12} sm={12} md lg>
-                            <Item name="Speaker" link="/speakers/register"/>
+                        <Grid style={{marginBottom:"20px"}} item xs={12} sm={12} md={4} lg={4}>
+                            <Item name="Speaker" link="/speakers/register" />
                         </Grid>
+                        
+                    </Hidden>
+
                 </Grid>
             </Container>
         </Grid>
@@ -69,12 +86,12 @@ const Item = (props) => {
     const name = props.name;
 
     return (<Link to={link}>
-        <div id="ribbon-items" style={{ textDecoration: 'none', color: 'black', background: "#E9AE91", padding: "15px", textAlign: 'center' }}>
+        <Grid item xs sm md lg id="ribbon-items" style={{ textDecoration: 'none', color: 'black', background: "#E9AE91", padding: "15px", textAlign: 'center' }}>
 
             <Typography variant="h6" style={{ textDecoration: 'none', color: 'black' }}>
                 <b>{name}</b>
             </Typography>
 
-        </div></Link>
+        </Grid></Link>
     )
 }

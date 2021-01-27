@@ -138,14 +138,14 @@ const Header = () => {
                       </Button>
                     </Link>
                   </Grid>
-                  {/* Check Status Button */}
+                  {/* Check Status Button
                   <Grid item xs={12} sm={12} md={12} lg={12} >
                     <Link to="/status">
                       <Button fullWidth variant="outlined" style={{ color: 'white', border: "1px solid white" }}>
                         Check Ticket Status
                       </Button>
                     </Link>
-                  </Grid>
+                  </Grid> */}
                   <br /><br /><br /><br /><br /><br /><br />
                 </Grid>
               </Grid>
@@ -210,14 +210,14 @@ const Header = () => {
                       </Button>
                     </Link>
                   </Grid>
-                  {/* Check Status Button */}
+                  {/* Check Status Button
                   <Grid item xs={12} sm={12} md={12} lg={12} >
                     <Link to="/status">
                       <Button fullWidth variant="outlined" style={{ color: 'white', border: "1px solid white" }}>
                         Check Ticket Status
                       </Button>
                     </Link>
-                  </Grid>
+                  </Grid> */}
                   <br /><br /><br /><br /><br />
                 </Grid>
             </Grid>

@@ -1,10 +1,30 @@
 import Axios from 'axios'
-const PostAction = async (role, data) => {
+const GenerateTicket = async (ticketType, data) => {
   try {
     let URI = ``;
     let id = ``;
-    // volunteer role
-    if (role === 1) {
+    //query ticket
+    if (ticketType === 0) {
+        id = `${process.env.REACT_APP_CONTACTUS_KEY}`;
+        URI = `https://api.airtable.com/v0/${id}/query`;
+        
+        const post_data ={
+            records: [
+                {
+                    fields: {
+                        name: data.name,
+                        Status: "In Queue",
+                        email: data.email,
+                        message: data.query
+                    }
+                }
+            ]
+        };
+        return sendData(URI, post_data);
+      }
+
+    // volunteer ticket
+    if (ticketType === 1) {
       id = `${process.env.REACT_APP_VOLUNTEER_KEY}`;
       URI = `https://api.airtable.com/v0/${id}/volunteers`;
       
@@ -23,8 +43,8 @@ const PostAction = async (role, data) => {
       };
       return sendData(URI, post_data);
     }
-    // mentor role
-    if (role === 2) {
+    // mentor ticket
+    if (ticketType === 2) {
       id = `${process.env.REACT_APP_MENTOR_KEY}`;
       URI = `https://api.airtable.com/v0/${id}/mentors`;
       const post_data = {
@@ -43,8 +63,8 @@ const PostAction = async (role, data) => {
       };
      return sendData(URI, post_data);
     }
-  // speaker role
-    if (role === 3) {
+  // speaker ticket
+    if (ticketType === 3) {
       id = `${process.env.REACT_APP_SPEAKER_KEY}`;
       URI = `https://api.airtable.com/v0/${id}/speakers`;
       const post_data = {
@@ -69,7 +89,7 @@ const PostAction = async (role, data) => {
 };
 
 async function sendData(URI, post_data) {
-  console.log(post_data)
+ 
   let res = await Axios({
     method: "POST",
     url: URI,
@@ -82,9 +102,9 @@ async function sendData(URI, post_data) {
   });
   let {data} =res;
   if(data.records[0].id)
-    return "success"
+    return data.records[0].id
   else 
     return "failure"
 }
 
-export {PostAction};
+export {GenerateTicket};

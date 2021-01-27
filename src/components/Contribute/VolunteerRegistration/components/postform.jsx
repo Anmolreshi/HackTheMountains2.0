@@ -5,7 +5,8 @@ import {
     Typography,
     CircularProgress
 } from "@material-ui/core";
-import {PostAction} from "./../../postActions/postaction"
+import {GenerateTicket} from "../../../../services/ticketGenerate.service"
+
 
 
 
@@ -17,6 +18,7 @@ const Form = () => {
     const [email, setEmail] = useState("");
     const [college, setCollege] = useState("");
     const [linkedin, setLinkedIn] = useState("");
+    const [ticket,setTicket] =useState("")
     const data = {
         name: name, 
         linkedin: linkedin,
@@ -27,13 +29,14 @@ const Form = () => {
      console.log(data);
         setLoading(true);
 
-        const response = await PostAction(1, data)
-        if (response === "success") {
+        const ticketGenerated = await GenerateTicket(1, data)
+        if (ticketGenerated) {
+            setTicket(ticketGenerated)
             setLoading(false)
             setSuccess(true);
-            setMessage("We got your volunteer application. Hold down, we will reach out to your inbox soon.")
+            setMessage("We got your volunteer application. You can check your status, using this volunteer ticket id:")
         }
-        if (response === "failure") {
+        if (ticketGenerated === "failure") {
             setLoading(false)
             setSuccess(true);
             setMessage("Something went wrong we are fixing it.")
@@ -42,8 +45,16 @@ const Form = () => {
     return (
 
         <>
-            <Typography color="secondary" gutterBottom={true}>
+            <Typography variant="h5" gutterBottom={true}>
                 {message}
+            </Typography>
+            <Typography color="secondary" variant="h5" gutterBottom={true}>
+                {ticket}
+               
+            </Typography>
+            <Typography  variant="h5" gutterBottom={true}>
+            {ticket && (<>Make Sure you copy it and keep it safe.</>)}
+               
             </Typography>
             <br />
             {loading && (

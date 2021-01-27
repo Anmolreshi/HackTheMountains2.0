@@ -6,8 +6,8 @@ const useStyles = makeStyles({
   root: {
     paddingTop: "88px",
     backgroundColor: '#202136',
-    backgroundImage: 'radial-gradient(white 0.6px, transparent 0)',
-    backgroundSize: `15px 15px`,
+    backgroundImage: 'radial-gradient(#676666 0.7px, transparent 0)',
+    backgroundSize:`15px 15px`,
     color: "white",
     paddingBottom: "88px",
     paddingLeft: "14px",

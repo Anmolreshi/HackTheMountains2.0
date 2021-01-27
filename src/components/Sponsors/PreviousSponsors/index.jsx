@@ -1,6 +1,7 @@
 import React from "react";
-import { Typography, Box, Container } from "@material-ui/core";
+import { Typography, Box, Container, Grid,Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import {Link} from 'react-router-dom'
 import { usePrevSponsors } from "../../../hooks/airtable/sponsors/previoussponsors";
 import Slides from "./Carousel";
 const useStyles = makeStyles({
@@ -76,7 +77,13 @@ const PreviousSponsors = (props) => {
             <center>
               <b>Coming Soon</b><br/><br/>
             </center>
-        
+            <Grid item xs={12} sm={12} md={12} lg={12} >
+                    <Link to="/sponsors/register">
+                      <Button fullWidth variant="outlined" style={{color:'white', border:'1px solid white',textDecoration:'none'}}>
+                        Be A Sponsor
+                      </Button>
+                    </Link>
+            </Grid>
           </Typography>
         </Box>
       </Container>
