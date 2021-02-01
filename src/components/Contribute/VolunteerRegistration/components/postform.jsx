@@ -6,6 +6,7 @@ import {
     CircularProgress
 } from "@material-ui/core";
 import {GenerateTicket} from "../../../../services/ticketGenerate.service"
+import ValidationService from '../../../../services/validationService';
 
 
 
@@ -19,6 +20,10 @@ const Form = () => {
     const [college, setCollege] = useState("");
     const [linkedin, setLinkedIn] = useState("");
     const [ticket,setTicket] =useState("")
+    const [namecolor, setnameColor] = useState("");
+  const [emailcolor, setemailColor] = useState("");
+  const [linkedincolor, setlinkedinColor] = useState("");
+
     const data = {
         name: name, 
         linkedin: linkedin,
@@ -70,6 +75,7 @@ const Form = () => {
                         autoFocus={true}
                         value={name}
                         name="name"
+                        style={{backgroundColor:`${namecolor}`}}
                         id="outlined-basic"
                         label="Name"
                         autoComplete={false}
@@ -77,6 +83,11 @@ const Form = () => {
                         required
                         onChange={(e) => {
                             setName(e.target.value);
+                            if(ValidationService(1,e.target.value)){
+                                setnameColor('#C4E4B1');
+                              }
+                              else
+                              setnameColor('#E4B1B1');
                         }}
                     />
                     <br />
@@ -88,10 +99,15 @@ const Form = () => {
                         id="outlined-basic"
                         label="Email"
                         variant="outlined"
+                        style={{backgroundColor:`${emailcolor}`}}
                         required
                         onChange={(e) => {
                             setEmail(e.target.value);
-
+                            if(ValidationService(0,e.target.value)){
+                                setemailColor('#C4E4B1');
+                              }
+                              else
+                              setemailColor('#E4B1B1');
                         }}
                     />
                     <br />
@@ -120,10 +136,16 @@ const Form = () => {
                         name="branch"
                         id="outlined-basic"
                         label="Linkedin Profile Link"
+                        style={{backgroundColor:`${linkedincolor}`}}
                         variant="outlined"
                         required
                         onChange={(e) => {
                             setLinkedIn(e.target.value);
+                            if(ValidationService(5,e.target.value)){
+                                setlinkedinColor('#C4E4B1');
+                              }
+                              else
+                              setlinkedinColor('#E4B1B1');
                         }}
                     />
                     <br />
@@ -137,9 +159,11 @@ const Form = () => {
                         disableElevation
                         variant="contained"
                         color="primary"
+                        
                         onClick={(e) => {
-                            sendResponse(data)
-                        }}
+                            if(ValidationService(1,name)&&ValidationService(0,email)&&college&&linkedin){
+                                sendResponse(data)
+                            }}}
                     >
                         Be A Volunteer
       </Button>

@@ -9,6 +9,7 @@ import {
     TextareaAutosize,
 } from "@material-ui/core";
 import Axios from "axios";
+import ValidationService from '../../../services/validationService';
 
 const Form = () => {
     const [loading, setLoading] = useState(false);
@@ -23,7 +24,9 @@ const Form = () => {
     const [mobile, setMobile] = useState("");
     const [help, setHelp] = useState("");
     const [Dticket, setDisplayTicket] = useState("");
-    
+    const [namecolor, setnameColor] = useState("");
+  const [emailcolor, setemailColor] = useState("");
+  const [contactcolor, setcontactColor] = useState("");
     
   
     const airtable_api = `${process.env.REACT_APP_AIRTABLE_API_KEY}`;
@@ -120,6 +123,7 @@ const Form = () => {
                                 autoFocus={false}
                                 value={name}
                                 name="name"
+                                style={{backgroundColor:`${namecolor}`}}
                                 id="outlined-basic"
                                 label="Your Name"
                                 autoComplete={false}
@@ -127,6 +131,11 @@ const Form = () => {
                                 required={true}
                                 onChange={(e) => {
                                     setName(e.target.value);
+                                    if(ValidationService(1,e.target.value)){
+                                        setnameColor('#C4E4B1');
+                                      }
+                                      else
+                                      setnameColor('#E4B1B1');
                                 }}
                             />
                             <br />
@@ -134,7 +143,7 @@ const Form = () => {
 {/* EMAIL */}
                             <TextField
                             fullWidth
-                            style={{background:'white'}}
+                            style={{backgroundColor:`${emailcolor}`}}
                                 value={email}
                                 name="email"
                                 id="outlined-basic"
@@ -143,6 +152,11 @@ const Form = () => {
                                 required
                                 onChange={(e) => {
                                     setEmail(e.target.value);
+                                    if(ValidationService(0,e.target.value)){
+                                        setemailColor('#C4E4B1');
+                                      }
+                                      else
+                                      setemailColor('#E4B1B1');
                                 }}
                             />
                             <br />
@@ -166,7 +180,7 @@ const Form = () => {
 {/* CONTACT NUMBER */}
                             <TextField
                             fullWidth
-                            style={{background:'white'}}
+                            style={{backgroundColor:`${contactcolor}`}}
                                 value={mobile}
                                 name="Contact No."
                                 id="outlined-basic"
@@ -175,6 +189,11 @@ const Form = () => {
                                 required
                                 onChange={(e) => {
                                     setMobile(e.target.value);
+                                    if(ValidationService(2,e.target.value)){
+                                        setcontactColor('#C4E4B1');
+                                      }
+                                      else
+                                      setcontactColor('#E4B1B1');
                                 }}
                             />
                             <br />
@@ -205,6 +224,10 @@ const Form = () => {
                                 onClick={(e) => {
                                     PostAction(name, email, org, mobile, help);
                                 }}
+                                onClick={(e) => {
+                                    if(ValidationService(1,name)&&ValidationService(0,email)&&org&&mobile&&help){
+                                        PostAction(name, email, org, mobile, help);
+                                    }}}
                             >
                                Be A Sponsor
                             </Button><br/><br/>
