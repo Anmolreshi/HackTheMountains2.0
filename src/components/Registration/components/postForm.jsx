@@ -6,6 +6,7 @@ import {
   CircularProgress
 } from "@material-ui/core";
 import Axios from "axios";
+import ValidationService from '../../../services/validationService';
 
 const Form = () => {
   const [loading, setLoading] = useState(false);
@@ -16,10 +17,16 @@ const Form = () => {
   const [contact, setContact] = useState("");
   const [college, setCollege] = useState("");
   const [branch, setBranch] = useState("");
+  const [namecolor, setnameColor] = useState("");
+  const [emailcolor, setemailColor] = useState("");
+  const [contactcolor, setcontactColor] = useState("");
+
 
   const airtable_api = `${process.env.REACT_APP_AIRTABLE_API_KEY}`;
   const id = `${process.env.REACT_APP_PRE_REGISTER_KEY}`;
   const formURI = `https://api.airtable.com/v0/${id}/pre`;
+
+
 
   const PostAction = async (email, name,contact,college,branch) => {
     try {
@@ -121,8 +128,15 @@ const Form = () => {
             autoComplete={false}
             variant="outlined"
             required
+            style={{backgroundColor:`${namecolor}`}}
             onChange={(e) => {
               setName(e.target.value);
+              
+              if(ValidationService(1,e.target.value)){
+                setnameColor('#C4E4B1');
+              }
+              else
+              setnameColor('#E4B1B1');
             }}
           />
           <br />
@@ -135,10 +149,15 @@ const Form = () => {
             label="Email"
             variant="outlined"
             required
+            style={{backgroundColor:`${emailcolor}`}}
             onChange={(e) => {
               setEmail(e.target.value);
-             
-            }}
+              if(ValidationService(0,e.target.value)){
+                setemailColor('#C4E4B1');
+              }
+              else
+              setemailColor('#E4B1B1');
+            }}       
           />
           <br />
           <br />{" "}
@@ -149,10 +168,16 @@ const Form = () => {
             name="contact"
             id="outlined-basic"
             label="Contact"
+            style={{backgroundColor:`${contactcolor}`}}
             variant="outlined"
             required
             onChange={(e) => {
               setContact(e.target.value);
+              if(ValidationService(2,e.target.value)){
+                setcontactColor('#C4E4B1');
+              }
+              else
+              setcontactColor('#E4B1B1');
             }}
           />
           <br />
@@ -198,7 +223,9 @@ const Form = () => {
             variant="contained"
             color="primary"
             onClick={(e) => {
-              PostAction(email, name, contact, college, branch);
+              if(ValidationService(1,name)&&ValidationService(0,email)&&college&&contact&&college&&branch){
+                PostAction(email, name, contact, college, branch);
+              }
             }}
           >
            Pre- Register

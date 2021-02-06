@@ -6,6 +6,7 @@ import {
     CircularProgress
 } from "@material-ui/core";
 import {GenerateTicket} from "../../../../services/ticketGenerate.service"
+import ValidationService from '../../../../services/validationService';
 
 
 
@@ -19,6 +20,10 @@ const Form = () => {
     const [topic, setTopic] = useState("");
     const [linkedin, setLinkedIn] = useState("");
     const [ticket,setTicket] =useState("")
+    const [namecolor, setnameColor] = useState("");
+    const [emailcolor, setemailColor] = useState("");
+    const [contactcolor, setcontactColor] = useState("");
+    const [linkedincolor, setlinkedinColor] = useState("");
     const data = {
         name: name, 
         linkedin: linkedin,
@@ -76,9 +81,17 @@ const Form = () => {
                         autoComplete={false}
                         variant="outlined"
                         required
+                        style={{backgroundColor:`${namecolor}`}}
                         onChange={(e) => {
-                            setName(e.target.value);
-                        }}
+                        setName(e.target.value);
+                        
+                                if(ValidationService(1,e.target.value)){
+                                    setnameColor('#C4E4B1');
+                                }
+                                else
+                                setnameColor('#E4B1B1');
+                        }}   
+                        
                     />
                     <br />
                     <br />
@@ -90,10 +103,16 @@ const Form = () => {
                         label="Email"
                         variant="outlined"
                         required
+                        style={{backgroundColor:`${emailcolor}`}}
                         onChange={(e) => {
-                            setEmail(e.target.value);
-
+                        setEmail(e.target.value);
+                            if(ValidationService(0,e.target.value)){
+                                setemailColor('#C4E4B1');
+                            }
+                            else
+                            setemailColor('#E4B1B1');
                         }}
+                      
                     />
                     <br />
                     <br />{" "}
@@ -109,9 +128,16 @@ const Form = () => {
                         placeholder="+91000111223"
                         variant="outlined"
                         required
+                        style={{backgroundColor:`${contactcolor}`}}
                         onChange={(e) => {
                             setMobile(e.target.value);
+                            if(ValidationService(2,e.target.value)){
+                                setcontactColor('#C4E4B1');
+                            }
+                            else
+                            setcontactColor('#E4B1B1');
                         }}
+                        
                     />
                     <br />
                     <br />{" "}
@@ -124,9 +150,16 @@ const Form = () => {
                         label="Linkedin Profile Link"
                         variant="outlined"
                         required
+                        style={{backgroundColor:`${linkedincolor}`}}
                         onChange={(e) => {
-                            setLinkedIn(e.target.value);
+                        setLinkedIn(e.target.value);
+                        if(ValidationService(5,e.target.value)){
+                            setlinkedinColor('#C4E4B1');
+                        }
+                        else
+                        setlinkedinColor('#E4B1B1');
                         }}
+                        
                     />
                     <br />
                     <br />{" "}
