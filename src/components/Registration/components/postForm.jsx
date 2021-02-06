@@ -157,8 +157,9 @@ const Form = () => {
               }
               else
               setemailColor('#E4B1B1');
-            }}
-           
+
+            }}       
+
           />
           <br />
           <br />{" "}
@@ -227,8 +228,6 @@ const Form = () => {
               if(ValidationService(1,name)&&ValidationService(0,email)&&college&&contact&&college&&branch){
                 PostAction(email, name, contact, college, branch);
               }
-              
-              
             }}
           >
            Pre- Register
