@@ -124,7 +124,7 @@ const Header = () => {
                   </Grid>{ }
                   {/* Brochure Button */}
                   <Grid item xs={12} sm={12} md={6} lg={6} >
-                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1d5yR7ts7lR0P3Q4pL9W3JLJitmXTsvlO/view?usp=sharing">
+                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1-K1JkZJP7x6eTr09SdWqlSEk_XoqRfnx/view">
                       <Button fullWidth variant="outlined" className={classes.button}>
                         Brochure
                       </Button>
@@ -196,7 +196,7 @@ const Header = () => {
                   </Grid>{ }
                   {/* Brochure Button */}
                   <Grid item xs={6} sm={6} md={6} lg={6} >
-                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1d5yR7ts7lR0P3Q4pL9W3JLJitmXTsvlO/view?usp=sharing">
+                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1-K1JkZJP7x6eTr09SdWqlSEk_XoqRfnx/view">
                       <Button fullWidth variant="outlined" className={classes.button}>
                         Brochure
                       </Button>
