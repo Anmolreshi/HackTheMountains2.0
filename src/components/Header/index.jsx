@@ -113,7 +113,20 @@ const Header = () => {
                     <b> {data.description}</b><br /><br />
                   </Typography>
                 </Grid>
+                
                 <Grid spacing={3} container item md={6} lg={6} >
+                
+                 {/* Devfolio Button Desktop */}
+                 <Grid item xs={12} sm={12} md={12} lg={12} >
+                    <div
+                      className="apply-button"
+                      data-hackathon-slug="hack-the-mountains-o"
+                      data-button-theme="light"
+                      style={{ height: "44px" }}
+                    ></div><br/><br/>
+                  </Grid>
+
+                
                   {/* Participate Button */}
                   <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Link to="/register">
@@ -130,6 +143,8 @@ const Header = () => {
                       </Button>
                     </a>
                   </Grid>
+                 
+
                   {/* Sponsor Button */}
                   <Grid item xs={12} sm={12} md={12} lg={12} >
                     <Link to="/sponsors/register">
@@ -181,36 +196,45 @@ const Header = () => {
               {/* Date */}
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Typography gutterBottom={true} variant="h5">
-                  <br /><b>{data.timeheading}</b><br/><br/>
+                  <br /><b>{data.timeheading}</b><br /><br />
                 </Typography>
               </Grid>
-               
+              {/* Devfolio Button Desktop */}
+              <Grid item xs={12} sm={12} md={12} lg={12} >
+                <div
+                  className="apply-button"
+                  data-hackathon-slug="hack-the-mountains-o"
+                  data-button-theme="light"
+                  style={{ height: "44px" }}
+                ></div><br/><br/>
+              </Grid>
               <Grid spacing={3} container item md={6} lg={6} >
-                  {/* Participate Button */}
-                  <Grid item xs={6} sm={6} md={6} lg={6}>
-                    <Link to="/register">
-                      <Button fullWidth variant="outlined" style={{ background: "#641BFF" }} className={classes.button}>
-                        Pre Register
+                {/* Participate Button */}
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Link to="/register">
+                    <Button fullWidth variant="outlined" style={{ background: "#641BFF" }} className={classes.button}>
+                      Pre Register
                         </Button>
-                    </Link>
-                  </Grid>{ }
-                  {/* Brochure Button */}
-                  <Grid item xs={6} sm={6} md={6} lg={6} >
-                    <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1-K1JkZJP7x6eTr09SdWqlSEk_XoqRfnx/view">
-                      <Button fullWidth variant="outlined" className={classes.button}>
-                        Brochure
+                  </Link>
+                </Grid>{ }
+                {/* Brochure Button */}
+                <Grid item xs={6} sm={6} md={6} lg={6} >
+                  <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1-K1JkZJP7x6eTr09SdWqlSEk_XoqRfnx/view">
+                    <Button fullWidth variant="outlined" className={classes.button}>
+                      Brochure
                       </Button>
-                    </a>
-                  </Grid>
-                  {/* Sponsor Button */}
-                  <Grid item xs={12} sm={12} md={12} lg={12} >
-                    <Link to="/sponsors/register">
-                      <Button fullWidth variant="outlined" className={classes.button}>
-                        Be A Sponsor
+                  </a>
+                </Grid>
+
+                {/* Sponsor Button */}
+                <Grid item xs={12} sm={12} md={12} lg={12} >
+                  <Link to="/sponsors/register">
+                    <Button fullWidth variant="outlined" className={classes.button}>
+                      Be A Sponsor
                       </Button>
-                    </Link>
-                  </Grid>
-                  {/* Check Status Button
+                  </Link>
+                </Grid>
+                {/* Check Status Button
                   <Grid item xs={12} sm={12} md={12} lg={12} >
                     <Link to="/status">
                       <Button fullWidth variant="outlined" style={{ color: 'white', border: "1px solid white" }}>
@@ -218,8 +242,8 @@ const Header = () => {
                       </Button>
                     </Link>
                   </Grid> */}
-                  <br /><br /><br /><br /><br />
-                </Grid>
+                <br /><br /><br /><br /><br />
+              </Grid>
             </Grid>
           </Container>
         </Grid></Hidden>
