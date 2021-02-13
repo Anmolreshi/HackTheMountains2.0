@@ -1,24 +1,27 @@
 import React from "react";
-import { Typography, Box, Container, Grid,Button } from "@material-ui/core";
+import { Typography, Box, Container, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Matic from './assets/matic.png';
+import Portis from './assets/portis.png';
+import Tezos from './assets/tezos.png';
 import { usePrevSponsors } from "../../../hooks/airtable/sponsors/previoussponsors";
 import Slides from "./Carousel";
 const useStyles = makeStyles({
   root: {
     padding: "25px",
-  
+
   },
   container: {
     padding: "20px",
     borderRadius: "5px"
   },
-  newsponsor:{
+  newsponsor: {
     background: "#202136",
-    color:'white',
-    padding:'25px',
+    color: 'white',
+    padding: '25px',
     backgroundImage: 'radial-gradient(grey 0.6px, transparent 0)',
-    backgroundSize:`15px 15px`,
+    backgroundSize: `15px 15px`,
   },
   btn: {
     background: "black",
@@ -47,50 +50,68 @@ const PreviousSponsors = (props) => {
 
   return (
     <div id="sponsors">
-    <div>
-    <Container className={classes.root}>
-        <Typography gutterBottom={true} variant="h3">
-          <center>
-            <b>Previous Sponsors</b>
-          </center>
-          <br />
-        </Typography>
-        <Box>
-          <Slides data={data} />
-        </Box>
-    </Container>
-    </div>
-    <div className={classes.newsponsor}>
-    
-    <Container >
-        <Typography className={classes.highlighter} 
-        gutterBottom={true} 
-        variant="h4">
-          <center>
-            <b>Our Sponsors</b>
-          </center>
-          <br />
-        </Typography>
-        <Box>
-          {" "}
-          <Typography gutterBottom={true} variant="h2">
+      <div>
+        <Container className={classes.root}>
+          <Typography gutterBottom={true} variant="h3">
             <center>
-              <b>Coming Soon</b><br/><br/>
+              <b>Previous Sponsors</b>
             </center>
-            <Grid item xs={12} sm={12} md={12} lg={12} >
-                    <Link to="/sponsors/register">
-                      <Button fullWidth variant="outlined" style={{color:'white', border:'1px solid white',textDecoration:'none'}}>
-                        Be A Sponsor
-                      </Button>
-                    </Link>
-            </Grid>
+            <br />
           </Typography>
-        </Box>
-      </Container>
+          <Box>
+            <Slides data={data} />
+          </Box>
+        </Container>
+      </div>
+      <div className={classes.newsponsor}>
 
-    </div>
-      
-      
+        <Container >
+          <Typography className={classes.highlighter}
+            gutterBottom={true}
+            variant="h4">
+            <center>
+              <b>Our Sponsors</b>
+            </center>
+            <br />
+          </Typography>
+
+          <Box>
+            {" "}
+            <Typography gutterBottom={true} variant="h2">
+              <center>
+                <b><span style={{color:'gold'}}>Gold Partners</span></b><br />
+              </center>
+
+            </Typography>
+            <Grid style={{textAlign:'center'}} container spacing={2}>
+
+              <Grid  item xs={12} sm={12} md={4} lg={4} >
+                <img src={Matic} width="50%" />
+              </Grid>
+              <Grid item xs={12} sm={12} md={4} lg={4} >
+                <img src={Portis} width="50%"  />
+              </Grid>
+              <Grid item xs={12} sm={12} md={4} lg={4} >
+                <img src={Tezos} width="50%"  />
+              </Grid>
+            </Grid>
+
+
+            <Grid item xs={12} sm={12} md={12} lg={12} >
+            <br/><br/>
+              <Link to="/sponsors/register">
+                <Button fullWidth variant="outlined" style={{ color: 'white', border: '1px solid white', textDecoration: 'none' }}>
+                  Be A Sponsor
+                      </Button>
+              </Link>
+            </Grid>
+          </Box>
+
+        </Container>
+
+      </div>
+
+
     </div>
   );
 };

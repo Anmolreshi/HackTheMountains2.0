@@ -45,9 +45,34 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
-</body>
 
+  </body>
+  <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+
+<!-- <script>
+  // Initialize elements and events
+document.addEventListener('DOMContentLoaded', function () {
+    let devfolioOptions = {
+        buttonSelector: '#devfolio-apply-now',
+        key: 'hack-the-mountains-o', // put the hackathon key here
+    }
+
+    let script = document.createElement('script');
+    script.src = "https://apply.devfolio.co";
+    document.head.append(script);
+
+    script.onload = function () {
+        new Devfolio(devfolioOptions);
+    }
+
+    script.onerror = function () {
+        document.querySelector(devfolioOptions.buttonSelector).addEventListener('click', function () {
+            window.location.href = 'https://devfolio.co/external-apply/' + devfolioOptions.key;
+        });
+    }
+});
+
+</script> -->
 </html>
 <style>
   * {

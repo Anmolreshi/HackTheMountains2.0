@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     backgroundImage: `url(${BG})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: "300px 150px",
+    backgroundPosition: "300px 130px",
     color: "white",
     paddingBottom: "10%",
     paddingTop: "30px",
@@ -113,20 +113,21 @@ const Header = () => {
                     <b> {data.description}</b><br /><br />
                   </Typography>
                 </Grid>
-                
+
                 <Grid spacing={3} container item md={6} lg={6} >
-                
-                 {/* Devfolio Button Desktop */}
-                 <Grid item xs={12} sm={12} md={12} lg={12} >
+
+                  {/* Devfolio Button Desktop */}
+                  <Grid item xs={12} sm={12} md={12} lg={12}>
                     <div
+                      id="devfolio-apply-now"
                       className="apply-button"
                       data-hackathon-slug="hack-the-mountains-o"
                       data-button-theme="light"
-                      style={{ height: "44px" }}
-                    ></div><br/><br/>
+            
+                    >
+                    </div><br />
                   </Grid>
 
-                
                   {/* Participate Button */}
                   <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Link to="/register">
@@ -143,7 +144,7 @@ const Header = () => {
                       </Button>
                     </a>
                   </Grid>
-                 
+
 
                   {/* Sponsor Button */}
                   <Grid item xs={12} sm={12} md={12} lg={12} >
@@ -161,7 +162,7 @@ const Header = () => {
                       </Button>
                     </Link>
                   </Grid> */}
-                  <br /><br /><br /><br /><br /><br /><br />
+                  <br /><br /><br /><br /><br />
                 </Grid>
               </Grid>
 
@@ -206,7 +207,7 @@ const Header = () => {
                   data-hackathon-slug="hack-the-mountains-o"
                   data-button-theme="light"
                   style={{ height: "44px" }}
-                ></div><br/><br/>
+                ></div><br /><br />
               </Grid>
               <Grid spacing={3} container item md={6} lg={6} >
                 {/* Participate Button */}
