@@ -1,7 +1,8 @@
 import React from "react";
 import { Typography, Box, Container, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Devfolio from "./assets/devfolio.png"
 import Matic from './assets/matic.png';
 import Portis from './assets/portis.png';
 import Tezos from './assets/tezos.png';
@@ -79,26 +80,45 @@ const PreviousSponsors = (props) => {
             {" "}
             <Typography gutterBottom={true} variant="h2">
               <center>
-                <b><span style={{color:'gold'}}>Gold Partners</span></b><br />
+                <b><span style={{ color: 'gold' }}>Gold Partners</span></b><br />
               </center>
-
             </Typography>
-            <Grid style={{textAlign:'center'}} container spacing={2}>
+            <Typography variant="h4"> <center>
+              Coming Soon</center><br/><br/><br/>
+            </Typography>
+            <Typography gutterBottom={true} variant="h2">
+              <center>
+                <b><span style={{ color: 'diamond' }}>Diamond Partners</span></b><br /><br/>
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: 'center' }} container spacing={2}>
 
-              <Grid  item xs={12} sm={12} md={4} lg={4} >
+              <Grid item xs={12} sm={12} md={4} lg={4} >
+                <img src={Devfolio} width="50%" />
+              </Grid>
+           
+            </Grid>
+            <Typography gutterBottom={true} variant="h2"><br/><br/>
+              <center>
+                <b><span style={{color:'silver'}}>Silver Partners</span></b><br /><br/>
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: 'center' }} container spacing={2}>
+
+              <Grid item xs={12} sm={12} md={4} lg={4} >
                 <img src={Matic} width="50%" />
               </Grid>
               <Grid item xs={12} sm={12} md={4} lg={4} >
-                <img src={Portis} width="50%"  />
+                <img src={Portis} width="50%" />
               </Grid>
               <Grid item xs={12} sm={12} md={4} lg={4} >
-                <img src={Tezos} width="50%"  />
+                <img src={Tezos} width="50%" />
               </Grid>
             </Grid>
 
 
             <Grid item xs={12} sm={12} md={12} lg={12} >
-            <br/><br/>
+              <br /><br />
               <Link to="/sponsors/register">
                 <Button fullWidth variant="outlined" style={{ color: 'white', border: '1px solid white', textDecoration: 'none' }}>
                   Be A Sponsor
