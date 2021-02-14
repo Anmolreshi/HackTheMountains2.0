@@ -86,7 +86,7 @@ const PreviousSponsors = (props) => {
             <Grid style={{ textAlign: 'center' }} container spacing={2}>
 
               <Grid item xs={12} sm={12} md={4} lg={4} >
-                <img src={Devfolio} width="50%" />
+                <a href="https://devfolio.co/" rel="noopener noreferrer" target="_blank"><img src={Devfolio} width="50%" /></a>
               </Grid>
            
             </Grid><br/><br/>
@@ -105,15 +105,14 @@ const PreviousSponsors = (props) => {
               </center>
             </Typography>
             <Grid style={{ textAlign: 'center' }} container spacing={2}>
-
               <Grid item xs={12} sm={12} md={4} lg={4} >
-                <img src={Matic} width="50%" />
+                <a href="https://matic.network/" rel="noopener noreferrer" target="_blank"><img src={Matic} width="50%" /></a>
               </Grid>
               <Grid item xs={12} sm={12} md={4} lg={4} >
-                <img src={Portis} width="50%" />
+                <a href="https://www.portis.io/" rel="noopener noreferrer" target="_blank"><img src={Portis} width="50%" /></a>
               </Grid>
               <Grid item xs={12} sm={12} md={4} lg={4} >
-                <img src={Tezos} width="50%" />
+                <a href="https://tezos.com/" rel="noopener noreferrer" target="_blank"><img src={Tezos} width="50%" /></a>
               </Grid>
             </Grid>
 
