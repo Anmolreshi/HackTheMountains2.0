@@ -80,15 +80,7 @@ const PreviousSponsors = (props) => {
             {" "}
             <Typography gutterBottom={true} variant="h2">
               <center>
-                <b><span style={{ color: 'gold' }}>Gold Partners</span></b><br />
-              </center>
-            </Typography>
-            <Typography variant="h4"> <center>
-              Coming Soon</center><br/><br/><br/>
-            </Typography>
-            <Typography gutterBottom={true} variant="h2">
-              <center>
-                <b><span style={{ color: 'diamond' }}>Diamond Partners</span></b><br /><br/>
+                <b><span style={{ color: 'diamond' }}>Diamond Partners</span></b><br />
               </center>
             </Typography>
             <Grid style={{ textAlign: 'center' }} container spacing={2}>
@@ -97,8 +89,17 @@ const PreviousSponsors = (props) => {
                 <img src={Devfolio} width="50%" />
               </Grid>
            
-            </Grid>
-            <Typography gutterBottom={true} variant="h2"><br/><br/>
+            </Grid><br/><br/>
+            <Typography gutterBottom={true} variant="h2">
+              <center>
+                <b><span style={{ color: 'gold' }}>Gold Partners</span></b><br />
+              </center>
+            </Typography>
+            <Typography variant="h4"> <center>
+              Coming Soon</center><br/><br/><br/>
+            </Typography>
+            
+            <Typography gutterBottom={true} variant="h2"><br/>
               <center>
                 <b><span style={{color:'silver'}}>Silver Partners</span></b><br /><br/>
               </center>
