@@ -121,7 +121,7 @@ const Header = () => {
                     <div
                       id="devfolio-apply-now"
                       className="apply-button"
-                      data-hackathon-slug="hack-the-mountains-o"
+                      data-hackathon-slug="hackthemountains2"
                       data-button-theme="light"
             
                     >
@@ -204,7 +204,7 @@ const Header = () => {
               <Grid item xs={12} sm={12} md={12} lg={12} >
                 <div
                   className="apply-button"
-                  data-hackathon-slug="hack-the-mountains-o"
+                  data-hackathon-slug="hackthemountains2"
                   data-button-theme="light"
                   style={{ height: "44px" }}
                 ></div><br /><br />
