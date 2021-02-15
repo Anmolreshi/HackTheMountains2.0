@@ -78,19 +78,23 @@ const PreviousSponsors = (props) => {
 
           <Box>
             {" "}
-            <Typography gutterBottom={true} variant="h2">
+            <Typography gutterBottom={true} variant="h3">
               <center>
                 <b><span style={{ color: 'diamond' }}>Diamond Partners</span></b><br />
               </center>
             </Typography>
             <Grid style={{ textAlign: 'center' }} container spacing={2}>
 
-              <Grid item xs={12} sm={12} md={4} lg={4} >
-                <a href="https://devfolio.co/" rel="noopener noreferrer" target="_blank"><img src={Devfolio} width="50%" /></a>
+              <Grid item xs={12} sm={12} md={12} lg={12} >
+                <center>
+                <a href="https://devfolio.co/" rel="noopener noreferrer" target="_blank"><img src={Devfolio} width="20%" /></a>
+                </center>
               </Grid>
            
-            </Grid><br/><br/>
-            <Typography gutterBottom={true} variant="h2">
+            </Grid>
+            {/* 
+            <br/><br/>
+           <Typography gutterBottom={true} variant="h2">
               <center>
                 <b><span style={{ color: 'gold' }}>Gold Partners</span></b><br />
               </center>
@@ -99,7 +103,9 @@ const PreviousSponsors = (props) => {
               Coming Soon</center><br/><br/><br/>
             </Typography>
             
-            <Typography gutterBottom={true} variant="h2"><br/>
+            */}
+            
+            <Typography gutterBottom={true} variant="h3"><br/>
               <center>
                 <b><span style={{color:'silver'}}>Silver Partners</span></b><br /><br/>
               </center>
