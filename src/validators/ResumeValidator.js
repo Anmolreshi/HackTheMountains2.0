@@ -1,8 +1,8 @@
-export default function ValidateResume(profile) 
+export default function ValidateResume(profile)
 {
- if (/^(https?:\/\/)?(www\.)?[a-zA-Z0-9_]{1,25}$/igm .test(profile))
-  {
-    return (true)
-  }
-    return (false)
+if (/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/igm .test(profile))
+{
+return (true)
+}
+return (false)
 }
