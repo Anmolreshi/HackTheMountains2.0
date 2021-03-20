@@ -39,7 +39,7 @@ const Form = () => {
             setTicket(ticketGenerated)
             setLoading(false)
             setSuccess(true);
-            setMessage("We got your volunteer application. You can check your status, using this volunteer ticket id:")
+            setMessage("We got your ambassador application. You can check your status, using this hack ambassador ticket id:")
         }
         if (ticketGenerated === "failure") {
             setLoading(false)
