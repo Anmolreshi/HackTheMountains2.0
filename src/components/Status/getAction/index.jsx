@@ -59,7 +59,7 @@ const TicketStatus = () => {
                 >
                     
                     <MenuItem value={1}>Query</MenuItem>
-                    <MenuItem value={2}>Volunteer</MenuItem>
+                    <MenuItem value={2}>Hack Ambassador</MenuItem>
                     <MenuItem value={3}>Mentor</MenuItem>
                     <MenuItem value={4}>Speaker</MenuItem>
                     <MenuItem value={5}>Sponsor</MenuItem>
