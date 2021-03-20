@@ -165,7 +165,7 @@ const Form = () => {
                                 sendResponse(data)
                             }}}
                     >
-                        Be A Volunteer
+                        Be A Hack Ambassador
       </Button>
                 </form>
 
