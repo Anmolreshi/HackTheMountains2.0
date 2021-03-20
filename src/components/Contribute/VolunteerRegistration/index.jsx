@@ -8,7 +8,7 @@ export default function AlternateTimeline() {
       <Grid container spacing={5} >
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <Typography gutterBottom={true} variant="h4">
-            Be a Volunteer.<br/>
+            Be a Hack Ambassador.<br/>
             We care about our Hackathon not your data!
       </Typography>
           <Typography gutterBottom={true} variant="h6">
