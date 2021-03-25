@@ -1,13 +1,13 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
 
-const AIRTABLE_URI = `https://api.airtable.com/v0/${process.env.REACT_APP_PARTNERS_KEY}/media?maxRecords=300&view=Grid%20view`;
+const AIRTABLE_URI = `https://api.airtable.com/v0/${process.env.REACT_APP_PARTNERS_KEY}/silver?maxRecords=300&view=Grid%20view`;
 
-const useMPs = () => {
+const useSPs = () => {
   const [repos, setRepos] = useState([]);
   const token = process.env.REACT_APP_AIRTABLE_API_KEY;
 
-  const getMPs = async () => {
+  const getSPs = async () => {
     let res = await Axios({
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
@@ -33,10 +33,10 @@ const useMPs = () => {
   };
 
   useEffect(() => {
-    getMPs();
+    getSPs();
   }, []);
 
   return repos;
 };
 
-export { useMPs };
+export { useSPs };

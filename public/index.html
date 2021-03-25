@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
     top: 0px;
     left:90%
   }
-  #teamM, #judge{
+  #teamM, #judge, #partners{
     /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
       filter: gray; /* IE5+ */
       -webkit-filter: grayscale(0.7); /* Webkit Nightlies & Chrome Canary */
@@ -150,6 +150,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     #textfield2{
       -webkit-transition: all 2s ease-in-out;  
+    }
+    #partners:hover {
+    filter: none;
+      -webkit-transform: scale(1.1);
     }
 </style>
 

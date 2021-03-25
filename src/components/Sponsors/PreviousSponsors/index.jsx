@@ -1,27 +1,28 @@
 import React from "react";
 import { Typography, Box, Container, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import { Link } from 'react-router-dom';
-import Devfolio from "./assets/devfolio.png"
-import Matic from './assets/matic.png';
-import Portis from './assets/portis.png';
-import Tezos from './assets/tezos.png';
+import { Link } from "react-router-dom";
+import Devfolio from "./assets/devfolio.png";
+
 import { usePrevSponsors } from "../../../hooks/airtable/sponsors/previoussponsors";
-import Slides from "./Carousel";
+// import Slides from "./Carousel";
+import { useMPs } from "../../../hooks/airtable/partners/Media";
+import { useEPs } from "../../../hooks/airtable/partners/Event";
+import { useCPs } from "../../../hooks/airtable/partners/Community";
+import { useSPs } from "../../../hooks/airtable/partners/silver";
 const useStyles = makeStyles({
   root: {
     padding: "25px",
-
   },
   container: {
     padding: "20px",
-    borderRadius: "5px"
+    borderRadius: "5px",
   },
   newsponsor: {
-    background: "#202136",
-    color: 'white',
-    padding: '25px',
-    backgroundImage: 'radial-gradient(grey 0.6px, transparent 0)',
+    background: "white",
+    color: "#3C3E66",
+    padding: "25px",
+    backgroundImage: "radial-gradient(grey 0.6px, transparent 0)",
     backgroundSize: `15px 15px`,
   },
   btn: {
@@ -30,11 +31,11 @@ const useStyles = makeStyles({
     borderRadius: "2px",
     "&:hover": {
       background: "#202136",
-      opacity: "0.7"
-    }
+      opacity: "0.7",
+    },
   },
   // highlighter:{
-  //   textShadow: `0 0 20px #fff, 
+  //   textShadow: `0 0 20px #fff,
   //   0 0 30px #CA484F,
   //   0 0 40px #CA484F,
   //   0 0 50px #CA484F,
@@ -45,6 +46,10 @@ const useStyles = makeStyles({
 });
 const PreviousSponsors = (props) => {
   const data = usePrevSponsors();
+  const mediaPartners = useMPs();
+  const eventPartners = useEPs();
+  const communityPartners = useCPs();
+  const silverPartners = useSPs();
   // const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
   // const handleVisibility = (data) => {};
@@ -52,7 +57,7 @@ const PreviousSponsors = (props) => {
   return (
     <div id="sponsors">
       <div>
-        <Container className={classes.root}>
+        {/* <Container className={classes.root}>
           <Typography gutterBottom={true} variant="h3">
             <center>
               <b>Previous Sponsors</b>
@@ -62,14 +67,15 @@ const PreviousSponsors = (props) => {
           <Box>
             <Slides data={data} />
           </Box>
-        </Container>
+        </Container> */}
       </div>
       <div className={classes.newsponsor}>
-
-        <Container >
-          <Typography className={classes.highlighter}
+        <Container>
+          <Typography
+            className={classes.highlighter}
             gutterBottom={true}
-            variant="h4">
+            variant="h4"
+          >
             <center>
               <b>Our Sponsors</b>
             </center>
@@ -80,17 +86,24 @@ const PreviousSponsors = (props) => {
             {" "}
             <Typography gutterBottom={true} variant="h3">
               <center>
-                <b><span style={{ color: 'diamond' }}>Diamond Partners</span></b><br />
+                <b>
+                  <span style={{ color: "diamond" }}>Diamond Partners</span>
+                </b>
+                <br />
               </center>
             </Typography>
-            <Grid style={{ textAlign: 'center' }} container spacing={2}>
-
-              <Grid item xs={12} sm={12} md={12} lg={12} >
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              <Grid item xs={12} sm={12} md={12} lg={12}>
                 <center>
-                <a href="https://devfolio.co/" rel="noopener noreferrer" target="_blank"><img src={Devfolio} width="20%" /></a>
+                  <a
+                    href="https://devfolio.co/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={Devfolio} width="20%" />
+                  </a>
                 </center>
               </Grid>
-           
             </Grid>
             {/* 
             <br/><br/>
@@ -104,40 +117,132 @@ const PreviousSponsors = (props) => {
             </Typography>
             
             */}
-            
-            <Typography gutterBottom={true} variant="h3"><br/>
+            <Typography gutterBottom={true} variant="h3">
+              <br />
               <center>
-                <b><span style={{color:'silver'}}>Silver Partners</span></b><br /><br/>
+                <b>
+                  <span>Silver Partners</span>
+                </b>
+                <br />
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+            {silverPartners.map((partner) => (
+                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
+                  <a
+                   
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))
+            }
+            </Grid>
+            {/* <Typography gutterBottom={true} variant="h3"><br/>
+              <center>
+                <b><span style={{color:'silver'}}>Bronze Partners</span></b><br /><br/>
               </center>
             </Typography>
             <Grid style={{ textAlign: 'center' }} container spacing={2}>
               <Grid item xs={12} sm={12} md={4} lg={4} >
-                <a href="https://matic.network/" rel="noopener noreferrer" target="_blank"><img src={Matic} width="50%" /></a>
               </Grid>
-              <Grid item xs={12} sm={12} md={4} lg={4} >
-                <a href="https://www.portis.io/" rel="noopener noreferrer" target="_blank"><img src={Portis} width="50%" /></a>
-              </Grid>
-              <Grid item xs={12} sm={12} md={4} lg={4} >
-                <a href="https://tezos.com/" rel="noopener noreferrer" target="_blank"><img src={Tezos} width="50%" /></a>
-              </Grid>
+            </Grid> */}
+            <Typography gutterBottom={true} variant="h3">
+              <br />
+              <center>
+                <b>
+                  <span>Media Partner</span>
+                </b>
+                <br />
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {mediaPartners.map((partner) => (
+                <Grid id="partners" item xs sm md>
+                  <a
+                  className="partners"
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img  src={partner.image} width="50%" style={{borderRadius:'10px'}}/>
+                  </a>
+                </Grid>
+              ))}
             </Grid>
-
-
-            <Grid item xs={12} sm={12} md={12} lg={12} >
-              <br /><br />
+            <Typography gutterBottom={true} variant="h3">
+              <br />
+              <center>
+                <b>
+                  <span>Event Partners</span>
+                </b>
+                <br />
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {eventPartners.map((partner) => (
+                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
+                  <a
+                   
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))}
+            </Grid>
+            <Typography gutterBottom={true} variant="h3">
+              <br />
+              <center>
+                <b>
+                  <span>Community Partners</span>
+                </b>
+                <br />
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {communityPartners.map((partner) => (
+                <Grid id="partners" item xs={12} sm={3} md={3}>
+                  <a
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))}
+            </Grid>
+            
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+              <br />
+              <br />
               <Link to="/sponsors/register">
-                <Button fullWidth variant="outlined" style={{ color: 'white', border: '1px solid white', textDecoration: 'none' }}>
+                <Button
+                  fullWidth
+                  variant="outlined"
+                  style={{
+                    color: "white",
+                    border: "1px solid white",
+                    textDecoration: "none",
+                  }}
+                >
                   Be A Sponsor
-                      </Button>
+                </Button>
               </Link>
             </Grid>
           </Box>
-
         </Container>
-
       </div>
-
-
     </div>
   );
 };

@@ -53,6 +53,12 @@ export default function SimpleBackdrop() {
                   </HashLink>
                 </Box>
               ))}
+              <Box>
+              <a style={{textDecoration:'none'}} href="https://live.hackthemountain.tech/">
+                 <Typography  className={classes.onhover} gutterBottom={true} variant="subtitle2">
+                       <b>Workshops</b> {" "}
+                  </Typography></a>
+              </Box>
             </Box>
           </Grid>
         </Grid>

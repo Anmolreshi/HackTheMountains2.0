@@ -93,12 +93,17 @@ export default function ElevateAppBar(props) {
                       smooth
                       to={`/${item.path}`}
                     >
-                      <Typography  className={classes.onhover} gutterBottom={true} variant="subtitle1">
+                      <Typography  className={classes.onhover} gutterBottom={true} variant="subtitle2">
                        <b>{item.name}</b> {" "}
                       </Typography>
                     </HashLink>
                   </Box>
                 ))}
+                <Box  p={1}>
+                <a style={{textDecoration:'none'}} href="https://live.hackthemountain.tech/">
+                 <Typography  className={classes.onhover} gutterBottom={true} variant="subtitle2">
+                       <b>Workshops</b> {" "}
+                  </Typography></a></Box>
               </Box>
               {/* <span id="MLHBadge">
                 <img src={MLHBadge} height="150" width="180"/>
