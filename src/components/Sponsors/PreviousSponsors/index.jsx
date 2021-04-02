@@ -10,6 +10,7 @@ import { useMPs } from "../../../hooks/airtable/partners/Media";
 import { useEPs } from "../../../hooks/airtable/partners/Event";
 import { useCPs } from "../../../hooks/airtable/partners/Community";
 import { useSPs } from "../../../hooks/airtable/partners/silver";
+import { useEDPs } from "../../../hooks/airtable/partners/Educational";
 const useStyles = makeStyles({
   root: {
     padding: "25px",
@@ -50,6 +51,7 @@ const PreviousSponsors = (props) => {
   const eventPartners = useEPs();
   const communityPartners = useCPs();
   const silverPartners = useSPs();
+  const educationalPartners = useEDPs();
   // const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
   // const handleVisibility = (data) => {};
@@ -100,7 +102,7 @@ const PreviousSponsors = (props) => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img src={Devfolio} width="20%" />
+                    <img src={Devfolio} width="50%" />
                   </a>
                 </center>
               </Grid>
@@ -222,6 +224,34 @@ const PreviousSponsors = (props) => {
                 </Grid>
               ))}
             </Grid>
+
+
+
+            <Typography gutterBottom={true} variant="h3">
+              <br />
+              <center>
+                <b>
+                  <span>Educational Partners</span>
+                </b>
+                <br />
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {educationalPartners.map((partner) => (
+                <Grid id="partners" item xs={12} sm={3} md={3}>
+                  <a
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))}
+            </Grid>
+
+
             
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <br />
