@@ -273,8 +273,8 @@ const PreviousSponsors = (props) => {
                   fullWidth
                   variant="outlined"
                   style={{
-                    color: "white",
-                    border: "1px solid white",
+                    color: "#3C3E66",
+                    border: "1px solid #3C3E66",
                     textDecoration: "none",
                   }}
                 >
