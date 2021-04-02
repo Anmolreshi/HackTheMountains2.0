@@ -88,9 +88,11 @@ const PreviousSponsors = (props) => {
             {" "}
             <Typography gutterBottom={true} variant="h3">
               <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
                 <b>
                   <span style={{ color: "diamond" }}>Diamond Partners</span>
                 </b>
+                
                 <br />
               </center>
             </Typography>
@@ -122,9 +124,11 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
                 <b>
                   <span>Silver Partners</span>
                 </b>
+                
                 <br />
                 <br />
               </center>
@@ -156,9 +160,11 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
                 <b>
                   <span>Media Partner</span>
                 </b>
+               
                 <br />
                 <br />
               </center>
@@ -180,9 +186,11 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
                 <b>
                   <span>Event Partners</span>
                 </b>
+               
                 <br />
                 <br />
               </center>
@@ -204,9 +212,11 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
                 <b>
                   <span>Community Partners</span>
                 </b>
+           
                 <br />
                 <br />
               </center>
@@ -230,9 +240,11 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
                 <b>
                   <span>Educational Partners</span>
                 </b>
+              
                 <br />
                 <br />
               </center>
@@ -261,8 +273,8 @@ const PreviousSponsors = (props) => {
                   fullWidth
                   variant="outlined"
                   style={{
-                    color: "white",
-                    border: "1px solid white",
+                    color: "#3C3E66",
+                    border: "1px solid #3C3E66",
                     textDecoration: "none",
                   }}
                 >
