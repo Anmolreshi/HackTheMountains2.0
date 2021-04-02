@@ -65,7 +65,7 @@ const About = () => {
               <Grid item xs={12} sm={12} md={12} lg={12} className={classes.rightup}>
                 <Box>
                   <Typography variant="h5"  style={{textAlign:'center'}} gutterBottom={true}><b>How do I signup?</b> </Typography>
-                  <Typography variant="h5">
+                  <Typography variant="h6">
                    You can pre-register for the hackathon. Soon we will be opening 
                    registration, where you can register yourself. We will roll out instructions to register in the form of video tutorial as well as instructions even on our social handles.
         
