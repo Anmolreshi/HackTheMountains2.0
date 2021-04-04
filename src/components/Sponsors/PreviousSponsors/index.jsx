@@ -11,6 +11,7 @@ import { useEPs } from "../../../hooks/airtable/partners/Event";
 import { useCPs } from "../../../hooks/airtable/partners/Community";
 import { useSPs } from "../../../hooks/airtable/partners/silver";
 import { useEDPs } from "../../../hooks/airtable/partners/Educational";
+import { usePartners } from "../../../hooks/airtable/partners/partner";
 const useStyles = makeStyles({
   root: {
     padding: "25px",
@@ -52,6 +53,7 @@ const PreviousSponsors = (props) => {
   const communityPartners = useCPs();
   const silverPartners = useSPs();
   const educationalPartners = useEDPs();
+  const Partners =  usePartners();
   // const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
   // const handleVisibility = (data) => {};
@@ -209,6 +211,34 @@ const PreviousSponsors = (props) => {
                 </Grid>
               ))}
             </Grid>
+            
+            <Typography gutterBottom={true} variant="h3">
+              <br />
+              <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <b>
+                  <span>Partners</span>
+                </b>
+               
+                <br />
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {Partners.map((partner) => (
+                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
+                  <a
+                   
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))}
+            </Grid>
+
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
@@ -251,7 +281,7 @@ const PreviousSponsors = (props) => {
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {educationalPartners.map((partner) => (
-                <Grid id="partners" item xs={12} sm={3} md={3}>
+                <Grid id="partners" item xs sm md>
                   <a
                     href={partner.link}
                     rel="noopener noreferrer"
