@@ -217,7 +217,7 @@ const PreviousSponsors = (props) => {
               <center>
               <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
                 <b>
-                  <span>Event Partners</span>
+                  <span>Partners</span>
                 </b>
                
                 <br />
