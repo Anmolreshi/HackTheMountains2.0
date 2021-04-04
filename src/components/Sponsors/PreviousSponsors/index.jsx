@@ -253,7 +253,7 @@ const PreviousSponsors = (props) => {
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {communityPartners.map((partner) => (
-                <Grid id="partners" item xs sm md>
+                <Grid id="partners" item xs={12} sm={3} md={3}>
                   <a
                     href={partner.link}
                     rel="noopener noreferrer"
@@ -281,7 +281,7 @@ const PreviousSponsors = (props) => {
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {educationalPartners.map((partner) => (
-                <Grid id="partners" item xs={12} sm={3} md={3}>
+                <Grid id="partners" item xs sm md>
                   <a
                     href={partner.link}
                     rel="noopener noreferrer"
