@@ -12,7 +12,7 @@ export default function AlternateTimeline() {
       </Typography>
           <Typography gutterBottom={true} variant="h6">
            Be a part of an impact.<br/><br/> We had over 50+ prime sponsors, last season.
-           You can see our brochure <a target="_blank" rel="noopener noreferrer"href="https://drive.google.com/file/d/1d5yR7ts7lR0P3Q4pL9W3JLJitmXTsvlO/view?usp=sharing">here</a>
+           You can see our brochure <a target="_blank" rel="noopener noreferrer"href="https://drive.google.com/file/d/1-K1JkZJP7x6eTr09SdWqlSEk_XoqRfnx/view?usp=sharing">here</a>
       </Typography>
           <Hidden smDown>
             <Typography gutterBottom={true} variant="p">
