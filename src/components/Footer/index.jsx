@@ -48,7 +48,7 @@ const Tracks = (props) => {
                   <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Typography gutterBottom={true} variant="h6">
                       Hack The Mountains
-                      <br /> Virtual, 15-16 May 2021 <br />
+                      <br /> Virtual, 26 - 27 June 2021 <br />
                       <a
                         style={{ textDecoration: "none", color: "#E9AE91" }}
                         href="https://www.instagram.com/hack_the_mountains/?hl=en"
