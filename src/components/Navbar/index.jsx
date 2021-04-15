@@ -100,7 +100,7 @@ export default function ElevateAppBar(props) {
                   </Box>
                 ))}
                 <Box  p={1}>
-                <a style={{textDecoration:'none'}} href="https://live.hackthemountain.tech/">
+                <a style={{textDecoration:'none',color:"#434040"}} href="https://live.hackthemountain.tech/">
                  <Typography  className={classes.onhover} gutterBottom={true} variant="subtitle2">
                        <b>Workshops</b> {" "}
                   </Typography></a></Box>

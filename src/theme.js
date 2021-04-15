@@ -24,6 +24,11 @@ const theme = createMuiTheme({
       fontSize: "22px",
       fontFamily: "Montserrat",
       fontWeight: 4
+    },
+    subtitle2: {
+      fontSize: "16px",
+      fontFamily: "Montserrat",
+      fontWeight: 4
     }
   }
 });
