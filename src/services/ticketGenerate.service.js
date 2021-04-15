@@ -35,8 +35,9 @@ const GenerateTicket = async (ticketType, data) => {
               "name": data.name,
               "email": data.email,
               "linkedin": data.linkedin,
-              "college":data.college,
-              "Status": "Your volunteer application is in queue."
+              "college": data.college,
+              "Status": "Your volunteer application is in queue.",
+              "referral": data.referral
             }
           }
         ]
