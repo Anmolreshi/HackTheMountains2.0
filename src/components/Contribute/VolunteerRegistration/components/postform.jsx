@@ -21,6 +21,7 @@ const Form = () => {
     const [linkedin, setLinkedIn] = useState("");
     const [ticket,setTicket] =useState("")
     const [namecolor, setnameColor] = useState("");
+    const [referral, setReferral] = useState("No Referral Applied");
   const [emailcolor, setemailColor] = useState("");
   const [linkedincolor, setlinkedinColor] = useState("");
 
@@ -28,7 +29,8 @@ const Form = () => {
         name: name, 
         linkedin: linkedin,
         email: email,
-        college: college
+        college: college,
+        referral: referral
     }
     const sendResponse = async (data) => {
      console.log(data);
@@ -150,7 +152,22 @@ const Form = () => {
                     />
                     <br />
                     <br />{" "}
-
+                    <TextField
+                        fullWidth
+                        value={referral}
+                        name="branch"
+                        id="outlined-basic"
+                        label="Referral(Optional)"
+                        style={{backgroundColor:`${linkedincolor}`}}
+                        variant="outlined"
+                        helperText="Its optional field"
+                        required
+                        onChange={(e) => {
+                            setReferral(e.target.value);
+                        }}
+                    />
+                    <br />
+                    <br />{" "}
 
 
 
