@@ -180,7 +180,7 @@ const PreviousSponsors = (props) => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img  src={partner.image} width="50%" style={{borderRadius:'10px'}}/>
+                    <img src={partner.image} width="20%" style={{borderRadius:'10px'}}/>
                   </a>
                 </Grid>
               ))}
@@ -226,7 +226,7 @@ const PreviousSponsors = (props) => {
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {Partners.map((partner) => (
-                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
+                <Grid  id="partners" item xs md lg sm>
                   <a
                    
                     href={partner.link}
@@ -287,7 +287,7 @@ const PreviousSponsors = (props) => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img src={partner.image} width="50%" />
+                    <img src={partner.image} width="20%" />
                   </a>
                 </Grid>
               ))}
