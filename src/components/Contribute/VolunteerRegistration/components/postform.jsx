@@ -161,7 +161,6 @@ const Form = () => {
                         style={{backgroundColor:`${linkedincolor}`}}
                         variant="outlined"
                         helperText="Its optional field"
-                        required
                         onChange={(e) => {
                             setReferral(e.target.value);
                         }}
