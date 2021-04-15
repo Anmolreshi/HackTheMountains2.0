@@ -157,10 +157,9 @@ const Form = () => {
                         value={referral}
                         name="branch"
                         id="outlined-basic"
-                        label="Referral(Optional)"
-                        style={{backgroundColor:`${linkedincolor}`}}
+                        label="Referral (Optional)"
                         variant="outlined"
-                        helperText="Its optional field"
+                        helperText="You can use referral code (if any) provided by existing Hack Ambassadors"
                         onChange={(e) => {
                             setReferral(e.target.value);
                         }}
