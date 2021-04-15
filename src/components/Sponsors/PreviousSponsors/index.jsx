@@ -106,7 +106,7 @@ const PreviousSponsors = (props) => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img src={Devfolio} width="50%" />
+                    <img src={Devfolio} width="30%" />
                   </a>
                 </center>
               </Grid>
