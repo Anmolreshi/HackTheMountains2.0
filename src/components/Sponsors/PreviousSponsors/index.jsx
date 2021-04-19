@@ -226,7 +226,7 @@ const PreviousSponsors = (props) => {
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {Partners.map((partner) => (
-                <Grid  id="partners" item xs={12} sm={3} md={3}>
+                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
                   <a
                    
                     href={partner.link}
