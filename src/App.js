@@ -150,6 +150,20 @@ export default function App() {
           </>
         }
       />
+        <Route
+        path="/HackAmbassadors/register/:id"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <Volunteer/>
+              <Footer />
+            </Box>
+          </>
+        }
+      />
        <Route
         path="/mentors/register"
         exact={true}
