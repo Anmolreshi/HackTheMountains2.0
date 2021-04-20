@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="theme-color" content="#000000" />
-  <!--
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link rel="shortcut icon" href="favicon.svg" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
-  <!--
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,19 +33,26 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>Hack The Mountains 2.0</title>
+    <title>Hack The Mountains 2.0</title>
+  </head>
 
-</head>
+  <body>
+    <noscript>
+      <span id="HTMNav"><img src="./htm.svg" height="150" width="170" /></span>
+      You do Need JavaScript to Participate in this season!!
+    </noscript>
 
-<body>
-  <noscript>
-    <span id="HTMNav"><img src="./htm.svg" height="150" width="170"></span>
-    You do Need JavaScript to Participate in this season!!
-  </noscript>
-
-  <div id="root"></div>
-
-  <!--
+    <div id="root"></div>
+    <!-- <div id="devfolioNotifyBar">
+      <center><h1>REGISTRATIONS ARE OPEN</h1></center> 
+      <div
+        id="devfolio-apply-now"
+        class="apply-button"
+        data-hackathon-slug="hackthemountains2"
+        data-button-theme="light"
+      ></div>
+    </div> -->
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -46,12 +62,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
   </body>
   <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
-<!--Adsense code -->
-  <script defer data-ad-client="ca-pub-3674010549763040" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- <script>
+  <!--Adsense code -->
+  <script
+    defer
+    data-ad-client="ca-pub-3674010549763040"
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+  ></script>
+  <!-- <script>
   // Initialize elements and events
 document.addEventListener('DOMContentLoaded', function () {
     let devfolioOptions = {
@@ -77,6 +97,29 @@ document.addEventListener('DOMContentLoaded', function () {
 </script> -->
 </html>
 <style>
+  #devfolioNotifyBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity:0.5;
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -92,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
   body {
     scrollbar-color: rebeccapurple green;
     scrollbar-width: thin;
-
   }
 
   ::-webkit-scrollbar {
@@ -102,8 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #E9AE91;
-
+    background: #e9ae91;
   }
 
   ::-webkit-scrollbar-corner {
@@ -117,43 +158,49 @@ document.addEventListener('DOMContentLoaded', function () {
     left: 40px;
     box-shadow: "0 0 20px #fff, 0 0 30px #CA484F,   0 0 40px #CA484F,  0 0 50px #CA484F, 0 0 60px #CA484F, 0 0 70px #CA484F, 0 0 80px #CA484F";
   }
-  #MLHBadge{
+  #MLHBadge {
     z-index: 6;
     position: fixed;
     top: 0px;
-    left:90%
+    left: 90%;
   }
-  #teamM, #judge, #partners{
+  #teamM,
+  #judge,
+  #partners {
     /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
-      filter: gray; /* IE5+ */
-      -webkit-filter: grayscale(0.7); /* Webkit Nightlies & Chrome Canary */
-      -webkit-transition: all 0.2s ease-in-out; ;  
-    }
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(0.7); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all 0.2s ease-in-out;
+  }
 
-   #teamM:hover {
+  #teamM:hover {
     filter: none;
-      -webkit-filter: grayscale(0);
-      -webkit-transform: scale(1.1);
-    }
-    #judge:hover {
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.1);
+  }
+  #judge:hover {
     filter: none;
-      -webkit-filter: grayscale(0);
-      -webkit-transform: scale(1.01);
-    }
-    #ribbon-items{
-      -webkit-transition: all 0.4s ease-in-out; 
-      border-radius: '10px'; 
-    }
-    #ribbon-items:hover{
-      -webkit-transform: scale(1.1);
-      background: '#202136';
-    }
-    #textfield2{
-      -webkit-transition: all 2s ease-in-out;  
-    }
-    #partners:hover {
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01);
+  }
+  #ribbon-items {
+    -webkit-transition: all 0.4s ease-in-out;
+    border-radius: "10px";
+  }
+  #ribbon-items:hover {
+    -webkit-transform: scale(1.1);
+    background: "#202136";
+  }
+  #textfield2 {
+    -webkit-transition: all 2s ease-in-out;
+  }
+  #partners:hover {
     filter: none;
-      -webkit-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
+  @keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
     }
+  }
 </style>
-
