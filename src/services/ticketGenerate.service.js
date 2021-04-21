@@ -55,7 +55,7 @@ const GenerateTicket = async (ticketType, data) => {
               title:  `${post_data.records[0].fields.name} registered using this referral`,
               type: "rich",
               description: `Referral Used: ${post_data.records[0].fields.referral}`,
-            },
+            }
           ]
         });
 
