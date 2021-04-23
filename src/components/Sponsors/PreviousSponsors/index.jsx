@@ -309,7 +309,7 @@ const PreviousSponsors = (props) => {
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <center>
                   <a
-                    href="https://sawolabs.com/"
+                    href="https://sawolabs.com/?utm_source=hacakthon&utm_medium=HTM&utm_campaign=HackPartner"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
