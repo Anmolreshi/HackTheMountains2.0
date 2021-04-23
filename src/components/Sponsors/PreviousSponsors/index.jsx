@@ -3,6 +3,7 @@ import { Typography, Box, Container, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 import Devfolio from "./assets/devfolio.png";
+import Sawo from "./assets/sawolabs.png";
 
 import { usePrevSponsors } from "../../../hooks/airtable/sponsors/previoussponsors";
 // import Slides from "./Carousel";
@@ -293,6 +294,30 @@ const PreviousSponsors = (props) => {
               ))}
             </Grid>
 
+
+            <Typography gutterBottom={true} variant="h3">
+              <center>
+              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <b>
+                  <span style={{ color: "diamond" }}>Auth Partner</span>
+                </b>
+                
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <center>
+                  <a
+                    href="https://sawolabs.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={Sawo} width="30%" />
+                  </a>
+                </center>
+              </Grid>
+            </Grid>
 
             
             <Grid item xs={12} sm={12} md={12} lg={12}>
