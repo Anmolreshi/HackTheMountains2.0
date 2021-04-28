@@ -6,6 +6,7 @@ import Devfolio from "./assets/devfolio.png";
 import Sawo from "./assets/sawolabs.png";
 import Postman from "./assets/postman.png";
 import MLH from "./assets/mlh.png";
+import Elastic from "./assets/elastic.png";
 import { usePrevSponsors } from "../../../hooks/airtable/sponsors/previoussponsors";
 // import Slides from "./Carousel";
 import { useMPs } from "../../../hooks/airtable/partners/Media";
@@ -142,7 +143,7 @@ const PreviousSponsors = (props) => {
               </center>
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
-              <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Grid item xs={12} sm={12} md={4} lg={4}>
                 <br />
                 <center>
                   <a
@@ -156,7 +157,7 @@ const PreviousSponsors = (props) => {
                   <br />
                 </center>
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Grid item xs={12} sm={12} md={4} lg={4}>
                 <center>
                   <a
                     href="https://postman.com/"
@@ -164,6 +165,17 @@ const PreviousSponsors = (props) => {
                     target="_blank"
                   >
                     <img src={Postman} width="300px" />
+                  </a>
+                </center>
+              </Grid>
+              <Grid item xs={12} sm={12} md={4} lg={4}>
+                <center>
+                  <a
+                    href="https://elastic.co/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={Elastic} width="300px" />
                   </a>
                 </center>
               </Grid>
