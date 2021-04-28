@@ -259,13 +259,8 @@ const Header = () => {
                 <br />
                 <br />
               </Grid>
-<<<<<<< HEAD
-              <Grid spacing={3} container item md={6} lg={6} >
-                {/* Participate Button 
-=======
               <Grid spacing={3} container item md={6} lg={6}>
                 {/* Participate Button
->>>>>>> origin
                 <Grid item xs={6} sm={6} md={6} lg={6}>
                   <Link to="/register">
                     <Button
@@ -278,12 +273,6 @@ const Header = () => {
                     </Button>
                   </Link>
                 </Grid> */}
-<<<<<<< HEAD
-                {/* Brochure Button */}
-                <Grid item xs={12} sm={12} md={12} lg={12} >
-                  <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1-K1JkZJP7x6eTr09SdWqlSEk_XoqRfnx/view">
-                    <Button fullWidth variant="outlined" className={classes.button}>
-=======
                 {}
                 {/* Brochure Button */}
                 <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -297,7 +286,6 @@ const Header = () => {
                       variant="outlined"
                       className={classes.button}
                     >
->>>>>>> origin
                       Brochure
                     </Button>
                   </a>
