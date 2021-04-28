@@ -105,8 +105,18 @@ export default function ElevateAppBar(props) {
                        <b>Workshops</b> {" "}
                   </Typography></a></Box>
               </Box>
+
+             
+              
+
+
               <span id="MLHBadge">
-                <img src={MLHBadge} height="150" width="180"/>
+                <a href="https://mlh.io/seasons/2021/events?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white" max-width="100px" min-width="60px" position="fixed" right="30px" top="0" width="10%" z-index="10000">
+                <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" width="100%"/></a>
+                
+                    
+               {/*<img src={MLHBadge} height="150" width="180"/>*/}
+                
               </span>
             </Container>
           </Hidden>

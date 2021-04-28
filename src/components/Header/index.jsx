@@ -102,7 +102,7 @@ const Header = () => {
                 </Grid>
                 {/* MLH Logo */}
                 <Grid item xs={12} sm={12} md={12} lg={12}>
-                  <Typography gutterBottom={true} variant="h5">
+                  <Typography gutterBottom={true} variant="h6">
                     Powered By:
                     <br />
                     <a
@@ -112,7 +112,7 @@ const Header = () => {
                     >
                       <img
                         src={MLH}
-                        width="150px"
+                        width="100px"
                         style={{ marginTop: "6px" }}
                       />
                     </a>
