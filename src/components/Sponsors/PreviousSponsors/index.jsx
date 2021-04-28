@@ -4,7 +4,8 @@ import { makeStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 import Devfolio from "./assets/devfolio.png";
 import Sawo from "./assets/sawolabs.png";
-
+import Postman from "./assets/postman.png";
+import MLH from "./assets/mlh.png";
 import { usePrevSponsors } from "../../../hooks/airtable/sponsors/previoussponsors";
 // import Slides from "./Carousel";
 import { useMPs } from "../../../hooks/airtable/partners/Media";
@@ -54,7 +55,7 @@ const PreviousSponsors = (props) => {
   const communityPartners = useCPs();
   const silverPartners = useSPs();
   const educationalPartners = useEDPs();
-  const Partners =  usePartners();
+  const Partners = usePartners();
   // const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
   // const handleVisibility = (data) => {};
@@ -91,11 +92,19 @@ const PreviousSponsors = (props) => {
             {" "}
             <Typography gutterBottom={true} variant="h3">
               <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
                 <b>
-                  <span style={{ color: "diamond" }}>Diamond Partners</span>
+                  <span style={{ color: "diamond" }}>League Partner</span>
                 </b>
-                
+
                 <br />
               </center>
             </Typography>
@@ -103,11 +112,58 @@ const PreviousSponsors = (props) => {
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <center>
                   <a
+                    href="https://mlh.io"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={MLH} width="300px" />
+                  </a>
+                </center>
+              </Grid>
+            </Grid>
+            <br />
+            <br />
+            <Typography gutterBottom={true} variant="h3">
+              <center>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
+                <b>
+                  <span style={{ color: "diamond" }}>Diamond Partners</span>
+                </b>
+
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <br />
+                <center>
+                  <a
                     href="https://devfolio.co/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img src={Devfolio} width="30%" />
+                    <img src={Devfolio} width="300px" />
+                  </a>
+                  <br />
+                  <br />
+                </center>
+              </Grid>
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <center>
+                  <a
+                    href="https://postman.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={Postman} width="300px" />
                   </a>
                 </center>
               </Grid>
@@ -127,20 +183,27 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
                 <b>
                   <span>Silver Partners</span>
                 </b>
-                
+
                 <br />
                 <br />
               </center>
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
-            {silverPartners.map((partner) => (
-                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
+              {silverPartners.map((partner) => (
+                <Grid id="partners" item xs={12} sm={12} md={4} lg={4}>
                   <a
-                   
                     href={partner.link}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -148,8 +211,7 @@ const PreviousSponsors = (props) => {
                     <img src={partner.image} width="50%" />
                   </a>
                 </Grid>
-              ))
-            }
+              ))}
             </Grid>
             {/* <Typography gutterBottom={true} variant="h3"><br/>
               <center>
@@ -163,11 +225,19 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
                 <b>
                   <span>Media Partner</span>
                 </b>
-               
+
                 <br />
                 <br />
               </center>
@@ -176,12 +246,16 @@ const PreviousSponsors = (props) => {
               {mediaPartners.map((partner) => (
                 <Grid id="partners" item xs sm md>
                   <a
-                  className="partners"
+                    className="partners"
                     href={partner.link}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img src={partner.image} width="20%" style={{borderRadius:'10px'}}/>
+                    <img
+                      src={partner.image}
+                      width="300px"
+                      style={{ borderRadius: "10px" }}
+                    />
                   </a>
                 </Grid>
               ))}
@@ -189,20 +263,27 @@ const PreviousSponsors = (props) => {
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
                 <b>
                   <span>Event Partners</span>
                 </b>
-               
+
                 <br />
                 <br />
               </center>
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {eventPartners.map((partner) => (
-                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
+                <Grid id="partners" item xs={12} sm={12} md={4} lg={4}>
                   <a
-                   
                     href={partner.link}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -212,24 +293,30 @@ const PreviousSponsors = (props) => {
                 </Grid>
               ))}
             </Grid>
-            
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
                 <b>
                   <span>Partners</span>
                 </b>
-               
+
                 <br />
                 <br />
               </center>
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {Partners.map((partner) => (
-                <Grid  id="partners" item xs={12} sm={12} md={4} lg={4}>
+                <Grid id="partners" item xs={12} sm={12} md={4} lg={4}>
                   <a
-                   
                     href={partner.link}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -239,15 +326,53 @@ const PreviousSponsors = (props) => {
                 </Grid>
               ))}
             </Grid>
+            <Typography gutterBottom={true} variant="h3">
+              <center>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
+                <b>
+                  <span style={{ color: "diamond" }}>Auth Partner</span>
+                </b>
 
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              <Grid id="partners" item xs={12} sm={12} md={12} lg={12}>
+                <center>
+                  <a
+                    href="https://sawolabs.com/?utm_source=hacakthon&utm_medium=HTM&utm_campaign=HackPartner"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={Sawo} width="300px" />
+                  </a>
+                </center>
+              </Grid>
+            </Grid>
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
                 <b>
                   <span>Community Partners</span>
                 </b>
-           
+
                 <br />
                 <br />
               </center>
@@ -265,17 +390,22 @@ const PreviousSponsors = (props) => {
                 </Grid>
               ))}
             </Grid>
-
-
-
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
                 <b>
                   <span>Educational Partners</span>
                 </b>
-              
+
                 <br />
                 <br />
               </center>
@@ -288,38 +418,11 @@ const PreviousSponsors = (props) => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img src={partner.image} width="20%" />
+                    <img src={partner.image} width="300px" />
                   </a>
                 </Grid>
               ))}
             </Grid>
-
-
-            <Typography gutterBottom={true} variant="h3">
-              <center>
-              <hr style={{color: '#3C3E66', backgroundColor: '#3C3E66', height:.5, opacity:0.7, width:"75%"}}/>
-                <b>
-                  <span style={{ color: "diamond" }}>Auth Partner</span>
-                </b>
-                
-                <br />
-              </center>
-            </Typography>
-            <Grid style={{ textAlign: "center" }} container spacing={2}>
-              <Grid id="partners" item xs={12} sm={12} md={12} lg={12}>
-                <center>
-                  <a
-                    href="https://sawolabs.com/?utm_source=hacakthon&utm_medium=HTM&utm_campaign=HackPartner"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <img src={Sawo} width="20%" />
-                  </a>
-                </center>
-              </Grid>
-            </Grid>
-
-            
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <br />
               <br />
