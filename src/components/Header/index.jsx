@@ -211,16 +211,16 @@ const Header = () => {
                 ></div><br /><br />
               </Grid>
               <Grid spacing={3} container item md={6} lg={6} >
-                {/* Participate Button */}
+                {/* Participate Button 
                 <Grid item xs={6} sm={6} md={6} lg={6}>
                   <Link to="/register">
                     <Button fullWidth variant="outlined" style={{ background: "#641BFF" }} className={classes.button}>
                       Pre Register
                         </Button>
                   </Link>
-                </Grid>{ }
+                </Grid> */}
                 {/* Brochure Button */}
-                <Grid item xs={6} sm={6} md={6} lg={6} >
+                <Grid item xs={12} sm={12} md={12} lg={12} >
                   <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1-K1JkZJP7x6eTr09SdWqlSEk_XoqRfnx/view">
                     <Button fullWidth variant="outlined" className={classes.button}>
                       Brochure
