@@ -14,6 +14,7 @@ import { useCPs } from "../../../hooks/airtable/partners/Community";
 import { useSPs } from "../../../hooks/airtable/partners/silver";
 import { useEDPs } from "../../../hooks/airtable/partners/Educational";
 import { usePartners } from "../../../hooks/airtable/partners/partner";
+import { useDPs } from "../../../hooks/airtable/partners/Diamond";
 const useStyles = makeStyles({
   root: {
     padding: "25px",
@@ -56,6 +57,7 @@ const PreviousSponsors = (props) => {
   const silverPartners = useSPs();
   const educationalPartners = useEDPs();
   const Partners = usePartners();
+  const diamondPartners = useDPs();
   // const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
   // const handleVisibility = (data) => {};
@@ -137,36 +139,22 @@ const PreviousSponsors = (props) => {
                 <b>
                   <span style={{ color: "diamond" }}>Diamond Partners</span>
                 </b>
-
+                <br/>
                 <br />
               </center>
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
-              <Grid item xs={12} sm={12} md={12} lg={12}>
-                <br />
-                <center>
+            {diamondPartners.map((partner) => (
+                <Grid item xs={12} sm={12} md={4} lg={4}>
                   <a
-                    href="https://devfolio.co/"
+                    href={partner.link}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <img src={Devfolio} width="300px" />
+                    <img src={partner.image} width="300px" />
                   </a>
-                  <br />
-                  <br />
-                </center>
-              </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={12}>
-                <center>
-                  <a
-                    href="https://postman.com/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <img src={Postman} width="300px" />
-                  </a>
-                </center>
-              </Grid>
+                </Grid>
+              ))}<br/><br/>
             </Grid>
             {/* 
             <br/><br/>
