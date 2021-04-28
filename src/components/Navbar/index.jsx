@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core/";
 import { makeStyles } from "@material-ui/styles";
 import HTM from './htm.svg'
-// import MLHBadge from "./mlh_Badge.svg"
+import MLHBadge from "./mlh_Badge.svg"
 import { HashLink } from "react-router-hash-link";
 import data from "./data";
 import Backdrop from "./mobileMenu";
@@ -105,9 +105,9 @@ export default function ElevateAppBar(props) {
                        <b>Workshops</b> {" "}
                   </Typography></a></Box>
               </Box>
-              {/* <span id="MLHBadge">
+              <span id="MLHBadge">
                 <img src={MLHBadge} height="150" width="180"/>
-              </span> */}
+              </span>
             </Container>
           </Hidden>
         </Toolbar>
