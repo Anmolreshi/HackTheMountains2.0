@@ -5,29 +5,29 @@ const theme = createMuiTheme({
     fontFamily: ["Segoe UI", "Raleway", "Montserrat"].join(","),
     h1: {
       fontSize: "58px",
-      fontFamily: "Montserrat"
+      fontFamily: "Raleway"
     },
     h3: {
-      fontFamily: "Montserrat"
+      fontFamily: "Raleway"
     },
     h4: {
-      fontFamily: "Montserrat"
+      fontFamily: "Raleway"
     },
     h6: {
-      fontFamily: "Montserrat"
+      fontFamily: "Raleway"
     },
     h5: {
-      fontFamily: "Montserrat",
+      fontFamily: "Raleway",
       fontWeight: 500
     },
     subtitle1: {
       fontSize: "22px",
-      fontFamily: "Montserrat",
+      fontFamily: "Raleway",
       fontWeight: 4
     },
     subtitle2: {
       fontSize: "16px",
-      fontFamily: "Montserrat",
+      fontFamily: "Raleway",
       fontWeight: 4
     }
   }
