@@ -51,6 +51,16 @@ const Tracks = (props) => {
                       <br /> Virtual, 26 - 27 June 2021 <br />
                       <a
                         style={{ textDecoration: "none", color: "#E9AE91" }}
+                        href="https://sender14.zohoinsights.com/ocgeturl/2d6f.327230a?l=b4533e04-ace3-11eb-a090-525400fa05f6&m=b345ecb0-ace3-11eb-a821-525400103106&h=3766c33a3063a14bab66e4c49acc30a1d64982f2e28cce6cf66ad83f8c8a07c7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        MLH Code Of Conduct{" "}
+                      </a>{" "}
+                      |
+                      <a
+                        style={{ textDecoration: "none", color: "#E9AE91" }}
                         href="https://www.instagram.com/hack_the_mountains/?hl=en"
                         target="_blank"
                         rel="noopener noreferrer"
