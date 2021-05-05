@@ -23,7 +23,10 @@ export default function AlternateTimeline() {
           </Hidden>
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
-          <Form />
+          {/* <Form /> */}
+           <Typography gutterBottom={true} variant="h6">
+              Registrations Closed for Hack Ambassadors.
+           </Typography>
         </Grid>
 
         <Hidden mdUp>
