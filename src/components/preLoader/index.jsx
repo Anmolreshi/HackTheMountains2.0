@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Backdrop } from "@material-ui/core";
+import {Backdrop, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
 import variants from "./../variants";
@@ -66,7 +66,10 @@ const PreLoader = () => {
               style={{ opacity: opacity }}
             />
             <br />
-            
+            <Typography variant="body1">
+               Our prayers are with Devfolio, one of our sponsors and hack culture enablers in India. <br/>
+               Shakti, Founder of Devfolio.<br/> 
+May his soul Rest in Peace. <br/></Typography>
           </center>
         </div>
       </motion.div>
