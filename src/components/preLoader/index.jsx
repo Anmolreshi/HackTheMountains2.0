@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Backdrop } from "@material-ui/core";
+import {Backdrop, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { motion } from "framer-motion";
 import variants from "./../variants";
@@ -14,6 +14,7 @@ const useStyles = makeStyles({
 });
 const PreLoader = () => {
   const classes = useStyles();
+  var d = new Date();
   const [open, setOpen] = useState(true);
   const [progress, setProgress] = React.useState(0);
   const [opacity, setOpacity] = React.useState(0.1);
@@ -29,7 +30,7 @@ const PreLoader = () => {
         document.body.style.overflow = ""
     
       } else {
-        const diff = Math.random() * 50;
+        const diff = Math.random() * 68;
         setProgress(progress + diff);
         setOpacity(progress * 0.01);
       }
@@ -65,8 +66,13 @@ const PreLoader = () => {
               alt="logo"
               style={{ opacity: opacity }}
             />
-            <br />
-            
+            <br /><br />
+    { d.getDate()<=17 &&
+            (<Typography variant="body1">
+               Our prayers are with Devfolio, one of our sponsors and hack culture enablers in India. <br/>
+               Shakti, Founder of Devfolio.<br/> 
+May his soul Rest in Peace. <br/></Typography>)
+    }
           </center>
         </div>
       </motion.div>
