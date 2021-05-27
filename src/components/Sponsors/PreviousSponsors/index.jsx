@@ -290,7 +290,7 @@ const PreviousSponsors = (props) => {
             </Typography>
             <Grid style={{ textAlign: "center" }} container spacing={2}>
               {incubationPartners.map((partner) => (
-                <Grid id="partners" item xs={12} sm={12} md={4} lg={4}>
+                <Grid id="partners" item xs sm md>
                   <a
                     href={partner.link}
                     rel="noopener noreferrer"
