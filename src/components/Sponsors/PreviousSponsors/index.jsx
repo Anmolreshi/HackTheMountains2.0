@@ -15,6 +15,9 @@ import { useSPs } from "../../../hooks/airtable/partners/silver";
 import { useEDPs } from "../../../hooks/airtable/partners/Educational";
 import { usePartners } from "../../../hooks/airtable/partners/partner";
 import { useDPs } from "../../../hooks/airtable/partners/Diamond";
+import { useGPs } from "../../../hooks/airtable/partners/Gold";
+import { useBPs } from "../../../hooks/airtable/partners/Bronze";
+import { useIPs } from "../../../hooks/airtable/partners/Incubation";
 const useStyles = makeStyles({
   root: {
     padding: "25px",
@@ -55,9 +58,12 @@ const PreviousSponsors = (props) => {
   const eventPartners = useEPs();
   const communityPartners = useCPs();
   const silverPartners = useSPs();
+  const goldPartners = useGPs();
+  const bronzePartners = useBPs();
   const educationalPartners = useEDPs();
   const Partners = usePartners();
   const diamondPartners = useDPs();
+  const incubationPartners = useIPs();
   // const [visible, setVisible] = React.useState(false);
   const classes = useStyles();
   // const handleVisibility = (data) => {};
@@ -156,18 +162,43 @@ const PreviousSponsors = (props) => {
                 </Grid>
               ))}<br/><br/>
             </Grid>
-            {/* 
-            <br/><br/>
-           <Typography gutterBottom={true} variant="h2">
+
+            
+            <Typography gutterBottom={true} variant="h3">
+              <br />
               <center>
-                <b><span style={{ color: 'gold' }}>Gold Partners</span></b><br />
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
+                <b>
+                  <span>Gold Partners</span>
+                </b>
+
+                <br />
+                <br />
               </center>
             </Typography>
-            <Typography variant="h4"> <center>
-              Coming Soon</center><br/><br/><br/>
-            </Typography>
-            
-            */}
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {goldPartners.map((partner) => (
+                <Grid id="partners" item xs={12} sm={12} md={4} lg={4}>
+                  <a
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))}
+            </Grid>
+
+
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
@@ -201,15 +232,77 @@ const PreviousSponsors = (props) => {
                 </Grid>
               ))}
             </Grid>
-            {/* <Typography gutterBottom={true} variant="h3"><br/>
+
+
+            <Typography gutterBottom={true} variant="h3">
+              <br />
               <center>
-                <b><span style={{color:'silver'}}>Bronze Partners</span></b><br /><br/>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
+                <b>
+                  <span>Bronze Partners</span>
+                </b>
+
+                <br />
+                <br />
               </center>
             </Typography>
-            <Grid style={{ textAlign: 'center' }} container spacing={2}>
-              <Grid item xs={12} sm={12} md={4} lg={4} >
-              </Grid>
-            </Grid> */}
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {bronzePartners.map((partner) => (
+                <Grid id="partners" item xs={12} sm={12} md={4} lg={4}>
+                  <a
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))}
+            </Grid>
+
+            <Typography gutterBottom={true} variant="h3">
+              <br />
+              <center>
+                <hr
+                  style={{
+                    color: "#3C3E66",
+                    backgroundColor: "#3C3E66",
+                    height: 0.5,
+                    opacity: 0.7,
+                    width: "75%",
+                  }}
+                />
+                <b>
+                  <span>Incubation Partners</span>
+                </b>
+
+                <br />
+                <br />
+              </center>
+            </Typography>
+            <Grid style={{ textAlign: "center" }} container spacing={2}>
+              {incubationPartners.map((partner) => (
+                <Grid id="partners" item xs sm md>
+                  <a
+                    href={partner.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img src={partner.image} width="50%" />
+                  </a>
+                </Grid>
+              ))}
+            </Grid>
+
+
             <Typography gutterBottom={true} variant="h3">
               <br />
               <center>
