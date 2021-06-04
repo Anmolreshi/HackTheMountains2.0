@@ -26,7 +26,6 @@ const useStyles = makeStyles({
 });
 
 const Prizes = () => {
-  // const history = useHistory();
   const classes = useStyles();
   const prize_data = usePrize();
   return (
@@ -42,8 +41,9 @@ const Prizes = () => {
           <Grid container spacing={4} >
         
             <Grid item xs={12} sm={12} md={12} lg={12}><br /><br /><br /><br /><br />
-              <Typography style={{ textAlign: 'center' }} variant="h3" gutterBottom={true}><b>
-                Every Participants</b></Typography>
+              <Typography style={{ textAlign: 'center' }} variant="h3" gutterBottom={true}>
+                <b>Every Participants</b>
+                </Typography>
               <Typography style={{textAlign:'center'}} variant="body" gutterBottom={true}>
                 {
                   prize_data.every_participant.map((el)=>(<><li>{el}</li><br/></>))
@@ -65,12 +65,12 @@ const Prizes = () => {
                       </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Typography style={{textAlign:'center'}} variant="body" gutterBottom={true}>
-                           <b>{el.description.map((prize)=>(<><li>{prize}</li><br/></>)}</b>
+                          {el.description.map((prize)=>(<><li>{prize}</li><br/></>))}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Typography style={{textAlign:'center'}} variant="body" gutterBottom={true}>
-                           <b>{el.notion_link && (<><li>{el.notion_link}</li><br/></>)}</b>
+                           {el.notion_link && (<><li><a href={el.notion_link}>Notion Link</a></li><br/></>)}
                         </Typography>
                     </Grid>
                   </Grid>
@@ -93,7 +93,7 @@ const Prizes = () => {
                       </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Typography style={{textAlign:'center'}} variant="body" gutterBottom={true}>
-                           <b>{el.description.map((prize)=>(<><li>{prize}</li><br/></>)}</b>
+                           <b>{el.description.map((prize)=>(<><li>{prize}</li><br/></>))}</b>
                         </Typography>
                     </Grid>
                   </Grid>
@@ -106,7 +106,6 @@ const Prizes = () => {
         </Container>
       </Grid>
     </div>
-
   );
 };
 export default Prizes;
