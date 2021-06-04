@@ -81,6 +81,7 @@ const Prizes = () => {
                       <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
+                                 style={{ textAlign: "center" }}
                             variant="h4"
                             gutterBottom={true}
                           >
@@ -89,7 +90,7 @@ const Prizes = () => {
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
-                            variant="body"
+                            variant="body"     style={{ textAlign: "center" }}
                             gutterBottom={true}
                           >
                             {el.description.map((prize) => (
@@ -102,13 +103,13 @@ const Prizes = () => {
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
-                            variant="body"
+                            variant="body"      style={{ textAlign: "center" }}
                             gutterBottom={true}
                           >
                             {el.notion_link && (
                               <>
                                 <li>
-                                  <a href={el.notion_link}>Notion Link</a>
+                                  <a href={el.notion_link}>View More on Notion</a>
                                 </li>
                                 <br />
                               </>
@@ -134,7 +135,7 @@ const Prizes = () => {
                     <>
                       <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
-                          <Typography
+                          <Typography      style={{ textAlign: "center" }}
                             variant="h4"
                             gutterBottom={true}
                           >
@@ -142,7 +143,7 @@ const Prizes = () => {
                           </Typography>
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
-                          <Typography
+                          <Typography      style={{ textAlign: "center" }}
                             variant="body"
                             gutterBottom={true}
                           >
