@@ -37,8 +37,8 @@ const Prizes = () => {
           >
             <br /> <b>Prizes</b>
           </Typography>
-
-          <Grid container spacing={4}>
+ {/*
+ <Grid container spacing={4}>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <br />
               <br />
@@ -168,6 +168,7 @@ const Prizes = () => {
               <br />
             </Grid>
           </Grid>
+        */}  
         </Container>
       </Grid>
     </div>
