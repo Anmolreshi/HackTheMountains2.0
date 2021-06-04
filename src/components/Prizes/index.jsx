@@ -78,7 +78,7 @@ const Prizes = () => {
                 {prize_data.sponsor_prize &&
                   prize_data.sponsor_prize.map((el) => (
                     <>
-                      <Grid container item xs={12} sm={12} md={6} lg={6}>
+                      <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
                             variant="h4"
@@ -132,7 +132,7 @@ const Prizes = () => {
                 {prize_data.htm_prize &&
                   prize_data.htm_prize.map((el) => (
                     <>
-                      <Grid container item xs={12} sm={12} md={6} lg={6}>
+                      <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
                             variant="h4"
