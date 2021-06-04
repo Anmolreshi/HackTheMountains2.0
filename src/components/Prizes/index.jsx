@@ -50,7 +50,7 @@ const Prizes = () => {
                 variant="h3"
                 gutterBottom={true}
               >
-                <b>Every Participants</b>
+                <b>Every Participant</b>
               </Typography>
               <Typography
                 style={{ textAlign: "center" }}
@@ -72,7 +72,7 @@ const Prizes = () => {
                 variant="h3"
                 gutterBottom={true}
               >
-                <b>Sponsor Prizes</b>
+                <b>Sponsor Prizes</b><br/>
               </Typography>
               <Grid container>
                 {prize_data.sponsor_prize &&
@@ -81,8 +81,7 @@ const Prizes = () => {
                       <Grid container item xs={12} sm={12} md={6} lg={6}>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
-                            style={{ textAlign: "center" }}
-                            variant="body"
+                            variant="h4"
                             gutterBottom={true}
                           >
                             <b>{el.sponsor_name}</b>
@@ -90,7 +89,6 @@ const Prizes = () => {
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
-                            style={{ textAlign: "center" }}
                             variant="body"
                             gutterBottom={true}
                           >
@@ -104,7 +102,6 @@ const Prizes = () => {
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
-                            style={{ textAlign: "center" }}
                             variant="body"
                             gutterBottom={true}
                           >
@@ -129,7 +126,7 @@ const Prizes = () => {
                 variant="h3"
                 gutterBottom={true}
               >
-                <b>HTM Prizes</b>
+                <b>HTM Prizes</b><br/>
               </Typography>
               <Grid container>
                 {prize_data.htm_prize &&
@@ -138,8 +135,7 @@ const Prizes = () => {
                       <Grid container item xs={12} sm={12} md={6} lg={6}>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
-                            style={{ textAlign: "center" }}
-                            variant="body"
+                            variant="h4"
                             gutterBottom={true}
                           >
                             <b>{el.pos}</b>
@@ -147,7 +143,6 @@ const Prizes = () => {
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
-                            style={{ textAlign: "center" }}
                             variant="body"
                             gutterBottom={true}
                           >
