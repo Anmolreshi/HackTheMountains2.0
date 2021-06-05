@@ -12,7 +12,7 @@ const usePrize = () => {
     });
 
     let { data } = res;
-    
+
 
     setRepos(data);
   };
@@ -21,4 +21,6 @@ const usePrize = () => {
   }, []);
   return repos;
 };
+
 export { usePrize };
+

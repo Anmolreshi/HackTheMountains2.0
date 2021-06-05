@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import variants from "../variants";
 import data from "./data";
 import BG from "./assets/bg.svg";
+import Discord from "./assets/Discord-Logo.svg";
 import MLH from "./../Sponsors/PreviousSponsors/assets/mlh.png";
 // import MLH from "../Sponsors/assets/mlh.svg";
 // import HTM from "./assets/htm.svg";
@@ -147,17 +148,9 @@ const Header = () => {
                     <br />
                   </Grid>
 
-                  {/* Participate Button 
-                  <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <Link to="/register">
-                      <Button fullWidth color="secondary" className={classes.button}>
-                        Pre Register
-                        </Button>
-                    </Link>
-                  </Grid>{ } */}
 
                   {/* Brochure Button */}
-                  <Grid item xs={12} sm={12} md={12} lg={12}>
+                  <Grid item xs={12} sm={12} md={6} lg={6}>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -174,7 +167,7 @@ const Header = () => {
                   </Grid>
 
                   {/* Sponsor Button */}
-                  <Grid item xs={12} sm={12} md={12} lg={12}>
+                  <Grid item xs={12} sm={12} md={6} lg={6}>
                     <Link to="/sponsors/register">
                       <Button
                         fullWidth
@@ -185,6 +178,27 @@ const Header = () => {
                       </Button>
                     </Link>
                   </Grid>
+
+                  {/* Discord Button  */}
+                  <Grid item xs={12} sm={12} md={12} lg={12}>
+                  <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://discord.hackthemountain.tech"
+                    >
+                      <Button
+                        fullWidth
+                        color="primary"
+                        variant="default"
+                        className={classes.button}
+                      >
+                        <a><img src={Discord} style={{maxHeight:'30px'}}></img></a>
+                      </Button>
+                    </a>
+                  </Grid>{ } 
+
+
+
                   {/* Check Status Button
                   <Grid item xs={12} sm={12} md={12} lg={12} >
                     <Link to="/status">
