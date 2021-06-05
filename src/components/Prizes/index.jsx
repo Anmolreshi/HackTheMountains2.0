@@ -25,6 +25,7 @@ const useStyles = makeStyles({
       color: "white",
       textDecoration: 'none',
     }
+
   },
   highlighter: {
     // textShadow: `0 0 20px aqua,
@@ -47,6 +48,7 @@ const Prizes = () => {
           <Typography
             style={{ textAlign: "center" }}
             className={classes.highlighter}
+
             variant="h2"
             gutterBottom={true}
           >
@@ -60,6 +62,7 @@ const Prizes = () => {
               <div style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2'}}>
               <Typography
                 style={{ textAlign: "center"}}
+
                 variant="h3"
                 gutterBottom={true}
               >
@@ -74,24 +77,31 @@ const Prizes = () => {
                   prize_data.every_participant.map((el) => (
                     <>
                       <li>{el}</li>
+
                     </>
                   ))}
               </Typography>
               <br />
+
               </div>
+
               <br />
               <Typography
                 style={{ textAlign: "center" }}
                 variant="h3"
                 gutterBottom={true}
               >
+
                 <b>Special Prizes</b><br/>
+
               </Typography>
               <Grid container>
                 {prize_data.sponsor_prize &&
                   prize_data.sponsor_prize.map((el) => (
                     <>
+
                       <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2'}}>
+
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
                                  style={{ textAlign: "center" }}
@@ -100,7 +110,9 @@ const Prizes = () => {
                           >
                             <b>{el.sponsor_name}</b>
                           </Typography>
+
                           <br />
+
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
@@ -110,18 +122,23 @@ const Prizes = () => {
                             {el.description.map((prize) => (
                               <>
                                 <li>{prize}</li>
+
                                 {/* <br /> */}
+
                               </>
                             ))}
                           </Typography>
                         </Grid>
+
                         <Grid item xs={12} sm={12} md={12} lg={12} style={{textAlign:'center'}}>
+
                           <Typography
                             variant="body"      style={{ textAlign: "center" }}
                             gutterBottom={true}
                           >
                             {el.notion_link && (
                               <>
+
                                 <br />
                                 
                                   <a href={el.notion_link}>
@@ -152,7 +169,9 @@ const Prizes = () => {
                 {prize_data.htm_prize &&
                   prize_data.htm_prize.map((el) => (
                     <>
+
                       <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '3'}}>
+
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography      style={{ textAlign: "center" }}
                             variant="h4"
@@ -170,7 +189,9 @@ const Prizes = () => {
                               {el.description.map((prize) => (
                                 <>
                                   <li>{prize}</li>
+
                                   
+
                                 </>
                               ))}
                             </b>
@@ -181,12 +202,16 @@ const Prizes = () => {
                   ))}
               </Grid>
               <br />
+
             </Grid>
           </Grid>
          
+
         </Container>
       </Grid>
     </div>
   );
 };
+
 export default Prizes;
+

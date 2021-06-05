@@ -21,4 +21,6 @@ const usePrize = () => {
   }, []);
   return repos;
 };
+
 export { usePrize };
+
