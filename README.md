@@ -1,8 +1,8 @@
 <!-- PLEASE MAKE SURE TO EDIT EVERY FILE  -->
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://github.com/MLH-Fellowship/CryptoDrive">
-    <img src="https://hackthemountain.tech/static/media/htm.f7288055.svg"  />
+  <a href="https://github.com/imabp/HackTheMountains2.0">
+    <img src="https://media.discordapp.net/attachments/850639097638682635/850639113983754260/68747470733a2f2f6861636b7468656d6f756e7461696e2e746563682f7374617469632f6d656469612f68746d2e66373238.png"  />
   </a>
 
   <p align="center">
