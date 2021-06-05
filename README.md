@@ -8,7 +8,7 @@
   <p align="center">
     "An International Hackathon. 🚀"
     <br /><br />
-    <a href="https://www.hackthemountain.tech"><strong>Browse CryptoDrive</strong></a>
+    <a href="https://www.hackthemountain.tech"><strong>Browse Hackathon</strong></a>
     <br />
     <br />
     <a href="https://en.wikipedia.org/wiki/Hackathon">What is a Hackathon</a>
