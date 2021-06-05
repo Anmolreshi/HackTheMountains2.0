@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/styles";
 // import variants from "../variants";
 // import data from "./data";
 // import BG from "./assets/bg.svg"
-// // import MLH from "../Sponsors/assets/mlh.svg";
+// import MLH from "../Sponsors/assets/mlh.svg";
 // import HTM from "./assets/htm.svg";
 const useStyles = makeStyles({
   container: {
