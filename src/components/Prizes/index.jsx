@@ -1,6 +1,14 @@
 import React from "react";
-import { Grid, Typography, Container, Button } from "@material-ui/core";
+import { Grid, Typography, Container, Button, Card } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+
+
+
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+
 
 import { usePrize } from "../../hooks/api/getPrizes";
 const useStyles = makeStyles({
@@ -45,7 +53,7 @@ const Prizes = () => {
     <div id="prizes" className={classes.container}>
       <Grid container>
         <Container>
-          <Typography
+        <Typography
             style={{ textAlign: "center" }}
             className={classes.highlighter}
 
@@ -53,38 +61,103 @@ const Prizes = () => {
             gutterBottom={true}
           >
            <b>Prizes</b>
-          </Typography>
+        </Typography>
 
- <Grid container spacing={4}>
-            <Grid item xs={12} sm={12} md={12} lg={12} >
-              <br />
-              <br />
-              <div style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2'}}>
-              <Typography
-                style={{ textAlign: "center"}}
 
-                variant="h3"
-                gutterBottom={true}
-              >
-                <b>Every Participant</b>
-              </Typography>
-              <Typography
-                style={{ textAlign: "center" }}
-                variant="body"
-                gutterBottom={true}
-              >
-                {prize_data.every_participant &&
-                  prize_data.every_participant.map((el) => (
+        <Typography
+              style={{ textAlign: "center" }}
+              variant="h3"
+              gutterBottom={true}
+            >
+              <b>HTM Prizes</b><br/>
+        </Typography>
+              <Grid container>
+                {prize_data.htm_prize &&
+                  prize_data.htm_prize.map((el) => (
                     <>
-                      <li>{el}</li>
+                      <Grid spacing={2} item xs={12} sm={12} md={4} lg={4} style={{padding:'10px'}}>
 
+                      <Card className={classes.root}  style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%'}}>
+                          <CardActionArea>
+                            <CardMedia
+                              className={classes.media}
+                              image="NULL"
+                              title={el.pos}
+                            />
+                            <CardContent>
+                              <Typography style={{ textAlign: "center", color:'white' }}
+                            variant="h4"
+                            gutterBottom={true}>
+                                {el.pos}
+                              </Typography>
+                              <Typography variant="body"     style={{ textAlign: "left", color:'white' }}
+                            gutterBottom={true}>
+                                {el.description.map((prize) => (
+                                                  <>
+                                                    <li>{prize}</li>
+                                                  </>))}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                          <CardActions style={{justifyContent: 'center'}}>
+                            <Typography
+                            variant="body"      style={{ textAlign: "center" }}
+                            gutterBottom={true}
+                          >
+                            {el.notion_link && (
+                              <>                              
+                                  <a href={el.notion_link}>
+                                  <Button variant="outlined" className={classes.button} >
+                                        Know More
+                                  </Button>
+                                  </a>
+                               
+                                <br />
+                              </>
+                            )}
+                          </Typography>
+                          </CardActions>
+                        </Card> 
+                      </Grid>
                     </>
                   ))}
-              </Typography>
+
+                  <Grid spacing={2} item xs={12} sm={12} md={8} lg={8} style={{padding:'20px'}}>
+                  <Card className={classes.root}  style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%'}}>
+                          <CardActionArea>
+                            <CardMedia
+                              className={classes.media}
+                              image="NULL"
+                              title="Every Participant"
+                            />
+                            <CardContent>
+                              <Typography style={{ textAlign: "center", color:'white' }}
+                            variant="h4"
+                            gutterBottom={true}>
+                                Every Participant
+                              </Typography>
+                              <Typography variant="body"     style={{ textAlign: "left", color:'white' }}
+                            gutterBottom={true}>
+                                {prize_data.every_participant &&
+                              prize_data.every_participant.map((el) => (
+                                <>
+                                  <li>{el}</li>
+                                </>
+                              ))}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                        </Card> 
+                          </Grid> 
+              </Grid>
               <br />
 
-              </div>
 
+          
+
+ <Grid container spacing={4}>
+             <Grid item xs={12} sm={12} md={12} lg={12} >
+              <br />
               <br />
               <Typography
                 style={{ textAlign: "center" }}
@@ -96,51 +169,42 @@ const Prizes = () => {
 
               </Typography>
               <Grid container>
+              
                 {prize_data.sponsor_prize &&
                   prize_data.sponsor_prize.map((el) => (
                     <>
 
-                      <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2'}}>
+                      <Grid item xs={12} sm={12} md={4} lg={4} style={{padding:'10px'}}>
 
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                          <Typography
-                                 style={{ textAlign: "center" }}
+                      <Card className={classes.root}  style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%'}}>
+                          <CardActionArea>
+                            <CardMedia
+                              className={classes.media}
+                              image="NULL"
+                              title={el.sponsor_name}
+                            />
+                            <CardContent>
+                              <Typography style={{ textAlign: "center", color:'white' }}
                             variant="h4"
-                            gutterBottom={true}
-                          >
-                            <b>{el.sponsor_name}</b>
-                          </Typography>
-
-                          <br />
-
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                          <Typography
-                            variant="body"     style={{ textAlign: "center" }}
-                            gutterBottom={true}
-                          >
-                            {el.description.map((prize) => (
-                              <>
-                                <li>{prize}</li>
-
-                                {/* <br /> */}
-
-                              </>
-                            ))}
-                          </Typography>
-                        </Grid>
-
-                        <Grid item xs={12} sm={12} md={12} lg={12} style={{textAlign:'center'}}>
-
-                          <Typography
+                            gutterBottom={true}>
+                                {el.sponsor_name}
+                              </Typography>
+                              <Typography variant="body"     style={{ textAlign: "left", color:'white' }}
+                            gutterBottom={true}>
+                                {el.description.map((prize) => (
+                                                  <>
+                                                    <li>{prize}</li>
+                                                  </>))}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                          <CardActions style={{justifyContent: 'center'}}>
+                            <Typography
                             variant="body"      style={{ textAlign: "center" }}
                             gutterBottom={true}
                           >
                             {el.notion_link && (
-                              <>
-
-                                <br />
-                                
+                              <>                              
                                   <a href={el.notion_link}>
                                   <Button variant="outlined" className={classes.button} >
                                         Know More
@@ -151,58 +215,16 @@ const Prizes = () => {
                               </>
                             )}
                           </Typography>
-                        </Grid>
-                      </Grid>
+                          </CardActions>
+                        </Card> 
+
+                      </Grid> 
                     </>
                   ))}
               </Grid>
               <br />
               <br />
-              <Typography
-                style={{ textAlign: "center" }}
-                variant="h3"
-                gutterBottom={true}
-              >
-                <b>HTM Prizes</b><br/>
-              </Typography>
-              <Grid container>
-                {prize_data.htm_prize &&
-                  prize_data.htm_prize.map((el) => (
-                    <>
-
-                      <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '3'}}>
-
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                          <Typography      style={{ textAlign: "center" }}
-                            variant="h4"
-                            gutterBottom={true}
-                          >
-                            <b>{el.pos}</b>
-                          </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                          <Typography      style={{ textAlign: "center" }}
-                            variant="body"
-                            gutterBottom={true}
-                          >
-                            <b>
-                              {el.description.map((prize) => (
-                                <>
-                                  <li>{prize}</li>
-
-                                  
-
-                                </>
-                              ))}
-                            </b>
-                          </Typography>
-                        </Grid>
-                      </Grid>
-                    </>
-                  ))}
-              </Grid>
-              <br />
-
+              
             </Grid>
           </Grid>
          
