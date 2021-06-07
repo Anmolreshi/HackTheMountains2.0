@@ -1,15 +1,10 @@
 import React from "react";
 import { Grid, Typography, Container, Button, Card } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-
-
-
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
-
 import { usePrize } from "../../hooks/api/getPrizes";
 const useStyles = makeStyles({
   container: {
@@ -151,9 +146,6 @@ const Prizes = () => {
                           </Grid> 
               </Grid>
               <br />
-
-
-          
 
  <Grid container spacing={4}>
              <Grid item xs={12} sm={12} md={12} lg={12} >
