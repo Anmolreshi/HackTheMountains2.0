@@ -76,7 +76,7 @@ export default function App() {
               <Team />
            
               <Contact/>
-              <Ribbon/>
+              {/* <Ribbon/> */}
               <Footer />
             </Box>
           </>
@@ -130,7 +130,7 @@ export default function App() {
             <Navbar />
             <Box>
               <FAQ/>
-              <Ribbon/>
+              {/* <Ribbon/> */}
               <Footer />
             </Box>
           </>
