@@ -180,7 +180,7 @@ const Prizes = () => {
                           <CardActionArea>
                             <CardMedia
                               className={classes.media}
-                              image="NULL"
+                              image={el.image}
                               title={el.sponsor_name}
                             />
                             <CardContent>
