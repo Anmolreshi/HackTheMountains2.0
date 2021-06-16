@@ -13,7 +13,7 @@ const data = [
   },
   {
     name: "Prizes",
-    path: "season2/#prizes"
+    path: "season2/prizes"
   },
   {
     name: "Judges",
@@ -23,10 +23,10 @@ const data = [
     name: "Team ",
     path: "season2/#team"
   },
-  {
-    name: "Schedule",
-    path: "season2/schedule"
-  },
+  // {
+  //   name: "Schedule",
+  //   path: "season2/schedule"
+  // },
   // {
   //   name: "Workshops",
   //   path: "season2/#workshops"

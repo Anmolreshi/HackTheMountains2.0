@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import Judge from './components/index'
 
 // import { useHistory } from 'react-router-dom';
 
@@ -29,7 +30,7 @@ const useStyles = makeStyles({
 
 const Judges = () => {
   const classes = useStyles();
-  // const judge_data = useJudges();
+  // const judge_data = Judges();
   return (
     <div id="judges" className={classes.container}>
       <Grid container>
@@ -40,23 +41,27 @@ const Judges = () => {
             variant="h4" gutterBottom={true}>
             <br/><b>Judges</b></Typography>
 
-          <Grid container spacing={4} >
-            {/* {
+           <Grid container spacing={4} >
+             {/* {
              judge_data.map((judge)=>(<Grid item xs={12} sm={12} md={4} lg={4}>
-              <Holder
+              <
                name={judge.name}
                designation={judge.designation}
                image={judge.image} 
                link={judge.externalLink}
               /> 
-              </Grid>))
-           }
-           */}
-            <Grid item xs={12} sm={12} md={12} lg={12}><br /><br /><br /><br /><br />
+              </Grid>)) 
+           } */}
+           
+            {/* <Grid item xs={12} sm={12} md={12} lg={12}><br /><br /><br /><br /><br />
               <Typography style={{ textAlign: 'center' }} variant="h3" gutterBottom={true}><b>
                 Coming Soon</b></Typography>
               <br /><br /><br /><br /><br />
-            </Grid>
+            </Grid> */}
+
+
+
+            <Judge />
           </Grid>
         </Container>
       </Grid>

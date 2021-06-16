@@ -44,7 +44,6 @@ export default function App() {
               <Tracks />
               <History />
               <PreviousSponsors />
-              <Prizes/>
               <Judges/>
 
               {/* <Workshops /> */}
@@ -69,7 +68,6 @@ export default function App() {
               <Tracks />
               <History />
               <PreviousSponsors />
-              <Prizes/>
               <Judges/>
             
               {/* <Workshops /> */}
@@ -77,6 +75,20 @@ export default function App() {
            
               <Contact/>
               {/* <Ribbon/> */}
+              <Footer />
+            </Box>
+          </>
+        }
+      />
+      <Route
+        path="/season2/prizes"
+        exact={true}
+        children={
+          <>
+           
+            <Navbar />
+            <Box>
+              <Prizes/>
               <Footer />
             </Box>
           </>

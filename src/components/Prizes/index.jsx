@@ -44,6 +44,7 @@ const useStyles = makeStyles({
 const Prizes = () => {
   const classes = useStyles();
   const prize_data = usePrize();
+  console.log(prize_data);
   return (
     <div id="prizes" className={classes.container}>
       <Grid container>
@@ -174,6 +175,7 @@ const Prizes = () => {
                               className={classes.media}
                               image={el.image}
                               title={el.sponsor_name}
+                              // style={{height:"100px", position:"relative"}}
                             />
                             <CardContent>
                               <Typography style={{ textAlign: "center", color:'white' }}
