@@ -38,7 +38,7 @@ const useStyles = makeStyles({
         <br/>
         <a rel="noopener noreferrer" 
               target="_blank" style={{textDecoration:'none', color:"white"}} 
-              href = {props.link}>
+              href = {props.linkedin}>
             <img
               src={props.image}
               width="150px"
