@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   button: {
     color: "white",
     background: "black",
-    border: "3px solid white",
+    border: "2px solid white",
     zIndex: 0,
     textDecoration: 'none',
     '&:hover' : {
@@ -162,7 +162,96 @@ const Prizes = () => {
               </Grid>
               <br />
 
- <Grid container spacing={4}>
+
+
+
+
+
+
+              <Grid container spacing={4}>
+             <Grid item xs={12} sm={12} md={12} lg={12} >
+              <br />
+              <br />
+              <Typography
+                style={{ textAlign: "center" }}
+                variant="h3"
+                gutterBottom={true}
+              >
+
+                <b>MLH Prizes</b><br/>
+
+              </Typography>
+              <Grid container>
+              
+                {prize_data.mlh_prize &&
+                  prize_data.mlh_prize.map((el) => (
+                    <>
+
+                      <Grid item xs={12} sm={12} md={6} lg={6} className={classes.cards}>
+
+                      <Card className={classes.innercard} 
+                       style={{marginBottom:'10px', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%',border:'3px solid white',}}>
+                          <CardActionArea>
+                          <CardMedia
+                              className={classes.media}
+                              image={el.image}
+                              title={el.sponsor_name}
+                              // style={{height:"100px", position:"relative"}}
+                            />
+                            <CardContent>
+                              <Typography style={{ textAlign: "center", color:'white' }}
+                            variant="h4"
+                            gutterBottom={true}>
+                                {el.sponsor_name}
+                              </Typography>
+                              <Typography variant="body"     style={{ textAlign: "left", color:'white' }}
+                            gutterBottom={true}>
+                                {el.description.map((prize) => (
+                                                  <>
+                                                    <li style={{listStyleType:'disclosure-Closed'}}>{prize}</li>
+                                                  </>))}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                          <CardActions style={{justifyContent: 'center'}}>
+                            <Typography
+                            variant="body"      style={{ textAlign: "center" }}
+                            gutterBottom={true}
+                          >
+                            {el.notion_link && (
+                              <>                              
+                                  <a href={el.notion_link}>
+                                  <Button variant="outlined" className={classes.button} >
+                                        Know More
+                                  </Button>
+                                  </a>
+                               
+                                <br />
+                              </>
+                            )}
+                          </Typography>
+                          </CardActions>
+                        </Card> 
+
+                      </Grid> 
+                    </>
+                  ))}
+              </Grid>
+              <br />
+              <br />
+              
+            </Grid>
+          </Grid>
+
+
+
+
+
+
+
+
+
+        <Grid container spacing={4}>
              <Grid item xs={12} sm={12} md={12} lg={12} >
               <br />
               <br />
@@ -235,6 +324,16 @@ const Prizes = () => {
               <br />
               
             </Grid>
+          </Grid>
+          <br/>
+          <br/>
+
+          <Grid container style={{justifyContent: 'center'}}>
+            <a href="https://www.notion.so/Other-Prizes-cb37562190634845b9bbd12bcaee4b71">
+              <Button variant="outlined" className={classes.button} >
+                    <h5>More Prizes </h5>   
+              </Button>
+            </a>
           </Grid>
          
 
