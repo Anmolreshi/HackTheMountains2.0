@@ -8,27 +8,41 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { usePrize } from "../../hooks/api/getPrizes";
 const useStyles = makeStyles({
   container: {
-    paddingTop: "88px",
+    paddingTop: "80px",
     backgroundColor: '#202136',
     backgroundImage: 'radial-gradient(#676666 0.7px, transparent 0)',
     backgroundSize:`15px 15px`,
     color: "white",
-    paddingBottom: "88px",
-    paddingLeft: "14px",
-    paddingRight: "14px"
+    paddingBottom: "80px",
+    paddingLeft: "10px",
+    paddingRight: "10px"
   },
   button: {
     color: "white",
     background: "black",
-    border: "1px solid white",
+    border: "3px solid white",
     zIndex: 0,
     textDecoration: 'none',
-    "&hover": {
-      background: "white",
-      color: "white",
-      textDecoration: 'none',
-    }
+    '&:hover' : {
+      background: "#b8b8ba",
+      color: "black",
+      textDecoration: "none",
+      underline: "none"
+    },
 
+  },
+  cards: {
+    padding:"10px",
+    '&:hover':{
+      transform: 'scale(1.04)',
+      transitionDuration: '0.97s',
+    },
+  },
+  innercard:{
+    background: '#121229',
+    '&:hover':{
+       backgroundColor:'#060607',
+    },
   },
   highlighter: {
     // textShadow: `0 0 20px aqua,
@@ -71,9 +85,9 @@ const Prizes = () => {
                 {prize_data.htm_prize &&
                   prize_data.htm_prize.map((el) => (
                     <>
-                      <Grid spacing={2} item xs={12} sm={12} md={4} lg={4} style={{padding:'10px'}}>
+                      <Grid className={classes.cards} spacing={2} item xs={12} sm={12} md={4} lg={4} style={{padding:'10px'}}>
 
-                      <Card className={classes.root}  style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%'}}>
+                      <Card className={classes.innercard}  style={{marginBottom:'10px', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%',border:'3px solid white',}}>
                           <CardActionArea>
                             <CardMedia
                               className={classes.media}
@@ -90,7 +104,7 @@ const Prizes = () => {
                             gutterBottom={true}>
                                 {el.description.map((prize) => (
                                                   <>
-                                                    <li>{prize}</li>
+                                                    <li style={{listStyleType:'disclosure-Closed'}}>{prize}</li>
                                                   </>))}
                               </Typography>
                             </CardContent>
@@ -104,7 +118,7 @@ const Prizes = () => {
                               <>                              
                                   <a href={el.notion_link}>
                                   <Button variant="outlined" className={classes.button} >
-                                        Know More
+                                        <span style={{color:'red'}}>Know More</span>
                                   </Button>
                                   </a>
                                
@@ -118,8 +132,8 @@ const Prizes = () => {
                     </>
                   ))}
 
-                  <Grid spacing={2} item xs={12} sm={12} md={8} lg={8} style={{padding:'20px'}}>
-                  <Card className={classes.root}  style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%'}}>
+                  <Grid className={classes.cards} spacing={2} item xs={12} sm={12} md={8} lg={8} style={{padding:'20px'}}>
+                  <Card className={classes.innercard}  style={{marginBottom:'10px', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%',border:'3px solid white'}}>
                           <CardActionArea>
                             <CardMedia
                               className={classes.media}
@@ -137,7 +151,7 @@ const Prizes = () => {
                                 {prize_data.every_participant &&
                               prize_data.every_participant.map((el) => (
                                 <>
-                                  <li>{el}</li>
+                                  <li style={{listStyleType:'disclosure-Closed'}}>{el}</li>
                                 </>
                               ))}
                               </Typography>
@@ -167,11 +181,12 @@ const Prizes = () => {
                   prize_data.sponsor_prize.map((el) => (
                     <>
 
-                      <Grid item xs={12} sm={12} md={4} lg={4} style={{padding:'10px'}}>
+                      <Grid item xs={12} sm={12} md={4} lg={4} className={classes.cards}>
 
-                      <Card className={classes.root}  style={{marginBottom:'10px',background: '#121229', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%'}}>
+                      <Card className={classes.innercard} 
+                       style={{marginBottom:'10px', padding:'20px', borderRadius:'10px',  lineHeight: '2', height:'100%',border:'3px solid white',}}>
                           <CardActionArea>
-                            <CardMedia
+                          <CardMedia
                               className={classes.media}
                               image={el.image}
                               title={el.sponsor_name}
@@ -187,7 +202,7 @@ const Prizes = () => {
                             gutterBottom={true}>
                                 {el.description.map((prize) => (
                                                   <>
-                                                    <li>{prize}</li>
+                                                    <li style={{listStyleType:'disclosure-Closed'}}>{prize}</li>
                                                   </>))}
                               </Typography>
                             </CardContent>
