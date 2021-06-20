@@ -66,8 +66,8 @@ const About = () => {
                 <Box>
                   <Typography variant="h5"  style={{textAlign:'center'}} gutterBottom={true}><b>How do I signup?</b> </Typography>
                   <Typography variant="h6">
-                   You can pre-register for the hackathon. Soon we will be opening 
-                   registration, where you can register yourself. We will roll out instructions to register in the form of video tutorial as well as instructions even on our social handles.
+                    Registartion for Hack The Mountains 2.0 are Open and you can register through Devfolio.
+                    We have rolled out instructions to register in the form of video tutorial as well as instructions even on our social handles and as well on Youtube.
         
                 </Typography>
                 </Box>
