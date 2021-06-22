@@ -27,10 +27,6 @@ const data = [
     name: "Schedule",
     path: "season2/schedule"
   },
-  // {
-  //   name: "Workshops",
-  //   path: "season2/#workshops"
-  // },
   {
     name: "FAQ",
     path: "faq"
