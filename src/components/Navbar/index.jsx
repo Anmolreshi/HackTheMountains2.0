@@ -102,11 +102,11 @@ export default function ElevateAppBar(props) {
                 
                 
 
-                <Box  p={1}>
+                {/* <Box  p={1}>
                 <a style={{textDecoration:'none',color:"#434040"}} href="https://www.notion.so/28e8804176e14b3ba4b15309917eded1?v=147cb6a1ffa444139b74444bb581ea8a">
                  <Typography  className={classes.onhover} gutterBottom={true} variant="subtitle2">
                        <b>Schedule</b> {" "}
-                  </Typography></a></Box>
+                  </Typography></a></Box> */}
               
 
                 <Box  p={1}>
