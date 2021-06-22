@@ -24,10 +24,6 @@ const data = [
     path: "season2/#team"
   },
   {
-    name: "Schedule",
-    path: "season2/schedule"
-  },
-  {
     name: "FAQ",
     path: "faq"
   },

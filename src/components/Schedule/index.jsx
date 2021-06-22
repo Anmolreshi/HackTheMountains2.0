@@ -32,9 +32,9 @@ export default function AlternateTimeline() {
         </Grid>
 
         <Grid item xs={12} sm={12} md={6} lg={6} style={{justifyItems:'center', margin:'auto'}}>
-        <img src={sc1} width="100%"/>
+        {/* <img src={sc1} width="100%"/>
         <img src={sc2} width="100%"/>
-        <img src={sc3} width="100%"/>
+        <img src={sc3} width="100%"/> */}
 
         <br/><br/><br/><br/>
         </Grid>
