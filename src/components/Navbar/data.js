@@ -16,16 +16,16 @@ const data = [
     path: "season2/prizes"
   },
   {
+    name:"Schedule",
+    path:"season2/schedule"
+  },
+  {
     name: "Judges",
     path: "season2/#judges"
   },
   {
     name: "Team ",
     path: "season2/#team"
-  },
-  {
-    name:"Schedule",
-    path:"season2/schedule"
   },
   {
     name: "FAQ",
