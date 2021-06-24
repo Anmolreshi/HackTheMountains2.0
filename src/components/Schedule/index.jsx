@@ -1,8 +1,7 @@
 import React from "react";
 import {Container, Grid, Typography} from "@material-ui/core";
-import sc1 from "./assets/1.png";
-import sc2 from "./assets/2.png";
-import sc3 from "./assets/3.png";
+import fullroad from "./assets/fullroad.png";
+
 // import Timeline from "./components/timeline"
 export default function AlternateTimeline() {
   return (<>
@@ -32,10 +31,7 @@ export default function AlternateTimeline() {
         </Grid>
 
         <Grid item xs={12} sm={12} md={6} lg={6} style={{justifyItems:'center', margin:'auto'}}>
-        {/* <img src={sc1} width="100%"/>
-        <img src={sc2} width="100%"/>
-        <img src={sc3} width="100%"/> */}
-
+         <img src={fullroad} width="100%"/>
         <br/><br/><br/><br/>
         </Grid>
 
